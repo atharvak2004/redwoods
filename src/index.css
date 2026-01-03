@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-pagination .swiper-pagination-bullet {
+  background: transparent;
+  color: white;
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+  font-weight: bold;
+}
+/* ===== Base Fade Animation ===== */
+.animate-fade {
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+/* ===== Fade Up ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation-name: fadeUp;
+}
+
+/* ===== Fade From Left ===== */
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-left {
+  animation-name: fadeLeft;
+}
+
+/* ===== Fade From Right ===== */
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-right {
+  animation-name: fadeRight;
+}
+.delay-0   { animation-delay: 0s; }
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal.active {
+  opacity: 1;
+}
+
