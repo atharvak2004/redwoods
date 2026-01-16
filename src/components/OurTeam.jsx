@@ -11,7 +11,7 @@ export default function OurTeam() {
       linkedin: "#",
     },
     {
-      name: "Mr. Anuj Nautiyal",
+      name: "Mr. Rajeshwar Nimodiya",
       position: "Head – Real Estate Advisory",
       image: "https://via.placeholder.com/500",
       linkedin: "#",

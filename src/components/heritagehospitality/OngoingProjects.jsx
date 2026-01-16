@@ -1,23 +1,31 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import MediaElement from "../media/MediaElement";
 
+/* ================= DATA ================= */
 const ongoingProjects = [
   {
-    image: "/Heritage_herobg.jpg",
+    image: "/barsana-ongoing.jpg",
     title: "Barsana Jal Mahal",
-    description: "A historic two-story water palace built by Roopram Katara in the 18th century in Barsana, Uttar Pradesh, India",
+    slug: "/heritage-hospitality/barsana-mahal",
+    description:
+      "A historic two-story water palace built by Roopram Katara in the 18th century in Barsana, Uttar Pradesh, India",
   },
   {
-    image: '/Shukla_Talab.JPG',
+    image: "/Shukla-ongoing.jpg",
     title: "Shukla Ka Talab",
-    description: "A historic pond and Mughal-era site in Akbarpur, Kanpur Dehat, Uttar Pradesh, India",
+    slug: "/heritage-hospitality/shukla-talab",
+    description:
+      "A historic pond and Mughal-era site in Akbarpur, Kanpur Dehat, Uttar Pradesh, India",
   },
-  // {
-  //   image: heritageImage,
-  //   title: "Lakeside Haveli",
-  //   description: "Heritage haveli redevelopment • Udaipur, Rajasthan",
-  // },
+  {
+    image: "/DeckOverlookingGanges.jpg",
+    title: "Pilibhit House",
+    slug: "/heritage-hospitality/pilibhit-house",
+    description:
+      "Pilibhit House is a 100-year-old, 5-star heritage hotel in Haridwar, India, located on the banks of the Ganges River",
+  },
 ];
 
 /* ================= ANIMATION VARIANTS ================= */
@@ -51,9 +59,9 @@ export function OngoingProjects() {
       <div
         className="absolute inset-0 
                    bg-gradient-to-r 
-                   from-brand-lightgreen/4 
-                   via-brand-lightgreen/7 
-                   to-brand-lightgreen/4"
+                   from-brand-lightgreen/5 
+                   via-brand-lightgreen/10 
+                   to-brand-lightgreen/5"
       />
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
@@ -66,17 +74,19 @@ export function OngoingProjects() {
           viewport={{ once: true, amount: 0.4 }}
           className="text-center mb-16"
         >
-          <span className="inline-block mb-4 text-sm tracking-widest text-brand-lightgreen uppercase">
+          <span className="inline-block mb-4 text-sm tracking-widest 
+                           text-brand-lightgreen uppercase">
             Current Engagements
           </span>
 
-          <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-blue leading-tight">
+          <h2 className="text-3xl md:text-4xl xl:text-5xl 
+                         font-semibold text-brand-blue">
             Ongoing <span className="text-[#373e68]">Projects</span>
           </h2>
         </motion.div>
 
         {/* ================= GRID ================= */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {ongoingProjects.map((p, i) => (
             <motion.div
               key={i}
@@ -86,9 +96,10 @@ export function OngoingProjects() {
               viewport={{ once: true, amount: 0.25 }}
               custom={i}
               className="group bg-white rounded-2xl overflow-hidden
-                         border border-gray-200
-                         hover:shadow-xl hover:-translate-y-1
-                         transition-all"
+                 border border-gray-200
+                 hover:shadow-xl hover:-translate-y-1
+                 transition-all
+                 min-h-[480px] flex flex-col"
             >
               {/* Image */}
               <div className="aspect-[4/3] overflow-hidden">
@@ -96,27 +107,37 @@ export function OngoingProjects() {
                   src={p.image}
                   alt={p.title}
                   className="w-full h-full object-cover
-                             transition-transform duration-700
-                             group-hover:scale-105"
+                     transition-transform duration-700
+                     group-hover:scale-105"
                 />
               </div>
 
               {/* Content */}
-              <div className="p-6">
-                <h3
-                  className="text-lg font-semibold text-brand-blue mb-2
-                             group-hover:text-brand-lightgreen
-                             transition-colors duration-300"
-                >
+              <div className="p-6 flex flex-col flex-grow">
+
+                <h3 className="text-lg font-semibold text-brand-blue mb-2
+                       group-hover:text-brand-lightgreen transition">
                   {p.title}
                 </h3>
 
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-sm leading-relaxed mb-2">
                   {p.description}
                 </p>
 
-                {/* Accent divider */}
-                <div className="mt-4 h-px w-12 bg-brand-lightgreen" />
+                {/* Button */}
+                <Link to={p.slug} className="mt-auto">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    className="inline-flex items-center gap-2
+                       bg-brand-green text-white
+                       px-5 py-2 rounded-full
+                       text-sm font-medium
+                       hover:opacity-90 transition"
+                  >
+                    Know More →
+                  </motion.button>
+                </Link>
+
               </div>
             </motion.div>
           ))}

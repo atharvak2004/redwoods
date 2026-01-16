@@ -14,7 +14,7 @@ function RealEstateAdvisory() {
       <DevelopmentSection />
       <ServicesSection />
       <OngoingProjects />
-      <CompletedProjects />
+      {/* <CompletedProjects /> */}
       <CTASection />
     </div>
   )

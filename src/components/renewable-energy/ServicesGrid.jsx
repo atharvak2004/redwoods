@@ -101,14 +101,14 @@ export function ServicesGrid() {
                 {service.desc}
               </p>
 
-              <ul className="space-y-3">
+              {/* <ul className="space-y-3">
                 {service.points.map((point, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <span className="w-2 h-2 mt-2 rounded-full bg-brand-lightgreen flex-shrink-0" />
                     <span className="text-gray-700 text-sm">{point}</span>
                   </li>
                 ))}
-              </ul>
+              </ul> */}
 
               {/* Accent strip */}
               <div className="absolute top-0 right-8 h-1 w-24 bg-brand-lightgreen rounded-b-3xl" />

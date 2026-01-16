@@ -1,8 +1,10 @@
+import React from "react";
 import { motion } from "framer-motion";
 import MediaElement from "../media/MediaElement";
-
+import { Link } from "react-router-dom";
 const ongoingProjects = [
   {
+    url:'/renewable-energy/dhakrani-solar',
     image: "/DHAKRANI_solor.png",
     title: "Dhakrani Solar Power Project",
     location: "Dhakrani, Vikasnagar, Uttarakhand",
@@ -17,6 +19,7 @@ const ongoingProjects = [
   },
 
   {
+    url:'/renewable-energy/khodri-solar',
     image: "/KHODRI_solar.png",
     title: "Khodri Solar Power Project",
     location: "Dakpathar, Khodri, Uttarakhand",
@@ -31,6 +34,7 @@ const ongoingProjects = [
   },
 
   {
+    url:'/renewable-energy/dadajalalpur-solar',
     image: "/DADAJALALPUR_solar.png",
     title: "Dadajalalpur Solar Power Project",
     location: "Dada Jalalpur, Haridwar, Uttarakhand",
@@ -130,6 +134,21 @@ export function OngoingProjects() {
                     </div>
                   ))}
                 </div>
+
+                {/* BUTTON */}
+                <Link to={project.url}>
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="mt-10 inline-flex items-center gap-2
+              bg-brand-green text-white
+              px-6 py-3 rounded-full
+              text-sm font-medium
+              hover:opacity-90 transition"
+                  >
+                    View Project →
+                  </motion.button>
+                </Link>
               </div>
             </motion.div>
           );

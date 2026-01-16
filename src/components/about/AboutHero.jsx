@@ -8,7 +8,7 @@ function AboutHero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/aboutbg.avif"
+          src="/aboutherobg.png"
           alt="About Redwoods Group"
           className="h-full w-full object-cover"
         />
@@ -43,7 +43,7 @@ function AboutHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
           >
-            <h1 className="text-4xl md:text-5xl xl:text-6xl font-semibold text-white leading-tight">
+            <h1 className="text-4xl md:text-5xl xl:text-6xl font-semibold text-white leading-tight font-bebas">
               Building Trust. <br />
               <span className="text-white/80">
                 Creating Long-Term Value.

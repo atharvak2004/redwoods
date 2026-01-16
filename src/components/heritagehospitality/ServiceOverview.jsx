@@ -62,12 +62,12 @@ export function ServiceOverview() {
               while preserving their cultural significance and authenticity.
             </p>
 
-            <p className="text-gray-700 text-lg leading-relaxed">
+            {/* <p className="text-gray-700 text-lg leading-relaxed">
               Working with heritage trusts, private owners, and institutional
               investors, we bring conservation expertise together with
               hospitality acumen to ensure every property tells its story with
               distinction.
-            </p>
+            </p> */}
           </motion.div>
 
           {/* ================= IMAGE ================= */}
@@ -80,7 +80,7 @@ export function ServiceOverview() {
           >
             <div className="aspect-square rounded-3xl overflow-hidden shadow-xl">
               <MediaElement
-                src="/Heritage_Services_3.jpg"
+                src="/home/hero/heritage1.jpg"
                 alt="Heritage property restoration"
                 className="object-cover"
               />

@@ -80,7 +80,7 @@ export default function RenewableEnergyHero() {
             animate="visible"
             className="max-w-3xl"
           >
-            <h1 className="text-4xl md:text-5xl xl:text-6xl font-semibold text-white leading-tight">
+            <h1 className="text-4xl md:text-5xl xl:text-6xl font-semibold text-white leading-tight font-bebas">
               Our Business <br />
               <span className="text-white/80">
                 Renewable Energy

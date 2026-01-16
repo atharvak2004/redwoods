@@ -47,7 +47,7 @@ function TeamHero() {
             }}
           >
             <motion.h1
-              className="text-4xl md:text-5xl xl:text-6xl font-semibold text-white leading-tight"
+              className="text-4xl md:text-5xl xl:text-6xl font-semibold text-white leading-tight font-bebas"
               variants={{
                 hidden: { opacity: 0, y: 30 },
                 visible: { opacity: 1, y: 0 },

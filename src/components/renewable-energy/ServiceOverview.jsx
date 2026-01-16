@@ -56,12 +56,6 @@ export function ServiceOverview() {
               developers, and corporations navigate the energy transition with
               clarity and confidence.
             </p>
-
-            <p className="mt-4 text-gray-700 leading-relaxed">
-              From project conception to operational handover, we combine deep
-              sector expertise with disciplined execution to deliver long-term,
-              measurable sustainability outcomes.
-            </p>
           </motion.div>
 
         </div>

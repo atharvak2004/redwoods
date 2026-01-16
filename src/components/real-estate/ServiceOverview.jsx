@@ -27,7 +27,7 @@ export default function ServiceOverview() {
             <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-blue leading-tight">
               End-to-End <br />
               <span className="text-[#373e68]">
-                Real Estate Excellence
+                Real Estate Solutions
               </span>
             </h2>
 
@@ -37,17 +37,6 @@ export default function ServiceOverview() {
               activities — from land acquisition to project completion.
             </p>
 
-            <p className="mt-4 text-gray-700 leading-relaxed">
-              We combine deep market insight with disciplined execution to help
-              investors, developers, and institutions create long-term,
-              sustainable value across residential, commercial, and mixed-use
-              assets.
-            </p>
-
-            <p className="mt-4 text-gray-700 leading-relaxed">
-              Every engagement is driven by transparency, clarity, and a
-              commitment to outcomes — not assumptions.
-            </p>
           </motion.div>
 
           {/* ================= RIGHT CONTENT ================= */}
@@ -60,13 +49,11 @@ export default function ServiceOverview() {
           >
             <div className="aspect-square rounded-3xl overflow-hidden shadow-xl">
               <MediaElement
-                src="/RealEstateHeroBg.png"
+                src="/development/2.png"
                 alt="Real estate development"
                 className="object-cover"
               />
             </div>
-
-            {/* Accent strip – same language as About cards */}
             
           </motion.div>
 

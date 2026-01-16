@@ -47,7 +47,7 @@ export default function RealEstateHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
           >
-            <h1 className="text-4xl md:text-5xl xl:text-6xl font-semibold text-white leading-tight">
+            <h1 className="text-4xl md:text-5xl xl:text-6xl font-semibold text-white leading-tight font-bebas">
               Our Business <br />
               <span className="text-white/80">
                 Real Estate Advisory

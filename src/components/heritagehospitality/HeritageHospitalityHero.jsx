@@ -9,7 +9,7 @@ export default function HeritageHospitalityHero() {
             {/* Background Media */}
             <div className="absolute inset-0">
                 <MediaElement
-                    src="/Heritage_herobg.jpg"
+                    src="/heritageHero.png"
                     alt="Premium real estate architecture"
                     className="h-full w-full object-cover"
                 />
@@ -47,7 +47,7 @@ export default function HeritageHospitalityHero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
                     >
-                        <h1 className="text-4xl md:text-5xl xl:text-6xl font-semibold text-white leading-tight">
+                        <h1 className="text-4xl md:text-5xl xl:text-6xl font-semibold text-white leading-tight font-bebas">
                             Our Business  <br />
                             <span className="text-white/80">
                                 Heritage Hospitality

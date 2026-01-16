@@ -10,7 +10,11 @@ function Navbar() {
   const location = useLocation();
 
   const isContactPage = location.pathname === "/contact";
-  const isBusinessActive = location.pathname.startsWith("/business");
+  const isBusinessActive =
+    location.pathname.startsWith("/business") ||
+    location.pathname.startsWith("/real-estate") ||
+    location.pathname.startsWith("/renewable-energy") ||
+    location.pathname.startsWith("/heritage-hospitality");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -24,35 +28,38 @@ function Navbar() {
 
     {
       name: "Our Business",
-
       dropdown: [
         {
-          name: "Real Estate Advisory",
+          name: "Real Estate",
           path: "/business/real-estate-advisory",
           children: [
-            {
-              name: "Real Estate Development",
-              path: "/business/real-estate-advisory#development",
-            },
-            {
-              name: "Real Estate Services",
-              path: "/business/real-estate-advisory#services",
-            },
+            { name: "Real Estate Development", path: "/real-estate/development" },
+            { name: "Real Estate Advisory", path: "/real-estate/services" },
           ],
         },
         {
           name: "Renewable Energy",
           path: "/business/renewable-energy",
+          children: [
+            { name: "Khodri Solar Project", path: "/renewable-energy/khodri-solar" },
+            { name: "Dadajalalpur Solar Project", path: "/renewable-energy/dadajalalpur-solar" },
+            { name: "Dhakrani Solar Project", path: "/renewable-energy/dhakrani-solar" },
+          ],
         },
         {
           name: "Heritage Hospitality",
           path: "/business/heritage-hospitality",
+          children: [
+            { name: "Barsana Jal Mahal", path: "/heritage-hospitality/barsana-mahal" },
+            { name: "Shukla Ka Talab", path: "/heritage-hospitality/shukla-talab" },
+            { name: "Pilibhit House", path: "/heritage-hospitality/pilibhit-house" },
+          ],
         },
       ],
     },
 
-    { name: "Transactions", path: "/transaction" },
-    { name: "Our Leadership", path: "/team" },
+    { name: "Transactions Portfolio", path: "/transaction" },
+    { name: "Our People", path: "/team" },
     { name: "Contact Us", path: "/contact" },
   ];
 
@@ -62,47 +69,49 @@ function Navbar() {
       <motion.header
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, ease: "easeOut" }}
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
-          ${scrolled ? "bg-white shadow-sm" : "bg-transparent"}
-        `}
+        transition={{ duration: 0.4 }}
+        className={`fixed top-0 left-0 w-full z-50 transition-all
+          ${scrolled ? "bg-white shadow-sm" : "bg-transparent"}`}
       >
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
           {/* Logo */}
-          <NavLink to="/" className="flex items-center">
+          <NavLink to="/">
             <img
               src="/Redwoods_logo-removebg.png"
               alt="Redwoods"
-              className="h-12 sm:h-14 w-auto object-contain"
+              className="h-12"
             />
           </NavLink>
 
           {/* ================= DESKTOP NAV ================= */}
           <nav className="hidden md:flex items-center gap-10">
+
             {navLinks.map((link) => {
-              // ---------- NORMAL LINKS ----------
+
+              /* ---------- NORMAL LINKS ---------- */
               if (!link.dropdown) {
                 return (
                   <NavLink key={link.name} to={link.path}>
                     {({ isActive }) => (
                       <span
-                        className={`relative text-md font-medium cursor-pointer transition-colors
-                          ${isActive
-                            ? "text-brand-blue"
-                            : isContactPage || scrolled
-                              ? "text-gray-700 hover:text-brand-green"
-                              : "text-white hover:text-brand-lightgreen"
-                          }
-                        `}
+                        className={`relative text-md font-medium cursor-pointer
+                        ${isActive
+                          ? "text-brand-green"
+                          : scrolled
+                            ? "text-brand-blue hover:text-brand-green"
+                            : "text-white hover:text-brand-lightgreen"
+                        }`}
                       >
                         {link.name}
+
+                        {/* underline */}
                         <span
-                          className={`absolute -bottom-1 left-0 h-[2px] transition-all duration-300
-                            ${isActive
-                              ? "w-full bg-brand-blue"
-                              : "w-0 bg-brand-green"
-                            }
-                          `}
+                          className={`absolute -bottom-1 left-0 h-[2px] transition-all
+                          ${isActive
+                            ? "w-full bg-brand-green"
+                            : "w-0 bg-brand-green"
+                          }`}
                         />
                       </span>
                     )}
@@ -110,100 +119,92 @@ function Navbar() {
                 );
               }
 
-              // ---------- OUR BUSINESS (DROPDOWN) ----------
+              /* ---------- OUR BUSINESS ---------- */
               return (
                 <div key={link.name} className="relative group">
+
                   <NavLink to={link.path}>
-                    {() => (
+                    <span
+                      className={`relative text-md font-medium cursor-pointer
+                      ${isBusinessActive
+                        ? "text-brand-green"
+                        : scrolled
+                          ? "text-brand-blue hover:text-brand-green"
+                          : "text-white hover:text-brand-lightgreen"
+                      }`}
+                    >
+                      {link.name}
+
                       <span
-                        className={`relative text-md font-medium cursor-pointer transition-colors
-                          ${isBusinessActive
-                            ? "text-brand-blue"
-                            : isContactPage || scrolled
-                              ? "text-gray-700 hover:text-brand-green"
-                              : "text-white hover:text-brand-lightgreen"
-                          }
-                        `}
-                      >
-                        {link.name}
-                        <span
-                          className={`absolute -bottom-1 left-0 h-[2px] transition-all duration-300
-                            ${isBusinessActive
-                              ? "w-full bg-brand-blue"
-                              : "w-0 bg-brand-green group-hover:w-full"
-                            }
-                          `}
-                        />
-                      </span>
-                    )}
+                        className={`absolute -bottom-1 left-0 h-[2px] transition-all
+                        ${isBusinessActive
+                          ? "w-full bg-brand-green"
+                          : "w-0 bg-brand-green group-hover:w-full"
+                        }`}
+                      />
+                    </span>
                   </NavLink>
 
-                  {/* DROPDOWN MENU */}
-                  <div
-                    className="
-                      absolute left-0 top-full mt-4 w-72
-                      bg-white rounded-xl shadow-lg
-                      opacity-0 invisible
-                      group-hover:opacity-100 group-hover:visible
-                      transition-all duration-300
-                    "
-                  >
-                    <div className="py-3">
-                      {link.dropdown.map((item) => (
-                        <div key={item.name} className="px-4 py-2">
-                          <NavLink
-                            to={item.path}
-                            className="block font-medium text-gray-800 hover:text-brand-blue"
-                          >
-                            {item.name}
-                          </NavLink>
+                  {/* DROPDOWN */}
+                  <div className="
+                    absolute left-0 top-full mt-4 w-72
+                    bg-white rounded-xl shadow-lg
+                    opacity-0 invisible
+                    group-hover:opacity-100 group-hover:visible
+                    transition-all
+                  ">
+                    {link.dropdown.map((item) => (
+                      <div key={item.name} className="px-4 py-2">
 
-                          {item.children && (
-                            <div className="ml-4 mt-2 border-l pl-4 space-y-1">
-                              {item.children.map((child) => (
-                                <NavLink
-                                  key={child.name}
-                                  to={child.path}
-                                  className="block text-sm text-gray-600 hover:text-brand-green"
-                                >
-                                  {child.name}
-                                </NavLink>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      ))}
-                    </div>
+                        <NavLink
+                          to={item.path}
+                          className={({ isActive }) =>
+                            `block font-medium
+                            ${isActive
+                              ? "text-brand-green"
+                              : "text-gray-700 hover:text-brand-blue"
+                            }`}
+                        >
+                          {item.name}
+                        </NavLink>
+
+                        {/* Children */}
+                        {item.children && (
+                          <div className="ml-4 mt-2 border-l pl-4 space-y-1">
+                            {item.children.map((child) => (
+                              <NavLink
+                                key={child.name}
+                                to={child.path}
+                                className={({ isActive }) =>
+                                  `block text-sm
+                                  ${isActive
+                                    ? "text-brand-green"
+                                    : "text-gray-600 hover:text-brand-green"
+                                  }`}
+                              >
+                                {child.name}
+                              </NavLink>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
                   </div>
                 </div>
               );
             })}
           </nav>
 
-          {/* ================= MOBILE BUTTON ================= */}
+          {/* MOBILE MENU BUTTON */}
           <button
             onClick={() => setOpen(true)}
             className={`md:hidden text-2xl
-              ${isContactPage || scrolled ? "text-brand-blue" : "text-white"}
-            `}
+              ${scrolled ? "text-brand-blue" : "text-white"}`}
           >
             <FiMenu />
           </button>
         </div>
       </motion.header>
-
-      {/* ================= MOBILE OVERLAY ================= */}
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/40 z-40"
-            onClick={() => setOpen(false)}
-          />
-        )}
-      </AnimatePresence>
 
       {/* ================= MOBILE DRAWER ================= */}
       <AnimatePresence>
@@ -212,26 +213,21 @@ function Navbar() {
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.3 }}
             className="fixed top-0 left-0 h-full w-[280px] bg-white z-50"
           >
+
             <div className="h-20 px-6 flex items-center justify-between border-b">
-              <img
-                src="/Redwoods_logo-removebg.png"
-                alt="Redwoods"
-                className="h-10"
-              />
-              <button
-                onClick={() => setOpen(false)}
-                className="text-2xl text-brand-blue"
-              >
+              <img src="/Redwoods_logo-removebg.png" className="h-10" />
+              <button onClick={() => setOpen(false)} className="text-2xl">
                 <FiX />
               </button>
             </div>
 
             <nav className="flex flex-col px-6 py-8 gap-6">
+
               {navLinks.map((link) => {
-                // ---------- NORMAL LINKS ----------
+
                 if (!link.dropdown) {
                   return (
                     <NavLink
@@ -239,87 +235,80 @@ function Navbar() {
                       to={link.path}
                       onClick={() => setOpen(false)}
                       className={({ isActive }) =>
-                        `text-base font-medium transition-colors
-            ${isActive
-                          ? "text-brand-blue"
+                        `font-medium
+                        ${isActive
+                          ? "text-brand-green"
                           : "text-gray-700 hover:text-brand-green"
-                        }`
-                      }
+                        }`}
                     >
                       {link.name}
                     </NavLink>
                   );
                 }
 
-                // ---------- DROPDOWN (OUR BUSINESS) ----------
                 const isOpen = mobileDropdown === link.name;
 
                 return (
                   <div key={link.name}>
-                    {/* Dropdown Header */}
                     <button
                       onClick={() =>
                         setMobileDropdown(isOpen ? null : link.name)
                       }
-                      className="w-full flex items-center justify-between
-                     text-base font-medium text-gray-800"
+                      className="w-full flex justify-between font-medium"
                     >
                       {link.name}
-                      <span
-                        className={`transition-transform duration-300
-              ${isOpen ? "rotate-180" : ""}`}
-                      >
+                      <span className={`${isOpen && "rotate-180"} transition`}>
                         ▾
                       </span>
                     </button>
 
-                    {/* Dropdown Content */}
-                    <AnimatePresence>
-                      {isOpen && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3, ease: "easeOut" }}
-                          className="mt-3 pl-4 border-l space-y-4 overflow-hidden"
-                        >
-                          {link.dropdown.map((item) => (
-                            <div key={item.name}>
-                              <NavLink
-                                to={item.path}
-                                onClick={() => setOpen(false)}
-                                className="block font-medium text-gray-700
-                               hover:text-brand-blue"
-                              >
-                                {item.name}
-                              </NavLink>
+                    {isOpen && (
+                      <div className="mt-3 pl-4 border-l space-y-4">
 
-                              {/* Nested Children */}
-                              {item.children && (
-                                <div className="mt-2 ml-3 space-y-2">
-                                  {item.children.map((child) => (
-                                    <NavLink
-                                      key={child.name}
-                                      to={child.path}
-                                      onClick={() => setOpen(false)}
-                                      className="block text-sm text-gray-600
-                                     hover:text-brand-green"
-                                    >
-                                      {child.name}
-                                    </NavLink>
-                                  ))}
-                                </div>
-                              )}
-                            </div>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
+                        {link.dropdown.map((item) => (
+                          <div key={item.name}>
+
+                            <NavLink
+                              to={item.path}
+                              onClick={() => setOpen(false)}
+                              className={({ isActive }) =>
+                                `block font-medium
+                                ${isActive
+                                  ? "text-brand-green"
+                                  : "text-gray-700 hover:text-brand-blue"
+                                }`}
+                            >
+                              {item.name}
+                            </NavLink>
+
+                            {item.children && (
+                              <div className="ml-3 mt-2 space-y-2">
+                                {item.children.map((child) => (
+                                  <NavLink
+                                    key={child.name}
+                                    to={child.path}
+                                    onClick={() => setOpen(false)}
+                                    className={({ isActive }) =>
+                                      `block text-sm
+                                      ${isActive
+                                        ? "text-brand-green"
+                                        : "text-gray-600 hover:text-brand-green"
+                                      }`}
+                                  >
+                                    {child.name}
+                                  </NavLink>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        ))}
+
+                      </div>
+                    )}
                   </div>
                 );
               })}
             </nav>
-
           </motion.aside>
         )}
       </AnimatePresence>

@@ -1,7 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link, useLocation } from "react-router-dom";
 
 export default function ServicesSection() {
+
+  const location = useLocation();
+
+  // Check current route
+  const hideButton = location.pathname === "/real-estate/services";
+
   return (
     <section
       id="services"
@@ -58,21 +65,6 @@ export default function ServicesSection() {
               optimal risk-adjusted returns from real estate allocations.
             </p>
 
-            <ul className="space-y-4">
-              {[
-                "Portfolio strategy and asset allocation",
-                "Due diligence and transaction support",
-                "Risk assessment and mitigation",
-                "Performance monitoring and reporting",
-              ].map((item, index) => (
-                <li key={index} className="flex items-start gap-4">
-                  <span className="w-2 h-2 mt-2 rounded-full bg-brand-lightgreen flex-shrink-0" />
-                  <span className="text-gray-700">{item}</span>
-                </li>
-              ))}
-            </ul>
-
-            {/* Accent strip */}
             <div className="absolute top-0 right-8 h-1 w-24 bg-brand-lightgreen rounded-b-3xl" />
           </motion.div>
 
@@ -95,25 +87,29 @@ export default function ServicesSection() {
               residential assets across key Indian markets.
             </p>
 
-            <ul className="space-y-4">
-              {[
-                "Market positioning and pricing strategy",
-                "Buyer qualification and matching",
-                "Negotiation and deal structuring",
-                "Transaction closure and handover",
-              ].map((item, index) => (
-                <li key={index} className="flex items-start gap-4">
-                  <span className="w-2 h-2 mt-2 rounded-full bg-brand-lightgreen flex-shrink-0" />
-                  <span className="text-gray-700">{item}</span>
-                </li>
-              ))}
-            </ul>
-
-            {/* Accent strip */}
             <div className="absolute top-0 right-8 h-1 w-24 bg-brand-lightgreen rounded-b-3xl" />
           </motion.div>
 
         </div>
+
+        {/* ================= BUTTON ================= */}
+        {!hideButton && (
+          <div className="flex justify-center mt-16">
+            <Link to="/real-estate/services">
+              <motion.button
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="inline-flex items-center gap-3 
+                           bg-brand-green text-white px-8 py-3 rounded-full
+                           font-medium hover:opacity-90 transition"
+              >
+                Learn More →
+              </motion.button>
+            </Link>
+          </div>
+        )}
 
       </div>
     </section>

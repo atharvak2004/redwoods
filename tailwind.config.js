@@ -13,6 +13,9 @@ export default {
           lightgreen: "#92c658",
         },
       },
+      fontFamily: {
+        bebas: ["'Bebas Neue'", "sans-serif"],
+      },
     },
   },
   plugins: [],

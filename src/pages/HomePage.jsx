@@ -14,8 +14,8 @@ function HomePage() {
         <HeroCarousel />
         <AboutRedwoods />
         <OurBusinesses />
-        <LeaderSection />
-        <Transactions />
+        {/* <LeaderSection />
+        <Transactions /> */}
         <HomeCTA /> 
     </div>
   )

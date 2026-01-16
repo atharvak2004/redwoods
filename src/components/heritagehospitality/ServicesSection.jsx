@@ -135,14 +135,14 @@ export function ServicesSection() {
                   {service.desc}
                 </p>
 
-                <ul className="space-y-3">
+                {/* <ul className="space-y-3">
                   {service.points.map((p, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <span className="w-2 h-2 mt-2 rounded-full bg-brand-lightgreen flex-shrink-0" />
                       <span className="text-gray-700 text-sm">{p}</span>
                     </li>
                   ))}
-                </ul>
+                </ul> */}
               </div>
             </motion.div>
           ))}

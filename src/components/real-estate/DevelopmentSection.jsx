@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 /* ================= ANIMATION VARIANTS ================= */
 const fadeUp = {
@@ -49,7 +50,7 @@ export default function DevelopmentSection() {
 
           <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-blue leading-tight">
             Real Estate <br />
-            <span className="text-[#373e68]">Development Expertise</span>
+            <span className="text-[#373e68]">Development </span>
           </h2>
 
           <p className="max-w-3xl mx-auto mt-6 text-gray-700 text-lg leading-relaxed">
@@ -112,6 +113,23 @@ export default function DevelopmentSection() {
               <div className="absolute top-0 right-6 h-1 w-20 bg-brand-lightgreen rounded-b-3xl" />
             </motion.div>
           ))}
+        </div>
+
+        {/* ================= CENTERED BUTTON ================= */}
+        <div className="flex justify-center mt-16">
+          <Link to="/real-estate/development">
+            <motion.button
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="inline-flex items-center gap-3 
+                         bg-brand-green text-white px-8 py-3 rounded-full
+                         font-medium hover:opacity-90 transition"
+            >
+              Learn More →
+            </motion.button>
+          </Link>
         </div>
 
       </div>

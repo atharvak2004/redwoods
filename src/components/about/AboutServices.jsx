@@ -22,7 +22,7 @@ function AboutServices() {
       title: "Heritage Hospitality",
       description:
         "We curate heritage hospitality experiences by restoring and managing culturally significant properties, blending authenticity with modern comfort while preserving historical value.",
-      image: "Heritage_Services_1.jpeg",
+      image: "home/hero/heritage1.jpg",
       link: "/business/heritage-hospitality",
     },
   ];

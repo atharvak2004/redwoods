@@ -1,19 +1,22 @@
 
 export const ongoingProjects = [
   {
-    image: '/r-ongoing1.jpg',
-    title: "Dehradun",
-    description: "Luxury waterfront development • Dehradun",  
+    image: '/development/GhaziabadPhoto.png',
+    title: "Ghaziabad MI",
+    description: "Luxury waterfront development • Ghaziabad",  
+    url: '/real-estate/development#ghaziabad-mi',
   },
   {
-    image: '/Ranikhet-ongoing.png',
-    title: "Ranikhet",
-    description: "Grade A commercial complex • Ranikhet",
+    image: '/RealEstateHeroBg.png',
+    title: "Dehradun House - Condo Living",
+    description: "Grade A commercial complex • Dehradun",
+    url: '/real-estate/development#dehradun-house',
   },
   {
-    image: '/Ghaziabad.jpeg',
-    title: "Ghaziabad",
+    image: '/development/2.png',
+    title: "The Residency",
     description: "Mixed-use urban regeneration • Ghaziabad",
+    url: '/real-estate/development#theresidency',
   },
 ];
 

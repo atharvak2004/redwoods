@@ -60,7 +60,7 @@ export function PhilosophySection() {
           >
             <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
               <MediaElement
-                src='/Shukla_Talab.JPG'
+                src='/OurPhilosophy-image1.png'
                 alt="Heritage architectural detail"
                 className="object-cover"
               />
@@ -68,7 +68,7 @@ export function PhilosophySection() {
 
             <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-xl mt-12">
               <MediaElement
-                src="/Heritage_herobg.jpg"
+                src="/OurPhilosophy-image2.png"
                 alt="Heritage hospitality space"
                 className="object-cover"
               />
@@ -129,9 +129,9 @@ export function PhilosophySection() {
                     <h4 className="font-semibold text-brand-blue mb-1">
                       {item.title}
                     </h4>
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    {/* <p className="text-gray-600 text-sm leading-relaxed">
                       {item.desc}
-                    </p>
+                    </p> */}
                   </div>
                 </motion.div>
               ))}

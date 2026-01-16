@@ -5,7 +5,7 @@ function ContactPage() {
   return (
     <div>
       <ContactHero />
-      <ContactInfo />
+      {/* <ContactInfo /> */}
     </div>
   )
 }

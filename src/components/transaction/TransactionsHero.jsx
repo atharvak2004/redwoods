@@ -7,7 +7,7 @@ function TransactionsHero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/transactionsbg.jpg"
+          src="/transactionsnewbg.jpg"
           alt="Transactions"
           className="h-full w-full object-cover"
         />
@@ -34,7 +34,7 @@ function TransactionsHero() {
             </NavLink>
             <span className="mx-2">/</span>
             <span className="text-brand-lightgreen">
-              Transactions
+              Transactions Portfolio
             </span>
           </motion.div>
 
@@ -53,7 +53,7 @@ function TransactionsHero() {
             }}
           >
             <motion.h1
-              className="text-4xl md:text-5xl xl:text-6xl font-semibold text-white leading-tight"
+              className="text-4xl md:text-5xl xl:text-6xl font-semibold text-white leading-tight font-bebas"
               variants={{
                 hidden: { opacity: 0, y: 30 },
                 visible: { opacity: 1, y: 0 },

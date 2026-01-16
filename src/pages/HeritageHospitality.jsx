@@ -12,9 +12,9 @@ function HeritageHospitality() {
       <HeritageHospitalityHero />
       <ServiceOverview />
       <PhilosophySection />
-      <ServicesSection />
+      {/* <ServicesSection /> */}
       <OngoingProjects />
-      <CompletedProjects />
+      {/* <CompletedProjects /> */}
       <CTASection />
     </div>
   )
