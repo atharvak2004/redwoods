@@ -43,7 +43,7 @@ function AboutHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
           >
-            <h1 className="text-4xl md:text-5xl xl:text-6xl font-semibold text-white leading-tight font-bebas">
+            <h1 className="text-5xl md:text-7xl text-white leading-tight font-bebas">
               Building Trust. <br />
               <span className="text-white/80">
                 Creating Long-Term Value.
@@ -54,13 +54,13 @@ function AboutHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-6 text-lg md:text-xl text-white/80 leading-relaxed"
+              className="mt-6 text-md md:text-lg text-white/80 leading-relaxed"
             >
               Redwoods Group is a diversified advisory and investment platform
               delivering strategic insight, disciplined execution, and enduring
               value across real estate, renewable energy, and heritage
               hospitality.
-            </motion.p>
+          </motion.p>
           </motion.div>
 
         </div>

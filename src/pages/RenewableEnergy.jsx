@@ -13,13 +13,6 @@ function RenewableEnergy() {
       <RenewableEnergyHero />
       <ServiceOverview />
       <ImpactSection />
-      {/* <VideoSection
-        eyebrow="Solar power & clean energy solutions"
-        title="Building Clean Energy Infrastructure"
-        caption="Advisory and execution support for renewable energy projects, focused on clean power generation, sustainable infrastructure, and long-term environmental and economic value."
-        videoSrc="/KrantiSolarVideo.mp4"
-      /> */}
-
 
       {/* <ServicesGrid /> */}
       <OngoingProjects />

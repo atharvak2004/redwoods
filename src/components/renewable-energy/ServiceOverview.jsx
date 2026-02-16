@@ -51,10 +51,10 @@ export function ServiceOverview() {
             </h2>
 
             <p className="mt-6 text-gray-700 text-lg leading-relaxed">
-              Our Renewable Energy practice provides comprehensive advisory and
-              execution support for clean energy projects — helping investors,
-              developers, and corporations navigate the energy transition with
-              clarity and confidence.
+              Our Renewable Energy practice offers structured advisory and execution
+              support for clean energy projects, assisting investors, developers,
+              and organisations in navigating the energy transition through informed
+              decision-making and responsible project development.
             </p>
           </motion.div>
 

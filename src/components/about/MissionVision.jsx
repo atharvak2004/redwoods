@@ -49,9 +49,9 @@ function MissionVision() {
             </h3>
 
             <p className="mt-4 text-gray-700 leading-relaxed">
-              To provide strategic advisory and execution expertise that enables
-              clients to make informed decisions, manage risk, and unlock
-              long-term value across real estate, energy, and heritage assets.
+              To guide clients with clear, thoughtful advisory and disciplined execution,
+              helping them make confident decisions and create lasting value across
+              real estate, energy, and heritage assets.
             </p>
 
             <div className="absolute top-0 right-6 h-1 w-24 bg-brand-lightgreen rounded-bl-3xl" />
@@ -75,9 +75,9 @@ function MissionVision() {
             </h3>
 
             <p className="mt-4 text-gray-700 leading-relaxed">
-              To be recognised as a long-term, trusted partner by investors,
-              developers, and institutions—creating sustainable value while
-              respecting culture, community, and the environment.
+              To build enduring partnerships across generations by delivering
+              responsible growth, sustainable outcomes, and respect for the
+              communities and environments in which we operate.
             </p>
 
             <div className="absolute top-0 right-6 h-1 w-24 bg-brand-lightgreen rounded-bl-3xl" />

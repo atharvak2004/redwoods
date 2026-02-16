@@ -54,9 +54,10 @@ export default function DevelopmentSection() {
           </h2>
 
           <p className="max-w-3xl mx-auto mt-6 text-gray-700 text-lg leading-relaxed">
-            Advisory across land acquisition, project feasibility, planning,
-            structuring, and execution support — guiding projects from concept
-            to completion with clarity and discipline.
+            Strategic development advisory supporting residential and commercial
+            projects through land evaluation, feasibility assessment, structured
+            planning, and execution guidance—focused on long-term value creation
+            and disciplined project delivery.
           </p>
         </motion.div>
 
@@ -64,20 +65,20 @@ export default function DevelopmentSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {[
             {
-              title: "Land Acquisition",
-              desc: "Due diligence, valuation, and negotiation support for strategic land purchases.",
+              title: "Land Evaluation & Acquisition",
+              desc: "Strategic assessment, due diligence, and advisory support for land identification and acquisition aligned with project objectives.",
             },
             {
-              title: "Project Feasibility",
-              desc: "Market analysis, financial modeling, and viability assessment.",
+              title: "Feasibility & Viability Analysis",
+              desc: "Market-driven feasibility studies, financial evaluation, and risk assessment to support informed development decisions.",
             },
             {
-              title: "Planning & Structuring",
-              desc: "Master planning, regulatory navigation, and deal structuring.",
+              title: "Planning & Project Structuring",
+              desc: "Development planning, regulatory coordination, and transaction structuring to enable efficient and compliant project execution.",
             },
             {
-              title: "Execution Oversight",
-              desc: "Project management, quality control, and delivery supervision.",
+              title: "Execution Advisory & Oversight",
+              desc: "Advisory support during project execution, focusing on timelines, quality benchmarks, and coordinated delivery.",
             },
           ].map((item, index) => (
             <motion.div
@@ -116,7 +117,7 @@ export default function DevelopmentSection() {
         </div>
 
         {/* ================= CENTERED BUTTON ================= */}
-        <div className="flex justify-center mt-16">
+        {/* <div className="flex justify-center mt-16">
           <Link to="/real-estate/development">
             <motion.button
               initial={{ opacity: 0, y: 30 }}
@@ -130,7 +131,7 @@ export default function DevelopmentSection() {
               Learn More →
             </motion.button>
           </Link>
-        </div>
+        </div> */}
 
       </div>
     </section>

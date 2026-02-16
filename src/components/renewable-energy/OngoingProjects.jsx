@@ -9,11 +9,8 @@ const ongoingProjects = [
     title: "Dhakrani Solar Power Project",
     location: "Dhakrani, Vikasnagar, Uttarakhand",
     description:
-      "Grid-connected solar photovoltaic project executed with high-efficiency modules and long-term power purchase assurance from a government utility.",
+      "A grid-connected solar photovoltaic project supported through advisory and execution assistance, contributing to clean energy generation under a long-term arrangement with a government utility.",
     stats: [
-      { label: "Capacity", value: "1.95 MWp (DC)" },
-      { label: "Land Area", value: "33,744 sq. m" },
-      { label: "Tariff", value: "₹7.08 / Unit" },
       { label: "Status", value: "Commissioned (2016)" },
     ],
   },
@@ -24,11 +21,8 @@ const ongoingProjects = [
     title: "Khodri Solar Power Project",
     location: "Dakpathar, Khodri, Uttarakhand",
     description:
-      "Utility-scale solar power plant developed in a hilly terrain, optimized for grid stability and long-term performance under a 25-year PPA.",
+      "A utility-scale solar power project located in hilly terrain, supported through structured development and execution advisory, with a focus on long-term operational reliability.",
     stats: [
-      { label: "Capacity", value: "5.04 MWp (DC)" },
-      { label: "Land Area", value: "101,175 sq. m" },
-      { label: "Tariff", value: "₹7.08 / Unit" },
       { label: "Status", value: "Commissioned (2016)" },
     ],
   },
@@ -39,11 +33,8 @@ const ongoingProjects = [
     title: "Dadajalalpur Solar Power Project",
     location: "Dada Jalalpur, Haridwar, Uttarakhand",
     description:
-      "Solar photovoltaic project supplying clean energy under a long-term power purchase agreement with a state electricity utility.",
+      "A solar photovoltaic project providing clean energy under a long-term power purchase arrangement with a state electricity utility, supported through development and execution advisory.",
     stats: [
-      { label: "Capacity", value: "2.26 MWp (DC)" },
-      { label: "Land Area", value: "39,954 sq. m" },
-      { label: "Tariff", value: "₹6.85 / Unit" },
       { label: "Status", value: "Commissioned" },
     ],
   },
@@ -79,7 +70,8 @@ export function OngoingProjects() {
             Current Engagements
           </span>
           <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-blue">
-            Ongoing <span className="text-[#373e68]">Projects</span>
+            Ongoing Renewable <span className="text-[#373e68]">Energy Projects</span>
+            
           </h2>
         </motion.div>
 

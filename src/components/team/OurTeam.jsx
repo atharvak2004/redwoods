@@ -11,20 +11,20 @@ export default function OurTeam() {
       linkedin: "#",
     },
     {
-      name: "Ms. Kaveri CS",
+      name: "Ms. Kaveramma C S",
       position: "Assistant Manager -EA & Admin",
       image: "https://via.placeholder.com/500",
       linkedin: "#",
     },
     {
-      name: "Ms. Kirthika Beena",
-      position: "Analyst",
+      name: "Ms. Gadi Muthyalamma",
+      position: "Manager - Accounts",
       image: "https://via.placeholder.com/500",
       linkedin: "#",
     },
     {
-      name: "Mr. Muthyalamma",
-      position: "Head – Real Estate Advisory",
+      name: "Ms. Kirthika M",
+      position: "IT - Executive",
       image: "https://via.placeholder.com/500",
       linkedin: "#",
     },
@@ -42,7 +42,7 @@ export default function OurTeam() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <span className="inline-block mb-4 text-sm tracking-widest text-brand-lightgreen uppercase">
+          <span className="inline-block mb-4 text-lg font-semibold tracking-widest text-brand-lightgreen uppercase">
             Our Team
           </span>
 
@@ -97,7 +97,7 @@ export default function OurTeam() {
                 </p>
 
                 {/* LinkedIn */}
-                <div className="mt-6 flex justify-center">
+                {/* <div className="mt-6 flex justify-center">
                   <a
                     href={member.linkedin}
                     target="_blank"
@@ -110,7 +110,7 @@ export default function OurTeam() {
                   >
                     <FaLinkedinIn className="text-lg" />
                   </a>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           ))}

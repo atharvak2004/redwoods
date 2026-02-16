@@ -53,30 +53,30 @@ function TransactionsHero() {
             }}
           >
             <motion.h1
-              className="text-4xl md:text-5xl xl:text-6xl font-semibold text-white leading-tight font-bebas"
+              className="text-5xl md:text-7xl text-white leading-tight font-bebas"
               variants={{
                 hidden: { opacity: 0, y: 30 },
                 visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
-              Proven Track Record <br />
+              Experience Across <br />
               <span className="text-white/80">
-                Across Strategic Transactions
+                Strategic Transactions
               </span>
             </motion.h1>
 
             <motion.p
-              className="mt-6 text-lg md:text-xl text-white/80 leading-relaxed"
+              className="mt-6 text-md md:text-lg text-white/80 leading-relaxed max-w-3xl"
               variants={{
                 hidden: { opacity: 0, y: 30 },
                 visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
             >
-              A curated selection of transactions executed across real estate
-              and financial advisory, reflecting our disciplined approach,
-              market insight, and execution excellence.
+              A curated overview of transactions advised across real estate and
+              financial mandates, reflecting Redwoods' structured approach,
+              market insight, and disciplined transaction support.
             </motion.p>
           </motion.div>
 

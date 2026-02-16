@@ -23,9 +23,9 @@ const ongoingProjects = [
     description:
       "Utility-scale solar power plant developed in a hilly terrain, optimized for grid stability and long-term performance under a 25-year PPA.",
     stats: [
-      { label: "Capacity", value: "5.04 MWp (DC)" },
-      { label: "Land Area", value: "101,175 sq. m" },
-      { label: "Tariff", value: "₹7.08 / Unit" },
+      // { label: "Capacity", value: "5.04 MWp (DC)" },
+      // { label: "Land Area", value: "101,175 sq. m" },
+      // { label: "Tariff", value: "₹7.08 / Unit" },
       { label: "Status", value: "Commissioned (2016)" },
     ],
   },

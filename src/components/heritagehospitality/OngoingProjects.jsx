@@ -10,21 +10,21 @@ const ongoingProjects = [
     title: "Barsana Jal Mahal",
     slug: "/heritage-hospitality/barsana-mahal",
     description:
-      "A historic two-story water palace built by Roopram Katara in the 18th century in Barsana, Uttar Pradesh, India",
+      "An 18th-century water palace in Barsana, Uttar Pradesh, currently engaged under a heritage restoration and adaptive reuse initiative focused on architectural conservation and long-term stewardship.",
   },
   {
     image: "/Shukla-ongoing.jpg",
     title: "Shukla Ka Talab",
     slug: "/heritage-hospitality/shukla-talab",
     description:
-      "A historic pond and Mughal-era site in Akbarpur, Kanpur Dehat, Uttar Pradesh, India",
+      "A historic Mughal-era site in Akbarpur, Kanpur Dehat, supported through heritage evaluation and restoration planning aimed at preserving cultural relevance and community value.",
   },
   {
     image: "/DeckOverlookingGanges.jpg",
     title: "Pilibhit House",
     slug: "/heritage-hospitality/pilibhit-house",
     description:
-      "Pilibhit House is a 100-year-old, 5-star heritage hotel in Haridwar, India, located on the banks of the Ganges River",
+      "A century-old heritage property in Haridwar, situated along the Ganges, supported through heritage hospitality development and stewardship-led hospitality use.",
   },
 ];
 
@@ -54,16 +54,6 @@ const fadeUpItem = {
 export function OngoingProjects() {
   return (
     <section className="relative py-24 bg-white overflow-hidden">
-
-      {/* Light green wash */}
-      <div
-        className="absolute inset-0 
-                   bg-gradient-to-r 
-                   from-brand-lightgreen/5 
-                   via-brand-lightgreen/10 
-                   to-brand-lightgreen/5"
-      />
-
       <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
 
         {/* ================= HEADER ================= */}
@@ -76,12 +66,12 @@ export function OngoingProjects() {
         >
           <span className="inline-block mb-4 text-sm tracking-widest 
                            text-brand-lightgreen uppercase">
-            Current Engagements
+             Projects
           </span>
 
           <h2 className="text-3xl md:text-4xl xl:text-5xl 
                          font-semibold text-brand-blue">
-            Ongoing <span className="text-[#373e68]">Projects</span>
+            Current <span className="text-[#373e68]">Engagements</span>
           </h2>
         </motion.div>
 

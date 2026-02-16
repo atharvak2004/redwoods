@@ -7,33 +7,30 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 const slides = [
   {
-    // 1️⃣ Real Estate Development
     title: "REAL ESTATE.\nBUILT TO LAST.",
-    desc: "Developing high-quality residential and commercial projects with a focus on durability, design excellence, and long-term value creation.",
+    desc: "Advisory-led development of residential and commercial projects, guided by thoughtful planning, execution discipline, and long-term value creation.",
     image: "/RealEstateHeroBg.png",
     link: "/real-estate/development",
   },
+
   {
-    // 2️⃣ Heritage Hospitality
-    title: "HERITAGE.\nREIMAGINED.",
-    desc: "Transforming historic properties into unique hospitality experiences while preserving cultural legacy and architectural authenticity.",
-    image: "/home/hero/InfinitySwimmingPool.jpg",
-    link: "/heritage-hospitality/pilibhit-house",
-  },
-  {
-    // 3️⃣ Solar Power Plant
-    title: "GRID-READY.\nSOLAR POWER.",
-    desc: "Engineering and delivering large-scale solar power plants that support the transition to clean, renewable energy infrastructure.",
+    title: "CLEAN ENERGY.\nBUILT RESPONSIBLY.",
+    desc: "Advisory and execution support for renewable energy projects, focused on sustainability, regulatory alignment, and long-term infrastructure value.",
     image: "/home/hero/solar1.JPG",
-    link: "/renewable-energy/dadajalalpur-solar",
+    link: "/business/renewable-energy",
   },
   {
-    // 4️⃣ Solar Power Plant
-    title: "CLEAN ENERGY.\nFOR THE FUTURE.",
-    desc: "Developing high-performance solar energy assets designed for efficiency, sustainability, and long-term impact.",
-    image: "/home/hero/solar2.JPG",
-    link: "/renewable-energy/khodri-solar",
+    title: "HERITAGE.\nTHOUGHTFULLY REDESIGNED.",
+    desc: "Restoration and adaptive reuse of heritage properties, balancing cultural preservation with contemporary hospitality and long-term stewardship.",
+    image: "/barsana-ongoing.jpg",
+    link: "/heritage-hospitality/shukla-talab",
   },
+  {
+    title: "REAL ESTATE.\nADVISED WITH CLARITY.",
+    desc: "Strategic real estate advisory services supporting acquisitions, transactions, and portfolio decisions through market insight, structured analysis, and disciplined execution support.",
+    image: "/image.png",
+    link: "/real-estate/advisory",
+  }
 ];
 
 
@@ -77,20 +74,11 @@ export default function HeroCarousel() {
                     OUR EXPERTISE
                   </span>
 
-                  <h1 className="
-                    mt-4 text-4xl lg:text-7xl
-                    font-bebas
-                    leading-tight
-                    fade-up delay-2
-                    font-semibold 
-                  ">
+                  <h1 className="md:text-7xl text-white mt-4 text-5xl font-bebas leading-tight fade-up delay-2">
                     {slide.title}
                   </h1>
 
-                  <p className="
-                    mt-6 text-gray-300 max-w-xl text-lg
-                    fade-up delay-3
-                  ">
+                  <p className="mt-6 max-w-xl text-md md:text-lg fade-up delay-3 text-white/80 leading-relaxed">
                     {slide.desc}
                   </p>
 
@@ -98,15 +86,7 @@ export default function HeroCarousel() {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="
-      mt-4 inline-flex items-center gap-2
-      bg-brand-green text-white
-      px-6 py-3 rounded-full
-      text-sm font-medium
-      hover:opacity-90 transition
-      fade-up delay-4
-    "
-                    >
+                      className="mt-4 md:mt-12 inline-flex items-center gap-2 bg-brand-green text-white px-6 py-3 rounded-full text-sm font-medium hover:opacity-90 transition fade-up delay-4">
                       View Project →
                     </motion.button>
                   </Link>

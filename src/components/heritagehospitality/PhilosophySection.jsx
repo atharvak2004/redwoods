@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import MediaElement from "../media/MediaElement";
-import heritageImage from "/service-heritage.jpg";
 
 /* ================= ANIMATION VARIANTS ================= */
 const fadeLeft = {
@@ -94,10 +93,11 @@ export function PhilosophySection() {
             </h2>
 
             <p className="text-gray-700 text-lg leading-relaxed mb-10">
-              Heritage properties are living testimonies to craftsmanship,
-              culture, and human achievement. Our approach respects this legacy
-              while creating refined hospitality experiences for modern
-              travelers.
+              Heritage properties are enduring expressions of craftsmanship,
+              culture, and history. Our philosophy is rooted in respecting this
+              legacy while enabling thoughtful hospitality use that supports
+              preservation, relevance, and long-term stewardship.
+
             </p>
 
             <div className="space-y-6">

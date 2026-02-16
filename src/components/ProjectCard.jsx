@@ -1,53 +1,89 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function ProjectCard({
   image,
   title,
-  description,
-  url,
+  shortDescription,
+  fullDescription,
 }) {
+  const [flipped, setFlipped] = useState(false);
+
   return (
-    <div className="flex flex-col h-full">
+    <div
+      className="w-full"
+      style={{ perspective: "1200px" }}
+    >
+      <motion.div
+        animate={{ rotateY: flipped ? 180 : 0 }}
+        transition={{ duration: 0.7, ease: "easeInOut" }}
+        style={{
+          transformStyle: "preserve-3d",
+          minHeight: "420px", // 🔥 CRITICAL FIX
+        }}
+        className="relative w-full"
+      >
+        {/* FRONT */}
+        <div
+          className="absolute inset-0 bg-white rounded-2xl overflow-hidden flex flex-col"
+          style={{ backfaceVisibility: "hidden" }}
+        >
+          <div className="aspect-[4/3] overflow-hidden">
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full object-cover"
+            />
+          </div>
 
-      {/* Image */}
-      <div className="aspect-[4/3] overflow-hidden">
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-full object-cover
-                     transition-transform duration-700
-                     group-hover:scale-105"
-        />
-      </div>
+          <div className="p-6 flex flex-col flex-grow">
+            <h3 className="text-lg font-semibold text-brand-blue mb-2">
+              {title}
+            </h3>
 
-      {/* Content */}
-      <div className="p-6 flex flex-col flex-grow">
+            <p className="text-gray-600 text-sm mb-4">
+              {shortDescription}
+            </p>
 
-        <h3 className="text-lg font-semibold text-brand-blue mb-2
-                       group-hover:text-brand-lightgreen transition">
-          {title}
-        </h3>
+            <button
+              onClick={() => setFlipped(true)}
+              className="mt-auto bg-brand-green text-white
+                         px-5 py-2 rounded-full
+                         text-sm font-medium
+                         hover:opacity-90 transition w-1/2"
+            >
+              Know More →
+            </button>
+          </div>
+        </div>
 
-        <p className="text-gray-600 text-sm leading-relaxed mb-4">
-          {description}
-        </p>
+        {/* BACK */}
+        <div
+          className="absolute inset-0 bg-brand-green text-white rounded-2xl p-6 flex flex-col"
+          style={{
+            transform: "rotateY(180deg)",
+            backfaceVisibility: "hidden",
+          }}
+        >
+          <h3 className="text-lg font-semibold mb-4">
+            {title}
+          </h3>
 
-        {/* Button */}
-        <Link to={url} className="mt-auto">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            className="inline-flex items-center gap-2
-                       bg-brand-green text-white
-                       px-5 py-2 rounded-full
+          <p className="text-sm leading-relaxed">
+            {fullDescription}
+          </p>
+
+          <button
+            onClick={() => setFlipped(false)}
+            className="mt-auto bg-white text-brand-green
+                       px-4 py-2 rounded-full
                        text-sm font-medium
-                       hover:opacity-90 transition"
+                       hover:opacity-90 transition w-1/2"
           >
-            Know More →
-          </motion.button>
-        </Link>
-
-      </div>
+            ← Back
+          </button>
+        </div>
+      </motion.div>
     </div>
   );
 }

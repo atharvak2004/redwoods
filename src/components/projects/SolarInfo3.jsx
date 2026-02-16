@@ -9,9 +9,9 @@ const ongoingProjects = [
     description:
       "Grid-connected solar photovoltaic project executed with high-efficiency modules and long-term power purchase assurance from a government utility.",
     stats: [
-      { label: "Capacity", value: "1.95 MWp (DC)" },
-      { label: "Land Area", value: "33,744 sq. m" },
-      { label: "Tariff", value: "₹7.08 / Unit" },
+      // { label: "Capacity", value: "1.95 MWp (DC)" },
+      // { label: "Land Area", value: "33,744 sq. m" },
+      // { label: "Tariff", value: "₹7.08 / Unit" },
       { label: "Status", value: "Commissioned (2016)" },
     ],
   },

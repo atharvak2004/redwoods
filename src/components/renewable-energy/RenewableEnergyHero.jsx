@@ -80,7 +80,7 @@ export default function RenewableEnergyHero() {
             animate="visible"
             className="max-w-3xl"
           >
-            <h1 className="text-4xl md:text-5xl xl:text-6xl font-semibold text-white leading-tight font-bebas">
+            <h1 className="text-5xl md:text-7xl text-white leading-tight font-bebas">
               Our Business <br />
               <span className="text-white/80">
                 Renewable Energy
@@ -91,11 +91,11 @@ export default function RenewableEnergyHero() {
               variants={fadeUpText}
               initial="hidden"
               animate="visible"
-              className="mt-6 text-lg md:text-xl text-white/80 leading-relaxed"
+              className="mt-6 text-md md:text-lg text-white/80 leading-relaxed max-w-3xl"
             >
-              Advisory and execution support for clean energy projects focused on
-              sustainability, long-term infrastructure value, and measurable
-              environmental impact.
+              Advisory and execution support for clean energy projects, focused on
+              sustainability, long-term infrastructure value, and responsible
+              environmental outcomes.
             </motion.p>
           </motion.div>
 

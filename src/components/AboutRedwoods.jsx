@@ -33,42 +33,40 @@ export default function AboutRedwoods() {
             </h2>
 
             <p className="mt-6 text-gray-700 text-lg leading-relaxed">
-              At <strong>Redwoods</strong>, we redefine trust in the real estate
-              service market through credibility, transparency, and an
-              unwavering client focus.
+              At <strong>Redwoods</strong>, we focus on building lasting relationships in
+              real estate through trust, clarity, and thoughtful advice.
             </p>
 
             <p className="mt-4 text-gray-700 leading-relaxed">
-              Established in <strong>2006</strong>, Redwoods Group has grown to
-              offer end-to-end, realistic services across real estate advisory,
-              fund management, deal structuring, fund allotment, joint
-              developments, and uniquely complex transactions.
+              Founded in <strong>2006</strong>, Redwoods Group provides practical and
+              end-to-end real estate advisory services, supporting clients across diverse
+              asset classes and markets.
             </p>
 
             <p className="mt-4 text-gray-700 leading-relaxed">
-              With more than <strong>two decades of hands-on experience</strong>,
-              we have evolved into one of the most trusted property consultants,
-              delivering professional insight and personalized solutions.
+              Our experience, combined with a client-first approach, allows us to deliver
+              solutions that are transparent, reliable, and aligned with long-term value.
             </p>
 
             <p className="mt-4 text-gray-700 leading-relaxed">
-              Today, Redwoods is recognised as one of the most reliable brands
-              for partners, investors, and property buyers alike.
+              Today, Redwoods continues to be a trusted partner for investors, developers,
+              and businesses navigating real estate decisions.
             </p>
+
 
             {!isAboutPage && (
               <Link to="/about">
-              <motion.button
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.4 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="mt-10 inline-flex items-center gap-3
+                <motion.button
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.4 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="mt-10 inline-flex items-center gap-3
                            bg-brand-green text-white px-8 py-3 rounded-full
                            font-medium hover:opacity-90 transition"
-              >
-                Learn More About Us →
-              </motion.button>
+                >
+                  Learn More About Us →
+                </motion.button>
               </Link>
             )}
           </motion.div>

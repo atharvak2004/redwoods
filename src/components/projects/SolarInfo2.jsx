@@ -37,9 +37,9 @@ const ongoingProjects = [
     description:
       "Solar photovoltaic project supplying clean energy under a long-term power purchase agreement with a state electricity utility.",
     stats: [
-      { label: "Capacity", value: "2.26 MWp (DC)" },
-      { label: "Land Area", value: "39,954 sq. m" },
-      { label: "Tariff", value: "₹6.85 / Unit" },
+      // { label: "Capacity", value: "2.26 MWp (DC)" },
+      // { label: "Land Area", value: "39,954 sq. m" },
+      // { label: "Tariff", value: "₹6.85 / Unit" },
       { label: "Status", value: "Commissioned" },
     ],
   },

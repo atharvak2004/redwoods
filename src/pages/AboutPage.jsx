@@ -1,6 +1,6 @@
 import React from 'react'
 import AboutHero from '../components/about/AboutHero'
-import AboutRedwoods from '../components/AboutRedwoods'
+import AboutRedwoodsDetailed from '../components/about/AboutRedwoodsDetailed'
 import AboutServices from '../components/about/AboutServices'
 import MissionVision from '../components/about/MissionVision'
 import OurTeam from '../components/OurTeam'
@@ -9,9 +9,9 @@ function AboutPage() {
   return (
     <div>
       <AboutHero />
-      <AboutRedwoods />
+      <AboutRedwoodsDetailed />
       <MissionVision />
-      <AboutServices />
+      {/* <AboutServices /> */}
       <OurTeam />
       <AboutCTA />
     </div>

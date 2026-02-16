@@ -2,9 +2,20 @@ import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 
 /* ACTIONS */
-const openMap = () => window.open("https://maps.google.com?q=Pune", "_blank");
+const openMap = () => {
+  window.open(
+    "https://www.google.com/maps/place/Redwoods/@12.9743628,77.6118325,902m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3bae16840f89fedf:0x6657c24357c4451a!8m2!3d12.9743628!4d77.6144074!16s%2Fg%2F1tdwccp6?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%3D%3D",
+    "_blank"
+  );
+};
+
+
+
 const openInstagram = () => window.open("https://instagram.com/", "_blank");
-const openWhatsApp = () => window.open("https://wa.me/919876543210", "_blank");
+const openCall = () => {
+  window.location.href = "tel:+91(80)49078888";
+};
+
 const openEmail = () => (window.location.href = "mailto:test@gmail.com");
 
 /* HEX COMPONENT */
@@ -17,7 +28,7 @@ const Hex = ({ src, onClick, className }) => (
     <img
       src={src}
       onClick={onClick}
-      className="w-24 cursor-pointer"
+      className="w-24 lg:w-32 cursor-pointer"
       alt="contact icon"
     />
   </motion.div>
@@ -48,8 +59,7 @@ export default function ContactHero() {
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-5xl xl:text-6xl 
-            font-semibold text-white leading-tight w-full font-bebas"
+          className="text-5xl md:text-7xl text-white leading-tight w-full font-bebas"
         >
           Let’s Start a <br />
           <span className="text-white/80">
@@ -61,7 +71,8 @@ export default function ContactHero() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mt-8 text-lg text-white/80 max-w-3xl"
+          className=" text-white/80 max-w-3xl
+          mt-6 text-md md:text-lg leading-relaxed"
         >
           Whether you’re exploring an opportunity, seeking strategic advisory,
           or planning a long-term partnership, our team is ready to engage
@@ -92,8 +103,8 @@ export default function ContactHero() {
             />
 
             <Hex
-              src="/contact/hex-whatsapp.svg"
-              onClick={openWhatsApp}
+              src="/contact/hex-call.svg"
+              onClick={openCall}
               className="absolute top-[122px] left-[50px]"
             />
 
@@ -132,31 +143,31 @@ export default function ContactHero() {
         <Hex
           src="/contact/hex-insta.svg"
           onClick={openInstagram}
-          className="absolute top-[40px] right-[70px]"
+          className="absolute top-[56px] right-[94px]"
         />
 
         <Hex
-          src="/contact/hex-whatsapp.svg"
-          onClick={openWhatsApp}
-          className="absolute top-[122px] right-[70px]"
+          src="/contact/hex-call.svg"
+          onClick={openCall}
+          className="absolute top-[162px] right-[94px]"
         />
 
         <Hex
           src="/contact/hex-mail.svg"
           onClick={openEmail}
-          className="absolute top-[162px] right-[140px]"
+          className="absolute top-[212px] right-[186px]"
         />
 
         <Hex
           src="/contact/hex-fb.svg"
           onClick={() => window.open("https://facebook.com")}
-          className="absolute top-[122px] right-[210px]"
+          className="absolute top-[160px] right-[280px]"
         />
 
         <Hex
           src="/contact/hex-yt.svg"
           onClick={() => window.open("https://youtube.com")}
-          className="absolute top-[162px] right-[280px]"
+          className="absolute top-[216px] right-[374px]"
         />
 
       </div>

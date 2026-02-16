@@ -47,7 +47,7 @@ export default function HeritageHospitalityHero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
                     >
-                        <h1 className="text-4xl md:text-5xl xl:text-6xl font-semibold text-white leading-tight font-bebas">
+                        <h1 className="text-5xl md:text-7xl text-white leading-tight font-bebas">
                             Our Business  <br />
                             <span className="text-white/80">
                                 Heritage Hospitality
@@ -55,12 +55,14 @@ export default function HeritageHospitalityHero() {
                         </h1>
 
                         <motion.p
-                            className="mt-6 text-lg md:text-xl text-white/80 leading-relaxed"
+                            className="mt-6 text-md md:text-lg text-white/80 leading-relaxed max-w-3xl"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.3 }}
                         >
-                            Restoration, development, and management of heritage properties — blending cultural authenticity with modern hospitality standards to create unforgettable experiences.
+                            Restoration and adaptive reuse of heritage properties, guided by
+                            cultural sensitivity, architectural integrity, and thoughtful
+                            hospitality development.
                         </motion.p>
                     </motion.div>
 

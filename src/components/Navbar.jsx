@@ -30,30 +30,20 @@ function Navbar() {
       name: "Our Business",
       dropdown: [
         {
-          name: "Real Estate",
-          path: "/business/real-estate-advisory",
-          children: [
-            { name: "Real Estate Development", path: "/real-estate/development" },
-            { name: "Real Estate Advisory", path: "/real-estate/services" },
-          ],
+          name: "Real Estate Development",
+          path: "/real-estate/development",
+        },
+        {
+          name: "Real Estate Advisory",
+          path: "/real-estate/advisory",
         },
         {
           name: "Renewable Energy",
           path: "/business/renewable-energy",
-          children: [
-            { name: "Khodri Solar Project", path: "/renewable-energy/khodri-solar" },
-            { name: "Dadajalalpur Solar Project", path: "/renewable-energy/dadajalalpur-solar" },
-            { name: "Dhakrani Solar Project", path: "/renewable-energy/dhakrani-solar" },
-          ],
         },
         {
           name: "Heritage Hospitality",
           path: "/business/heritage-hospitality",
-          children: [
-            { name: "Barsana Jal Mahal", path: "/heritage-hospitality/barsana-mahal" },
-            { name: "Shukla Ka Talab", path: "/heritage-hospitality/shukla-talab" },
-            { name: "Pilibhit House", path: "/heritage-hospitality/pilibhit-house" },
-          ],
         },
       ],
     },

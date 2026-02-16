@@ -22,31 +22,40 @@ export default function OurBusinesses() {
           <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-blue leading-tight">
             Expertise Across <br />
             <span className="text-[#373e68]">
-              Property, Energy & Heritage
+              Real Estate, Energy & Heritage
             </span>
           </h2>
 
           <p className="mt-6 text-lg text-gray-700 leading-relaxed">
-            Each vertical is shaped by long-term thinking, disciplined execution,
-            and a commitment to building assets that endure.
+            Our businesses are built on long-term thinking, disciplined execution,
+            and a commitment to creating assets with lasting value.
           </p>
         </motion.div>
 
         {/* ================= BUSINESS CARDS ================= */}
 
         <BusinessCard
-          image="/home/ranikhet.png"
-          title="Real Estate"
-          desc="Comprehensive advisory across development, investment strategy, and brokerage—supporting informed decision-making across residential and commercial assets."
-          link="/business/real-estate-advisory"
+          image="/RealEstateHeroBg.png"
+          title="Real Estate Development"
+          desc="Development-focused advisory supporting residential and commercial projects through strategic planning, execution guidance, and market-driven insights."
+          link="real-estate/development"
           cards={[
             {
-              title: "Development",
-              items: ["Completed: The Residency", "Ongoing: Dehradun, Ranikhet, Ghaziabad"],
+              title: "Development Projects",
+              items: ["Dehradun", "Ranikhet", "Ghaziabad"],
             },
+          ]}
+        />
+
+        <BusinessCard
+          image="/home/real-estate-adv1.png"
+          title="Real Estate Advisory"
+          desc="Strategic real estate advisory services enabling informed investment decisions, efficient transactions, and long-term portfolio value."
+          link="/real-estate/advisory"
+          cards={[
             {
-              title: "Advisory",
-              items: ["Investment Advisory", "Brokerage & Transaction Support"],
+              title: "Advisory Services",
+              items: ["Investment Advisory", "Transaction & Brokerage Support"],
             },
           ]}
         />
@@ -54,7 +63,7 @@ export default function OurBusinesses() {
         <BusinessCard
           image="/solar/Dakpathar.JPG"
           title="Renewable Energy"
-          desc="Development and execution of clean energy infrastructure focused on efficiency, sustainability, and institutional-grade performance."
+          desc="Execution of clean energy infrastructure projects with a focus on sustainability, operational efficiency, and long-term asset performance."
           link="/business/renewable-energy"
           cards={[
             {
@@ -65,14 +74,14 @@ export default function OurBusinesses() {
         />
 
         <BusinessCard
-          image="/philibhit-gallery/4.jpg"
+          image="/heritageHero.png"
           title="Heritage Hospitality"
-          desc="Sensitive restoration and hospitality operations that preserve architectural legacy while enabling sustainable, contemporary use."
+          desc="Curated hospitality experiences through the careful restoration and adaptive reuse of heritage properties, balancing legacy with modern comfort."
           link="/business/heritage-hospitality"
           cards={[
             {
               title: "Heritage Assets",
-              items: ["Barsana Jal Mahal", "Shukla Ka Talab" , "Pilibhit House"],
+              items: ["Barsana Jal Mahal", "Shukla Ka Talab", "Pilibhit House"],
             },
           ]}
         />
@@ -121,9 +130,11 @@ function BusinessCard({ image, title, desc, link, cards }) {
         </div>
 
         <Link to={link}>
-          <button className="mt-10 inline-flex items-center gap-3 
+          <button
+            className="mt-10 inline-flex items-center gap-3 
             bg-brand-green text-white px-8 py-3 rounded-full 
-            font-medium hover:opacity-90 transition">
+            font-medium hover:opacity-90 transition"
+          >
             Explore Business →
           </button>
         </Link>

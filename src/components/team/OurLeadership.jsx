@@ -11,7 +11,7 @@ export default function OurLeadership() {
       linkedin: "#",
     },
     {
-      name: "Mr.Rajeshwar Nimodia",
+      name: "Mr. Rajeshwar Nimodiya",
       position: "Sr. Vice President",
       image: "https://via.placeholder.com/500",
       linkedin: "#",
@@ -30,7 +30,7 @@ export default function OurLeadership() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <span className="inline-block mb-4 text-sm tracking-widest text-brand-lightgreen uppercase">
+          <span className="inline-block mb-4 text-lg font-semibold tracking-widest text-brand-lightgreen uppercase">
             Our Leadership
           </span>
 

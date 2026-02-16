@@ -42,7 +42,7 @@ function App() {
         <Route path="/business/renewable-energy" element={<RenewableEnergy />} />
         <Route path="/business/heritage-hospitality" element={<HeritageHospitality />} />
         <Route path="/real-estate/development" element={<RealEstateDevelopment />} />
-        <Route path="/real-estate/services" element={<RealEstateServices />} />
+        <Route path="/real-estate/advisory" element={<RealEstateServices />} />
         <Route path="/renewable-energy/khodri-solar" element={<KhodriSolar />} />
         <Route path="/renewable-energy/dadajalalpur-solar" element={<DadajalalpurSolar />} />
         <Route path="/renewable-energy/dhakrani-solar" element={<DhakraniSolar />} />

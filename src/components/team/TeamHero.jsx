@@ -47,7 +47,7 @@ function TeamHero() {
             }}
           >
             <motion.h1
-              className="text-4xl md:text-5xl xl:text-6xl font-semibold text-white leading-tight font-bebas"
+              className="text-5xl md:text-7xl text-white leading-tight font-bebas"
               variants={{
                 hidden: { opacity: 0, y: 30 },
                 visible: { opacity: 1, y: 0 },
@@ -61,7 +61,7 @@ function TeamHero() {
             </motion.h1>
 
             <motion.p
-              className="mt-6 text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl"
+              className="mt-6 text-md md:text-lg text-white/80 leading-relaxed max-w-3xl"
               variants={{
                 hidden: { opacity: 0, y: 30 },
                 visible: { opacity: 1, y: 0 },

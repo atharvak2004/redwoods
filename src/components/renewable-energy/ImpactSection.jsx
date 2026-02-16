@@ -52,13 +52,13 @@ export function ImpactSection() {
           </span>
 
           <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-green/80 leading-tight">
-            Our <br />
-            <span className="text-brand-green">Impact</span>
+            Our <span className="text-brand-green">Impact</span>
           </h2>
 
           <p className="max-w-2xl mx-auto mt-6 text-gray-600 text-lg leading-relaxed">
-            Contributing to India’s clean energy transition through disciplined
-            advisory, execution excellence, and measurable environmental outcomes.
+            Supporting India's clean energy transition through structured advisory, disciplined execution support, and a long-term commitment to
+            sustainable infrastructure development.
+
           </p>
         </motion.div>
 

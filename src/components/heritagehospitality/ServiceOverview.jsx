@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import MediaElement from "../media/MediaElement";
-import heritageImage from "/service-heritage.jpg";
 
 /* ================= ANIMATION VARIANTS ================= */
 const fadeLeft = {
@@ -56,18 +55,11 @@ export function ServiceOverview() {
             </h2>
 
             <p className="text-gray-700 text-lg leading-relaxed mb-6">
-              Our Heritage Hospitality practice specializes in the restoration,
-              development, and management of historic properties. We transform
-              architectural treasures into world-class hospitality destinations
-              while preserving their cultural significance and authenticity.
+              Our Heritage Hospitality practice focuses on the careful restoration
+              and adaptive reuse of historic properties. We work to preserve
+              architectural character and cultural significance while enabling
+              thoughtful hospitality use aligned with long-term stewardship.
             </p>
-
-            {/* <p className="text-gray-700 text-lg leading-relaxed">
-              Working with heritage trusts, private owners, and institutional
-              investors, we bring conservation expertise together with
-              hospitality acumen to ensure every property tells its story with
-              distinction.
-            </p> */}
           </motion.div>
 
           {/* ================= IMAGE ================= */}
@@ -80,7 +72,7 @@ export function ServiceOverview() {
           >
             <div className="aspect-square rounded-3xl overflow-hidden shadow-xl">
               <MediaElement
-                src="/home/hero/heritage1.jpg"
+                src="/home/hero/Shukla.jpg"
                 alt="Heritage property restoration"
                 className="object-cover"
               />
