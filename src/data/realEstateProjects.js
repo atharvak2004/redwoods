@@ -10,7 +10,7 @@ export const ongoingProjects = [
   {
     image: "/RealEstateHeroBg.png",
     title: "Dehradun House",
-    shortDescription: "Mixed-use development • Dehradun",
+    shorretDescription: "Mixed-use development • Dehradun",
     fullDescription:
       "Dehradun House is a mixed-use development combining residential living with complementary commercial spaces. Located within an established urban setting, the project is designed around functionality, accessibility, and efficient layouts, supporting both lifestyle and long-term usability.",
     url: "/real-estate/development#dehradun-house",
@@ -18,7 +18,7 @@ export const ongoingProjects = [
   {
     image: "/development/2.png",
     title: "The Residency",
-    shortDescription: "Integrated residential development • Ghaziabad",
+    shortDescription: "Integrated residential development • Bengaluru",
     fullDescription:
       "The Residency is an integrated residential development aimed at structured urban growth. The project focuses on coordinated planning, livable community spaces, and sustainable development principles, contributing to long-term urban value creation.",
     url: "/real-estate/development#theresidency",

@@ -1,7 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* html {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+} */
 .custom-pagination .swiper-pagination-bullet {
   background: transparent;
   color: white;
@@ -13,7 +24,6 @@
   opacity: 1;
   font-weight: bold;
 }
-/* ===== Base Fade Animation ===== */
 .animate-fade {
   animation-duration: 0.8s;
   animation-fill-mode: forwards;

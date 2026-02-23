@@ -8,14 +8,14 @@ import { motion } from "framer-motion";
 const slides = [
   {
     title: "REAL ESTATE.\nBUILT TO LAST.",
-    desc: "Advisory-led development of residential and commercial projects, guided by thoughtful planning, execution discipline, and long-term value creation.",
+    desc: "End-to-end real estate development across land acquisition, project feasibility, planning, structuring, and execution—delivering projects seamlessly from concept to completion.",
     image: "/RealEstateHeroBg.png",
     link: "/real-estate/development",
   },
 
   {
     title: "CLEAN ENERGY.\nBUILT RESPONSIBLY.",
-    desc: "Advisory and execution support for renewable energy projects, focused on sustainability, regulatory alignment, and long-term infrastructure value.",
+    desc: "Ownership and operation of clean energy infrastructure, focused on sustainable power generation, operational efficiency, and long-term asset performance.",
     image: "/home/hero/solar1.JPG",
     link: "/business/renewable-energy",
   },
@@ -27,7 +27,7 @@ const slides = [
   },
   {
     title: "REAL ESTATE.\nADVISED WITH CLARITY.",
-    desc: "Strategic real estate advisory services supporting acquisitions, transactions, and portfolio decisions through market insight, structured analysis, and disciplined execution support.",
+    desc: "Strategic real estate advisory services supporting informed investment decisions, efficient transactions, and sustainable long-term value creation.",
     image: "/image.png",
     link: "/real-estate/advisory",
   }
@@ -42,7 +42,7 @@ export default function HeroCarousel() {
         modules={[Pagination, Autoplay, EffectFade]}
         effect="fade"
         autoplay={{ delay: 5200, disableOnInteraction: false }}
-        speed={1200}  // smoother
+        speed={1200}  
         pagination={{
           clickable: true,
           el: ".custom-pagination",

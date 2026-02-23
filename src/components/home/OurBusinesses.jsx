@@ -37,7 +37,7 @@ export default function OurBusinesses() {
         <BusinessCard
           image="/RealEstateHeroBg.png"
           title="Real Estate Development"
-          desc="Development-focused advisory supporting residential and commercial projects through strategic planning, execution guidance, and market-driven insights."
+          desc="End-to-end real estate development across land acquisition, project feasibility, planning, structuring, and execution—delivering projects seamlessly from concept to completion."
           link="real-estate/development"
           cards={[
             {
@@ -50,7 +50,7 @@ export default function OurBusinesses() {
         <BusinessCard
           image="/home/real-estate-adv1.png"
           title="Real Estate Advisory"
-          desc="Strategic real estate advisory services enabling informed investment decisions, efficient transactions, and long-term portfolio value."
+          desc="Strategic real estate advisory services supporting informed investment decisions, efficient transactions, and sustainable long-term value creation."
           link="/real-estate/advisory"
           cards={[
             {
@@ -63,12 +63,12 @@ export default function OurBusinesses() {
         <BusinessCard
           image="/solar/Dakpathar.JPG"
           title="Renewable Energy"
-          desc="Execution of clean energy infrastructure projects with a focus on sustainability, operational efficiency, and long-term asset performance."
+          desc="Ownership and operation of clean energy infrastructure, focused on sustainable power generation, operational efficiency, and long-term asset performance."
           link="/business/renewable-energy"
           cards={[
             {
               title: "Solar Projects",
-              items: ["Dhakrani", "Dakpathar", "Dadajalalpur"],
+              items: ["Dakpathar Solar Power Plant", "Dakpathar Solar Power Plant", "Dhakrani Solar Power Plant", "Dada Jalalpur Solar Power Project"],
             },
           ]}
         />
@@ -81,7 +81,7 @@ export default function OurBusinesses() {
           cards={[
             {
               title: "Heritage Assets",
-              items: ["Barsana Jal Mahal", "Shukla Ka Talab", "Pilibhit House"],
+              items: ["Barsana Jal Mahal", "Shukla Ka Talab"],
             },
           ]}
         />
@@ -90,8 +90,6 @@ export default function OurBusinesses() {
     </section>
   );
 }
-
-/* ================= REUSABLE ================= */
 
 function BusinessCard({ image, title, desc, link, cards }) {
   return (

@@ -77,8 +77,8 @@ export default function DevelopmentSection() {
               desc: "Development planning, regulatory coordination, and transaction structuring to enable efficient and compliant project execution.",
             },
             {
-              title: "Execution Advisory & Oversight",
-              desc: "Advisory support during project execution, focusing on timelines, quality benchmarks, and coordinated delivery.",
+              title: "Execution Management & Delivery",
+              desc: "Active execution management ensuring schedule control, quality compliance, and coordinated project delivery.",
             },
           ].map((item, index) => (
             <motion.div

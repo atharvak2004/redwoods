@@ -14,7 +14,7 @@ function HeroSection({name, title, title2, descr, img}) {
           className="h-full w-full object-cover"
         />
         {/* Brand Overlay */}
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
 
       {/* Content */}

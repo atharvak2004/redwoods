@@ -5,8 +5,6 @@ function MissionVision() {
   return (
     <section className="py-28 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-
-        {/* ================= HEADER ================= */}
         <motion.div
           className="max-w-3xl mb-20"
           initial={{ opacity: 0, y: 40 }}
@@ -27,8 +25,6 @@ function MissionVision() {
             deliver lasting impact across every engagement.
           </p>
         </motion.div>
-
-        {/* ================= CARDS ================= */}
         <div className="grid md:grid-cols-2 gap-12">
 
           {/* Mission */}
@@ -56,8 +52,6 @@ function MissionVision() {
 
             <div className="absolute top-0 right-6 h-1 w-24 bg-brand-lightgreen rounded-bl-3xl" />
           </motion.div>
-
-          {/* Vision */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -82,7 +76,6 @@ function MissionVision() {
 
             <div className="absolute top-0 right-6 h-1 w-24 bg-brand-lightgreen rounded-bl-3xl" />
           </motion.div>
-
         </div>
       </div>
     </section>

@@ -1,24 +1,39 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { NavLink } from "react-router-dom";
-
-/* ACTIONS */
-const openMap = () => {
-  window.open(
-    "https://www.google.com/maps/place/Redwoods/@12.9743628,77.6118325,902m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3bae16840f89fedf:0x6657c24357c4451a!8m2!3d12.9743628!4d77.6144074!16s%2Fg%2F1tdwccp6?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%3D%3D",
-    "_blank"
-  );
-};
-
-
+import { MdCancel } from "react-icons/md";
+/* ================= ACTIONS ================= */
 
 const openInstagram = () => window.open("https://instagram.com/", "_blank");
 const openCall = () => {
-  window.location.href = "tel:+91(80)49078888";
+  window.location.href = "tel:+918049078888";
+};
+const openEmail = () => {
+  window.location.href = "mailto:test@gmail.com";
 };
 
-const openEmail = () => (window.location.href = "mailto:test@gmail.com");
+/* ================= LOCATIONS ================= */
 
-/* HEX COMPONENT */
+const locations = [
+  {
+    name: "Bangalore – Head Office",
+    mapUrl:
+      "https://www.google.com/maps/place/Redwoods/@12.9743628,77.6144074",
+  },
+  {
+    name: "Mumbai Office",
+    mapUrl:
+      "https://www.google.com/maps/search/?api=1&query=Mumbai+India",
+  },
+  {
+    name: "Delhi NCR Office",
+    mapUrl:
+      "https://www.google.com/maps/search/?api=1&query=Delhi+NCR+India",
+  },
+];
+
+/* ================= HEX COMPONENT ================= */
+
 const Hex = ({ src, onClick, className }) => (
   <motion.div
     whileHover={{ scale: 1.08 }}
@@ -34,7 +49,16 @@ const Hex = ({ src, onClick, className }) => (
   </motion.div>
 );
 
+/* ================= MAIN COMPONENT ================= */
+
 export default function ContactHero() {
+  const [showMapPopup, setShowMapPopup] = useState(false);
+
+  const openLocation = (url) => {
+    window.open(url, "_blank");
+    setShowMapPopup(false);
+  };
+
   return (
     <section
       className="relative h-[90vh] min-h-[520px] flex items-center
@@ -42,7 +66,7 @@ export default function ContactHero() {
     >
       <div className="max-w-7xl mx-auto px-6 w-full">
 
-        {/* Breadcrumb */}
+        {/* ================= BREADCRUMB ================= */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -55,7 +79,7 @@ export default function ContactHero() {
           <span className="text-green-400">Contact</span>
         </motion.div>
 
-        {/* TITLE */}
+        {/* ================= TITLE ================= */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -67,32 +91,24 @@ export default function ContactHero() {
           </span>
         </motion.h1>
 
-        {/* DESCRIPTION */}
+        {/* ================= DESCRIPTION ================= */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className=" text-white/80 max-w-3xl
-          mt-6 text-md md:text-lg leading-relaxed"
+          className="text-white/80 max-w-3xl mt-6 text-md md:text-lg leading-relaxed"
         >
           Whether you’re exploring an opportunity, seeking strategic advisory,
           or planning a long-term partnership, our team is ready to engage
           with clarity, discretion, and purpose.
         </motion.p>
 
-        {/* MOBILE HEX (ZIG-ZAG) */}
+        {/* ================= MOBILE HEX ================= */}
         <div className="lg:hidden mt-10 relative w-full h-[420px]">
-
-          <div
-            className="
-      absolute left-1/2 top-1/2
-      -translate-x-1/2 -translate-y-1/2
-      w-[320px] h-[420px]
-    "
-          >
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[420px]">
 
             <Hex
               src="/contact/hex-map.svg"
-              onClick={openMap}
+              onClick={() => setShowMapPopup(true)}
               className="absolute top-[0px] left-[120px]"
             />
 
@@ -116,27 +132,26 @@ export default function ContactHero() {
 
             <Hex
               src="/contact/hex-fb.svg"
-              onClick={() => window.open("https://facebook.com")}
+              onClick={() => window.open("https://facebook.com", "_blank")}
               className="absolute top-[122px] left-[190px]"
             />
 
             <Hex
               src="/contact/hex-yt.svg"
-              onClick={() => window.open("https://youtube.com")}
+              onClick={() => window.open("https://youtube.com", "_blank")}
               className="absolute top-[40px] left-[190px]"
             />
 
           </div>
         </div>
-
-
       </div>
 
-      {/* DESKTOP HEX (UNCHANGED) */}
+      {/* ================= DESKTOP HEX ================= */}
       <div className="hidden lg:block absolute right-[6%] top-[50%] -translate-y-1/2 w-[600px] h-[300px]">
+
         <Hex
           src="/contact/hex-map.svg"
-          onClick={openMap}
+          onClick={() => setShowMapPopup(true)}
           className="absolute top-[0px] right-[0px]"
         />
 
@@ -160,17 +175,65 @@ export default function ContactHero() {
 
         <Hex
           src="/contact/hex-fb.svg"
-          onClick={() => window.open("https://facebook.com")}
+          onClick={() => window.open("https://facebook.com", "_blank")}
           className="absolute top-[160px] right-[280px]"
         />
 
         <Hex
           src="/contact/hex-yt.svg"
-          onClick={() => window.open("https://youtube.com")}
+          onClick={() => window.open("https://youtube.com", "_blank")}
           className="absolute top-[216px] right-[374px]"
         />
-
       </div>
+
+      {/* ================= MAP POPUP ================= */}
+      <AnimatePresence>
+        {showMapPopup && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60"
+          >
+            <motion.div
+              initial={{ scale: 0.9, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 20 }}
+              transition={{ type: "spring", stiffness: 120, damping: 18 }}
+              className="relative bg-white rounded-2xl p-8 w-[90%] max-w-md text-center"
+            >
+              {/* CLOSE ICON */}
+              <button
+                onClick={() => setShowMapPopup(false)}
+                className="absolute top-4 right-4 text-gray-400 hover:text-gray-700 transition"
+              >
+                <MdCancel size={26} />
+              </button>
+
+              <h3 className="text-2xl font-semibold text-brand-blue mb-6">
+                Select Location
+              </h3>
+
+              <div className="space-y-4">
+                {locations.map((loc, index) => (
+                  <button
+                    key={index}
+                    onClick={() => openLocation(loc.mapUrl)}
+                    className="w-full py-3 rounded-lg border
+                         border-brand-lightgreen
+                         text-brand-blue font-medium
+                         hover:bg-brand-lightgreen hover:text-white
+                         transition"
+                  >
+                    {loc.name}
+                  </button>
+                ))}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
     </section>
   );
 }

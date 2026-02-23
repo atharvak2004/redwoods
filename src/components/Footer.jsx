@@ -31,7 +31,7 @@ const businesses = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-200 text-brand-blue">
       <div className="max-w-7xl mx-auto px-6 py-20">
 
         {/* Top Section */}
@@ -44,7 +44,7 @@ export default function Footer() {
               alt="Redwoods Group"
               className="h-14 w-auto mb-6"
             />
-            <p className="text-sm text-white/80 leading-relaxed">
+            <p className="text-sm text-gray-700 leading-relaxed">
               Delivering strategic advisory, execution excellence, and
               long-term value across real estate, energy, and heritage hospitality.
             </p>
@@ -55,7 +55,7 @@ export default function Footer() {
             <h4 className="text-sm font-semibold uppercase tracking-wide mb-5">
               Quick Links
             </h4>
-            <ul className="space-y-3 text-sm text-white/80">
+            <ul className="space-y-3 text-sm text-gray-700">
               {quickLinks.map((link) => (
                 <li key={link.label}>
                   <a
@@ -74,7 +74,7 @@ export default function Footer() {
             <h4 className="text-sm font-semibold uppercase tracking-wide mb-5">
               Businesses
             </h4>
-            <ul className="space-y-3 text-sm text-white/80">
+            <ul className="space-y-3 text-sm text-gray-700">
               {businesses.map((item) => (
                 <li key={item.label}>
                   <a
@@ -93,7 +93,7 @@ export default function Footer() {
             <h4 className="text-sm font-semibold uppercase tracking-wide mb-5">
               Contact
             </h4>
-            <ul className="space-y-4 text-sm text-white/80">
+            <ul className="space-y-4 text-sm text-gray-700">
               <li className="flex items-center gap-3">
                 <CiLocationOn className="text-lg" />
                 Bengaluru, Karnataka, India
@@ -117,9 +117,9 @@ export default function Footer() {
 
         {/* Divider */}
         <div
-          className="mt-16 pt-8 border-t border-brand-lightgreen/30
+          className="mt-16 pt-8 border-t border-brand-lightgreen
                      flex flex-col md:flex-row justify-between items-center gap-4
-                     text-sm text-white/70"
+                     text-sm text-gray-700"
         >
           <a href="/" className="hover:text-brand-green transition">
             © {new Date().getFullYear()} Redwoods. All rights reserved.

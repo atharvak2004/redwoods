@@ -3,8 +3,7 @@ import { NavLink } from "react-router-dom";
 
 function TeamHero() {
   return (
-    <section className="relative h-[90vh] min-h-[520px] flex items-center pt-28 md:pt-0">
-      {/* Background */}
+    <section className="relative min-h-screen flex items-center  md:pt-0">
       <div className="absolute inset-0">
         <img
           src="/teambg.jpg"
@@ -13,12 +12,8 @@ function TeamHero() {
         />
         <div className="absolute inset-0 bg-black/60" />
       </div>
-
-      {/* Content */}
       <div className="relative z-10 w-full">
         <div className="max-w-7xl mx-auto px-6">
-
-          {/* Breadcrumb */}
           <motion.div
             className="mb-6 text-sm text-white/80"
             initial={{ opacity: 0, y: 20 }}
@@ -31,8 +26,6 @@ function TeamHero() {
             <span className="mx-2">/</span>
             <span className="text-brand-lightgreen">Our Team</span>
           </motion.div>
-
-          {/* Heading + Copy */}
           <motion.div
             className="max-w-4xl"
             initial="hidden"
@@ -47,7 +40,7 @@ function TeamHero() {
             }}
           >
             <motion.h1
-              className="text-5xl md:text-7xl text-white leading-tight font-bebas"
+              className="text-4xl sm:text-5xl md:text-7xl text-white leading-tight font-bebas"
               variants={{
                 hidden: { opacity: 0, y: 30 },
                 visible: { opacity: 1, y: 0 },
@@ -76,7 +69,7 @@ function TeamHero() {
 
           {/* Stats */}
           <motion.div
-            className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-4xl"
+            className="mt-10 md:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-10 max-w-4xl"
             initial="hidden"
             animate="visible"
             variants={{
@@ -91,7 +84,7 @@ function TeamHero() {
           >
             {[
               { value: "20+", label: "Years of Experience" },
-              // { value: "50+", label: "Projects Completed" },
+              { value: "1,000+", label: "Cumulative Team Experience" },
               { value: "200+", label: "Engineers & Workforce" },
             ].map((stat, index) => (
               <motion.div

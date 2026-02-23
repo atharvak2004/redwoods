@@ -34,8 +34,6 @@ const fadeUpText = {
 export default function RenewableEnergyHero() {
   return (
     <section className="relative h-[90vh] min-h-[520px] flex items-center">
-
-      {/* ================= BACKGROUND MEDIA ================= */}
       <div className="absolute inset-0">
         <MediaElement
           src="/solarherobg.png"
@@ -43,14 +41,10 @@ export default function RenewableEnergyHero() {
           className="h-full w-full object-cover"
         />
         {/* Brand Overlay */}
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-black/50" />
       </div>
-
-      {/* ================= CONTENT ================= */}
       <div className="relative z-10 w-full">
         <div className="max-w-7xl mx-auto px-6">
-
-          {/* ================= BREADCRUMB ================= */}
           <motion.div
             variants={fadeDown}
             initial="hidden"
@@ -72,8 +66,6 @@ export default function RenewableEnergyHero() {
               Renewable Energy
             </span>
           </motion.div>
-
-          {/* ================= HEADING ================= */}
           <motion.div
             variants={fadeUpHero}
             initial="hidden"
@@ -93,9 +85,7 @@ export default function RenewableEnergyHero() {
               animate="visible"
               className="mt-6 text-md md:text-lg text-white/80 leading-relaxed max-w-3xl"
             >
-              Advisory and execution support for clean energy projects, focused on
-              sustainability, long-term infrastructure value, and responsible
-              environmental outcomes.
+              Ownership and operation of clean energy infrastructure, focused on sustainable power generation, operational efficiency, and long-term asset performance.
             </motion.p>
           </motion.div>
 

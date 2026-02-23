@@ -19,13 +19,13 @@ const ongoingProjects = [
     description:
       "A historic Mughal-era site in Akbarpur, Kanpur Dehat, supported through heritage evaluation and restoration planning aimed at preserving cultural relevance and community value.",
   },
-  {
-    image: "/DeckOverlookingGanges.jpg",
-    title: "Pilibhit House",
-    slug: "/heritage-hospitality/pilibhit-house",
-    description:
-      "A century-old heritage property in Haridwar, situated along the Ganges, supported through heritage hospitality development and stewardship-led hospitality use.",
-  },
+  // {
+  //   image: "/DeckOverlookingGanges.jpg",
+  //   title: "Pilibhit House",
+  //   slug: "/heritage-hospitality/pilibhit-house",
+  //   description:
+  //     "A century-old heritage property in Haridwar, situated along the Ganges, supported through heritage hospitality development and stewardship-led hospitality use.",
+  // },
 ];
 
 /* ================= ANIMATION VARIANTS ================= */
@@ -76,7 +76,7 @@ export function OngoingProjects() {
         </motion.div>
 
         {/* ================= GRID ================= */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10">
           {ongoingProjects.map((p, i) => (
             <motion.div
               key={i}
