@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MdArrowDropDown } from "react-icons/md";
+import HorizontalTimeline from "./HorizontalTimeline";
 
 function TransactionsGrid() {
   const [activeYear, setActiveYear] = useState(null);
@@ -266,6 +267,7 @@ function TransactionsGrid() {
 
   return (
     <section className="py-28 bg-gray-50">
+      <HorizontalTimeline />
       <div className="max-w-7xl mx-auto px-6">
 
         <motion.div
