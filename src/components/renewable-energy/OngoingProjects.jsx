@@ -9,7 +9,7 @@ const ongoingProjects = [
     title: "Dhakrani Solar Power Project",
     location: "Dhakrani, Vikasnagar, Uttarakhand",
     description:
-      "A grid-connected solar photovoltaic project supported through advisory and execution assistance, contributing to clean energy generation under a long-term arrangement with a government utility.",
+      "A grid-connected solar photovoltaic project supported through execution assistance, contributing to clean energy generation under a long-term power supply arrangement with a government utility.",
     stats: [
       { label: "Status", value: "Commissioned (2016)" },
     ],
@@ -21,7 +21,7 @@ const ongoingProjects = [
     title: "Khodri Solar Power Project",
     location: "Dakpathar, Khodri, Uttarakhand",
     description:
-      "A utility-scale solar power project located in hilly terrain, supported through structured development and execution advisory, with a focus on long-term operational reliability.",
+      "A utility-scale solar power project located in hilly terrain, supported through structured development and execution with a focus on long-term operational efficiency and reliability.",
     stats: [
       { label: "Status", value: "Commissioned (2016)" },
     ],
@@ -33,7 +33,7 @@ const ongoingProjects = [
     title: "Dadajalalpur Solar Power Project",
     location: "Dada Jalalpur, Haridwar, Uttarakhand",
     description:
-      "A solar photovoltaic project providing clean energy under a long-term power purchase arrangement with a state electricity utility, supported through development and execution advisory.",
+      "A solar photovoltaic project delivering clean energy under a long-term power purchase agreement with a state electricity utility, supported through development and execution.",
     stats: [
       { label: "Status", value: "Commissioned" },
     ],
@@ -70,7 +70,7 @@ export function OngoingProjects() {
             Current Engagements
           </span>
           <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-blue">
-            Ongoing Renewable <span className="text-[#373e68]">Energy Projects</span>
+            Renewable Energy <span className="text-[#373e68]"> Projects</span>
             
           </h2>
         </motion.div>

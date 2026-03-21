@@ -33,10 +33,7 @@ export default function ServicesSection() {
           </h2>
 
           <p className="max-w-3xl mx-auto mt-6 text-gray-700 text-lg leading-relaxed">
-            Strategic real estate services supporting informed decision-making
-            across investments and transactions, guided by market insight,
-            structured analysis, and disciplined execution.
-
+            Strategic real estate services that help investors and businesses make informed decisions across investments and transactions, supported by market insight, structured analysis, and disciplined execution.
           </p>
         </motion.div>
 
@@ -72,8 +69,7 @@ export default function ServicesSection() {
                 </h3>
 
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Advisory support for investors seeking clarity, risk management,
-                  and long-term value across real estate opportunities.
+                  Providing strategic guidance to investors seeking clarity, effective risk management, and sustainable long-term value in real estate investments.
                 </p>
 
                 <button
@@ -151,8 +147,7 @@ export default function ServicesSection() {
                 </h3>
 
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Transaction advisory for commercial and residential assets,
-                  focused on structured execution and informed pricing decisions.
+                  Advisory support for commercial and residential property transactions, ensuring structured execution and well-informed pricing decisions.
                 </p>
 
                 <button

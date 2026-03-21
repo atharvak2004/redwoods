@@ -2,23 +2,23 @@ export const ongoingProjects = [
   {
     image: "/development/GhaziabadPhoto.png",
     title: "Ghaziabad MI",
-    shortDescription: "Residential development • Ghaziabad",
+    shortDescription: "Residential development • Ghaziabad • Under construction",
     fullDescription:
       "Ghaziabad MI is a thoughtfully planned residential development focused on balanced living, efficient design, and long-term value. The project emphasizes careful site planning, quality construction standards, and connectivity to key urban infrastructure, supporting sustainable residential growth.",
     url: "/real-estate/development#ghaziabad-mi",
   },
   {
-    image: "/RealEstateHeroBg.png",
-    title: "Dehradun House",
-    shorretDescription: "Mixed-use development • Dehradun",
+    image: "/realestatedev_bgremove.jpeg",
+    title: "Condo Living",
+    shortDescription: "Mixed-use development • Dehradun • Under construction",
     fullDescription:
-      "Dehradun House is a mixed-use development combining residential living with complementary commercial spaces. Located within an established urban setting, the project is designed around functionality, accessibility, and efficient layouts, supporting both lifestyle and long-term usability.",
+      "Condo Living is a mixed-use development combining residential living with complementary commercial spaces. Located within an established urban setting, the project is designed around functionality, accessibility, and efficient layouts, supporting both lifestyle and long-term usability.",
     url: "/real-estate/development#dehradun-house",
   },
   {
-    image: "/development/2.png",
+    image: "/TheRecidency.png",
     title: "The Residency",
-    shortDescription: "Integrated residential development • Bengaluru",
+    shortDescription: "Integrated residential development • Bengaluru • Completed",
     fullDescription:
       "The Residency is an integrated residential development aimed at structured urban growth. The project focuses on coordinated planning, livable community spaces, and sustainable development principles, contributing to long-term urban value creation.",
     url: "/real-estate/development#theresidency",

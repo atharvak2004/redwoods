@@ -13,7 +13,7 @@ export default function OurLeadership() {
     {
       name: "Mr. Rajeshwar Nimodiya",
       position: "Sr. Vice President",
-      image: "https://via.placeholder.com/500",
+      image: "/team/Rajeshwar-removebg-preview.png",
       linkedin: "#",
     },
   ];
@@ -71,7 +71,7 @@ export default function OurLeadership() {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
 

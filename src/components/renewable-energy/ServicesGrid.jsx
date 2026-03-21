@@ -32,7 +32,7 @@ export function ServicesGrid() {
           </h2>
 
           <p className="max-w-3xl mx-auto mt-6 text-gray-600 text-lg leading-relaxed">
-            End-to-end advisory for solar, wind, and hybrid energy systems across
+            End-to-end execution for solar, wind, and hybrid energy systems across
             utility-scale, commercial, and industrial applications.
           </p>
         </motion.div>
@@ -41,7 +41,7 @@ export function ServicesGrid() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {[
             {
-              title: "Project Advisory",
+              title: "Project Development",
               desc: "Guidance on technology selection, site assessment, and project structuring.",
               points: [
                 "Technology assessment",

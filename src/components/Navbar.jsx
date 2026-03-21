@@ -60,17 +60,23 @@ function Navbar() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
-        className={`fixed top-0 left-0 w-full z-50 transition-all
-          ${scrolled ? "bg-white shadow-sm" : "bg-transparent"}`}
+        className="
+    fixed top-4 left-4 right-4
+    mx-auto max-w-7xl
+    z-50
+    bg-white/90 backdrop-blur-md
+    rounded-2xl
+    shadow-xl
+    border border-gray-200
+  "
       >
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-
+        <div className={`px-6 flex items-center justify-between transition-all duration-300 h-16`}>
           {/* Logo */}
           <NavLink to="/">
             <img
               src="/Redwoods_logo-removebg.png"
               alt="Redwoods"
-              className="h-12"
+              className={`transition-all duration-300 h-12`}
             />
           </NavLink>
 
@@ -86,20 +92,15 @@ function Navbar() {
                     {({ isActive }) => (
                       <span
                         className={`relative text-md font-medium cursor-pointer
-                        ${isActive
-                          ? "text-brand-green"
-                          : scrolled
-                            ? "text-brand-blue hover:text-brand-green"
-                            : "text-white hover:text-brand-lightgreen"
-                        }`}
+  text-brand-blue`}
                       >
                         {link.name}
                         <span
                           className={`absolute -bottom-1 left-0 h-[2px] transition-all
                           ${isActive
-                            ? "w-full bg-brand-green"
-                            : "w-0 bg-brand-green"
-                          }`}
+                              ? "w-full bg-brand-green"
+                              : "w-0 bg-brand-green"
+                            }`}
                         />
                       </span>
                     )}
@@ -113,22 +114,16 @@ function Navbar() {
 
                   <NavLink to={link.path}>
                     <span
-                      className={`relative text-md font-medium cursor-pointer
-                      ${isBusinessActive
-                        ? "text-brand-green"
-                        : scrolled
-                          ? "text-brand-blue hover:text-brand-green"
-                          : "text-white hover:text-brand-lightgreen"
-                      }`}
+                      className="relative text-md font-medium cursor-pointer text-brand-blue"
                     >
                       {link.name}
 
                       <span
                         className={`absolute -bottom-1 left-0 h-[2px] transition-all
                         ${isBusinessActive
-                          ? "w-full bg-brand-green"
-                          : "w-0 bg-brand-green group-hover:w-full"
-                        }`}
+                            ? "w-full bg-brand-green"
+                            : "w-0 bg-brand-green group-hover:w-full"
+                          }`}
                       />
                     </span>
                   </NavLink>

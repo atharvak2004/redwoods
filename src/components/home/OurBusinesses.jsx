@@ -35,7 +35,7 @@ export default function OurBusinesses() {
         {/* ================= BUSINESS CARDS ================= */}
 
         <BusinessCard
-          image="/RealEstateHeroBg.png"
+          image="/realestatedev_bgremove.jpeg"
           title="Real Estate Development"
           desc="End-to-end real estate development across land acquisition, project feasibility, planning, structuring, and execution—delivering projects seamlessly from concept to completion."
           link="real-estate/development"

@@ -12,7 +12,7 @@ export default function HeritageHospitalityHero() {
                     className="h-full w-full object-cover"
                 />
 
-                <div className="absolute inset-0 bg-black/50" />
+                <div className="absolute inset-0 bg-black/65" />
             </div>
 
             {/* Content */}
@@ -53,9 +53,7 @@ export default function HeritageHospitalityHero() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.3 }}
                         >
-                            Restoration and adaptive reuse of heritage properties, guided by
-                            cultural sensitivity, architectural integrity, and thoughtful
-                            hospitality development.
+                            Revitalizing heritage properties through restoration and adaptive reuse, guided by cultural sensitivity, architectural integrity, and thoughtful hospitality development.
                         </motion.p>
                     </motion.div>
                 </div>

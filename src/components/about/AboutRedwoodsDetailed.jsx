@@ -32,26 +32,31 @@ export default function AboutRedwoodsDetailed() {
           </h2>
 
           <p className="mt-14 text-gray-700 text-lg leading-relaxed max-w-3xl">
-            At <strong>Redwoods</strong>, we help clients navigate real estate decisions
-            with clarity, integrity, and a long-term perspective.
+            Founded in 2006, Redwoods Group is a diversified business group committed to delivering strategic opportunities across Real Estate Development, Real Estate Advisory, Renewable Energy, and Heritage Hospitality.
           </p>
 
           <p className="mt-4 text-gray-700 leading-relaxed max-w-3xl text-lg">
-            Founded in <strong>2006</strong>, Redwoods Group provides end-to-end real
-            estate advisory and investment services, supporting clients across
-            commercial, residential, retail, hospitality, and infrastructure assets.
+            With deep expertise in investment advisory, deal structuring, fund syndication, and joint developments, Redwoods has built a reputation for delivering thoughtful solutions that create long-term value for investors, developers, and businesses.
           </p>
 
           <p className="mt-4 text-gray-700 leading-relaxed max-w-3xl text-lg">
-            Our strength lies in combining market insight with practical execution,
-            enabling informed decisions across acquisitions, transactions, capital
-            structuring, and development strategies.
+            Over the years, we have facilitated over 25 million sq. ft. of leasing and real estate transactions across major markets in India, building strong partnerships with leading developers and global organizations.
+          </p>
+
+          <p className="mt-4 text-gray-700 leading-relaxed max-w-3xl text-lg">
+            Our association with renowned clients including Fidelity Investments, Embassy, Valmark, Vaishnavi Group, Marvel, Jain Heights, Unity Infra Projects, Unitech, and Steria, along with our strategic collaboration with BNP Paribas Real Estate, reflects the trust and credibility we have built in the industry.
+          </p>
+          <p className="mt-4 text-gray-700 leading-relaxed max-w-3xl text-lg">
+            Over the years, we have facilitated over 25 million sq. ft. of leasing and real estate transactions across major markets in India, building strong partnerships with leading developers and global organizations.
           </p>
 
           <p className="mt-8 text-gray-700 leading-relaxed max-w-3xl text-xl font-semibold">
-            Today, Redwoods is a trusted partner for investors, developers, and
-            businesses seeking sustainable, value-driven real estate outcomes.
+            At Redwoods, our approach is guided by integrity, transparency, and long-term thinking. We believe in building lasting relationships and creating opportunities that drive sustainable growth for our partners and stakeholders.
           </p>
+           <p className="mt-8 text-gray-700 leading-relaxed max-w-3xl text-xl font-semibold">
+           As we continue to expand across sectors, our vision remains clear — to redefine trust and excellence in every venture we undertake.
+          </p>
+
 
 
           {!isAboutPage && (

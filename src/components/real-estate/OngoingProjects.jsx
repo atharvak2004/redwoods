@@ -53,11 +53,11 @@ export default function OngoingProjects() {
           </span>
 
           <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-blue leading-tight">
-            Ongoing <span className="text-[#373e68]">Projects</span>
+            Our <span className="text-[#373e68]">Projects</span>
           </h2>
 
           <p className="max-w-2xl mx-auto mt-6 text-gray-700 text-lg leading-relaxed">
-            A snapshot of select projects currently under advisory and execution,
+            A snapshot of select projects currently under execution,
             reflecting our focus on quality, clarity, and long-term value.
           </p>
         </motion.div>

@@ -55,10 +55,7 @@ export function ServiceOverview() {
             </h2>
 
             <p className="text-gray-700 text-lg leading-relaxed mb-6">
-              Our Heritage Hospitality practice focuses on the careful restoration
-              and adaptive reuse of historic properties. We work to preserve
-              architectural character and cultural significance while enabling
-              thoughtful hospitality use aligned with long-term stewardship.
+              Our Heritage Hospitality practice specializes in the careful restoration and adaptive reuse of historic properties. We preserve architectural character and cultural significance while transforming these spaces into thoughtful hospitality destinations designed for long-term stewardship.
             </p>
           </motion.div>
 

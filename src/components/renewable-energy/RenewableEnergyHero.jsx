@@ -36,12 +36,12 @@ export default function RenewableEnergyHero() {
     <section className="relative h-[90vh] min-h-[520px] flex items-center">
       <div className="absolute inset-0">
         <MediaElement
-          src="/solarherobg.png"
+          src="/home/hero/hero3.png"
           alt="Renewable energy infrastructure"
           className="h-full w-full object-cover"
         />
         {/* Brand Overlay */}
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/70" />
       </div>
       <div className="relative z-10 w-full">
         <div className="max-w-7xl mx-auto px-6">
@@ -83,9 +83,9 @@ export default function RenewableEnergyHero() {
               variants={fadeUpText}
               initial="hidden"
               animate="visible"
-              className="mt-6 text-md md:text-lg text-white/80 leading-relaxed max-w-3xl"
+              className="mt-6 text-md md:text-lg text-white/80 leading-relaxed max-w-2xl"
             >
-              Ownership and operation of clean energy infrastructure, focused on sustainable power generation, operational efficiency, and long-term asset performance.
+              Ownership and operation of clean energy infrastructure focused on sustainable power generation, operational efficiency, and long-term asset performance.
             </motion.p>
           </motion.div>
 

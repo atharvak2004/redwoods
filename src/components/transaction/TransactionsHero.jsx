@@ -12,7 +12,7 @@ function TransactionsHero() {
           className="h-full w-full object-cover"
         />
         {/* Brand Overlay */}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/80" />
       </div>
 
       {/* Content */}

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FaBullseye, FaEye } from "react-icons/fa";
 
 function MissionVision() {
   return (
@@ -21,12 +22,11 @@ function MissionVision() {
           </h2>
 
           <p className="mt-6 text-lg text-gray-700 leading-relaxed">
-            Our mission and vision define how we create value, build trust, and
-            deliver lasting impact across every engagement.
+            Our mission and vision guide how we create value, build trusted partnerships, and deliver meaningful impact across every venture we undertake.
           </p>
         </motion.div>
-        <div className="grid md:grid-cols-2 gap-12">
 
+        <div className="grid md:grid-cols-2 gap-12">
           {/* Mission */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -36,22 +36,27 @@ function MissionVision() {
             className="relative border border-gray-200 rounded-3xl p-10
                        hover:shadow-xl transition bg-white"
           >
-            <span className="text-sm uppercase tracking-widest text-brand-green">
-              Our Mission
-            </span>
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-brand-lightgreen/10 text-brand-green">
+                <FaBullseye size={20} />
+              </div>
+              <span className="text-sm uppercase tracking-widest text-brand-green">
+                Our Mission
+              </span>
+            </div>
 
-            <h3 className="mt-4 text-2xl font-semibold text-brand-blue">
-              Deliver Clarity, Trust, and Value
+            <h3 className="text-2xl font-semibold text-brand-blue">
+              Deliver Clarity, Trust, and Long-Term Value
             </h3>
 
             <p className="mt-4 text-gray-700 leading-relaxed">
-              To guide clients with clear, thoughtful advisory and disciplined execution,
-              helping them make confident decisions and create lasting value across
-              real estate, energy, and heritage assets.
+              To guide our clients with clear insight, strategic advisory, and disciplined execution, enabling confident decisions and sustainable value creation across real estate, renewable energy, and heritage hospitality.
             </p>
 
             <div className="absolute top-0 right-6 h-1 w-24 bg-brand-lightgreen rounded-bl-3xl" />
           </motion.div>
+
+          {/* Vision */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -60,18 +65,21 @@ function MissionVision() {
             className="relative border border-gray-200 rounded-3xl p-10
                        hover:shadow-xl transition bg-white"
           >
-            <span className="text-sm uppercase tracking-widest text-brand-green">
-              Our Vision
-            </span>
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-brand-lightgreen/10 text-brand-green">
+                <FaEye size={20} />
+              </div>
+              <span className="text-sm uppercase tracking-widest text-brand-green">
+                Our Vision
+              </span>
+            </div>
 
-            <h3 className="mt-4 text-2xl font-semibold text-brand-blue">
-              Be a Trusted Partner for Generations
+            <h3 className="text-2xl font-semibold text-brand-blue">
+              A Trusted Partner for Generations
             </h3>
 
             <p className="mt-4 text-gray-700 leading-relaxed">
-              To build enduring partnerships across generations by delivering
-              responsible growth, sustainable outcomes, and respect for the
-              communities and environments in which we operate.
+              To build enduring partnerships and become a trusted, forward-thinking business group, delivering responsible growth, sustainable opportunities, and lasting value for our partners, communities, and future generations.
             </p>
 
             <div className="absolute top-0 right-6 h-1 w-24 bg-brand-lightgreen rounded-bl-3xl" />

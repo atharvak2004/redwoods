@@ -9,7 +9,7 @@ export default function RealEstateHero() {
       {/* Background Media */}
       <div className="absolute inset-0">
         <MediaElement
-          src="/RealEstateHeroBg.png"
+          src="/realestatedev_bgremove.jpeg"
           alt="Premium real estate architecture"
           className="h-full w-full object-cover"
         />

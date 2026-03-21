@@ -10,14 +10,14 @@ const ongoingProjects = [
     title: "Barsana Jal Mahal",
     slug: "/heritage-hospitality/barsana-mahal",
     description:
-      "An 18th-century water palace in Barsana, Uttar Pradesh, currently engaged under a heritage restoration and adaptive reuse initiative focused on architectural conservation and long-term stewardship.",
+      "An 18th-century water palace in Barsana, Uttar Pradesh, currently undergoing a heritage restoration and adaptive reuse initiative focused on architectural conservation and long-term stewardship.",
   },
   {
     image: "/Shukla-ongoing.jpg",
     title: "Shukla Ka Talab",
     slug: "/heritage-hospitality/shukla-talab",
     description:
-      "A historic Mughal-era site in Akbarpur, Kanpur Dehat, supported through heritage evaluation and restoration planning aimed at preserving cultural relevance and community value.",
+      "A historic Mughal-era site in Akbarpur, Kanpur Dehat, supported through heritage evaluation and restoration planning aimed at preserving its cultural significance and community value.",
   },
   // {
   //   image: "/DeckOverlookingGanges.jpg",

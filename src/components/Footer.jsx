@@ -34,10 +34,8 @@ export default function Footer() {
     <footer className="bg-gray-200 text-brand-blue">
       <div className="max-w-7xl mx-auto px-6 py-20">
 
-        {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14">
 
-          {/* Brand */}
           <div>
             <img
               src="/Redwoods_logo-removebg.png"
@@ -50,7 +48,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wide mb-5">
               Quick Links
@@ -69,7 +66,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Businesses */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wide mb-5">
               Businesses
@@ -105,10 +101,10 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <CiMail className="text-lg" />
                 <a
-                  href="mailto:info@redwoodsgroup.com"
+                  href="mailto:info@redwoodscorp.com"
                   className="hover:text-brand-green transition"
                 >
-                  info@redwoodsgroup.com
+                  info@redwoodscorp.com
                 </a>
               </li>
             </ul>

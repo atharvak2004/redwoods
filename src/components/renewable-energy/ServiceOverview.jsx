@@ -40,7 +40,7 @@ export function ServiceOverview() {
             className="lg:order-1"
           >
             <span className="inline-block mb-4 text-sm tracking-widest text-brand-lightgreen uppercase">
-              Renewable Energy Advisory
+              Renewable Energy 
             </span>
 
             <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-blue leading-tight">
@@ -51,10 +51,7 @@ export function ServiceOverview() {
             </h2>
 
             <p className="mt-6 text-gray-700 text-lg leading-relaxed">
-              Our Renewable Energy practice offers structured advisory and execution
-              support for clean energy projects, assisting investors, developers,
-              and organisations in navigating the energy transition through informed
-              decision-making and responsible project development.
+              Our Renewable Energy practice provides structured execution support for clean energy projects, helping investors, developers, and organisations navigate the energy transition through informed decision-making and responsible project development.
             </p>
           </motion.div>
 

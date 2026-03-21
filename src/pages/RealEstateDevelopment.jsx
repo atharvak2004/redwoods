@@ -10,8 +10,7 @@ import OngoingProjects from '../components/real-estate/OngoingProjects'
 function RealEstateDevelopment() {
   return (
     <div>
-      <HeroSection name="Real Estate Development" title="Our Business" title2="Real Estate Development" descr="End-to-end real estate development across land acquisition, project feasibility, planning, structuring, and execution—delivering projects seamlessly from concept to completion." img="/RealEstateHeroBg.png" />
-
+      <HeroSection name="Real Estate Development" title="Our Business" title2="Real Estate Development" descr="End-to-end real estate development across land acquisition, project feasibility, planning, structuring, and execution—delivering projects seamlessly from concept to completion." img="/home/hero/hero1.png" />
       <ServiceOverview />
       <DevelopmentSection />
       <OngoingProjects />

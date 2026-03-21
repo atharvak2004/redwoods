@@ -9,26 +9,26 @@ const openCall = () => {
   window.location.href = "tel:+918049078888";
 };
 const openEmail = () => {
-  window.location.href = "mailto:test@gmail.com";
+  window.location.href = "mailto:info@redwoodscorp.com";
 };
 
 /* ================= LOCATIONS ================= */
 
 const locations = [
   {
-    name: "Bangalore – Head Office",
+    name: "Bangalore - Head Office",
     mapUrl:
-      "https://www.google.com/maps/place/Redwoods/@12.9743628,77.6144074",
+      "https://www.google.com/maps/place/Redwoods/@12.9743628,77.6118325,902m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3bae16840f89fedf:0x6657c24357c4451a!8m2!3d12.9743628!4d77.6144074!16s%2Fg%2F1tdwccp6?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D",
   },
   {
-    name: "Mumbai Office",
+    name: "Delhi Office",
     mapUrl:
-      "https://www.google.com/maps/search/?api=1&query=Mumbai+India",
+      "https://www.google.com/maps/search/redwoods+C-345,+3rd+Floor,+Defence+Colony,+New+Delhi+-+110024/@28.5733421,77.2303086,3390m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D",
   },
   {
-    name: "Delhi NCR Office",
+    name: "Dehradun Office",
     mapUrl:
-      "https://www.google.com/maps/search/?api=1&query=Delhi+NCR+India",
+      "https://www.google.com/maps/place/Vasant+vihar/@30.3233089,77.9986889,1598m/data=!3m1!1e3!4m10!1m2!2m1!1s%2316,+Lane+No:+5,+Vasanth+Vihar+Extension,+DehradunUttarkhand+-+248006!3m6!1s0x39092b00600b865d:0x1c8fa47d5739d616!8m2!3d30.3226277!4d78.0036994!15sCkcjMTYsIExhbmUgTm86IDUsIFZhc2FudGggVmloYXIgRXh0ZW5zaW9uLCBEZWhyYWR1biBVdHRhcmFraGFuZCAtIDI0ODAwNlpDIkEjMTYgbGFuZSBubyA1IHZhc2FudGggdmloYXIgZXh0ZW5zaW9uIGRlaHJhZHVuIHV0dGFyYWtoYW5kIDI0ODAwNpIBBmdhcmRlbpoBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQydFNZVXhXUWpCak0zQlVVa1ZrYmxSdWFEVk9iVmw0VmpGa01GWklZeEFC4AEA-gEECAAQEA!16s%2Fg%2F11xvhc209k?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D",
   },
 ];
 
@@ -53,7 +53,8 @@ const Hex = ({ src, onClick, className }) => (
 
 export default function ContactHero() {
   const [showMapPopup, setShowMapPopup] = useState(false);
-
+  const [showCallPopup, setShowCallPopup] = useState(false);
+  const [showEmailPopup, setShowEmailPopup] = useState(false);
   const openLocation = (url) => {
     window.open(url, "_blank");
     setShowMapPopup(false);
@@ -95,7 +96,7 @@ export default function ContactHero() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-white/80 max-w-3xl mt-6 text-md md:text-lg leading-relaxed"
+          className="text-white/80 max-w-2xl mt-6 text-md md:text-lg leading-relaxed"
         >
           Whether you’re exploring an opportunity, seeking strategic advisory,
           or planning a long-term partnership, our team is ready to engage
@@ -120,25 +121,25 @@ export default function ContactHero() {
 
             <Hex
               src="/contact/hex-call.svg"
-              onClick={openCall}
+              onClick={() => setShowCallPopup(true)}
               className="absolute top-[122px] left-[50px]"
             />
 
             <Hex
               src="/contact/hex-mail.svg"
-              onClick={openEmail}
+              onClick={() => setShowEmailPopup(true)}
               className="absolute top-[162px] left-[120px]"
             />
 
             <Hex
               src="/contact/hex-fb.svg"
-              onClick={() => window.open("https://facebook.com", "_blank")}
+              onClick={() => window.open("https://www.facebook.com/RedwoodsIndia", "_blank")}
               className="absolute top-[122px] left-[190px]"
             />
 
             <Hex
               src="/contact/hex-yt.svg"
-              onClick={() => window.open("https://youtube.com", "_blank")}
+              onClick={() => window.open("https://www.youtube.com/@RedwoodsHoldingsGroup", "_blank")}
               className="absolute top-[40px] left-[190px]"
             />
 
@@ -163,25 +164,25 @@ export default function ContactHero() {
 
         <Hex
           src="/contact/hex-call.svg"
-          onClick={openCall}
+          onClick={() => setShowCallPopup(true)}
           className="absolute top-[162px] right-[94px]"
         />
 
         <Hex
           src="/contact/hex-mail.svg"
-          onClick={openEmail}
+          onClick={() => setShowEmailPopup(true)}
           className="absolute top-[212px] right-[186px]"
         />
 
         <Hex
           src="/contact/hex-fb.svg"
-          onClick={() => window.open("https://facebook.com", "_blank")}
+          onClick={() => window.open("https://www.facebook.com/RedwoodsIndia", "_blank")}
           className="absolute top-[160px] right-[280px]"
         />
 
         <Hex
           src="/contact/hex-yt.svg"
-          onClick={() => window.open("https://youtube.com", "_blank")}
+          onClick={() => window.open("https://www.youtube.com/@RedwoodsHoldingsGroup", "_blank")}
           className="absolute top-[216px] right-[374px]"
         />
       </div>
@@ -233,7 +234,94 @@ export default function ContactHero() {
           </motion.div>
         )}
       </AnimatePresence>
+      {/* ================= CALL POPUP ================= */}
+      <AnimatePresence>
+        {showCallPopup && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60"
+          >
+            <motion.div
+              initial={{ scale: 0.9, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 20 }}
+              transition={{ type: "spring", stiffness: 120, damping: 18 }}
+              className="relative bg-white rounded-2xl p-8 w-[90%] max-w-md text-center"
+            >
+              <button
+                onClick={() => setShowCallPopup(false)}
+                className="absolute top-4 right-4 text-gray-400 hover:text-gray-700"
+              >
+                <MdCancel size={26} />
+              </button>
 
+              <h3 className="text-2xl font-semibold text-brand-blue mb-6">
+                Call Us
+              </h3>
+
+              <button
+                onClick={() => {
+                  openCall();
+                  setShowCallPopup(false);
+                }}
+                className="w-full py-3 rounded-lg border
+                     border-brand-lightgreen
+                     text-brand-blue font-medium
+                     hover:bg-brand-lightgreen hover:text-white
+                     transition"
+              >
+                +91 80490 78888
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      {/* ================= EMAIL POPUP ================= */}
+      <AnimatePresence>
+        {showEmailPopup && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60"
+          >
+            <motion.div
+              initial={{ scale: 0.9, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 20 }}
+              transition={{ type: "spring", stiffness: 120, damping: 18 }}
+              className="relative bg-white rounded-2xl p-8 w-[90%] max-w-md text-center"
+            >
+              <button
+                onClick={() => setShowEmailPopup(false)}
+                className="absolute top-4 right-4 text-gray-400 hover:text-gray-700"
+              >
+                <MdCancel size={26} />
+              </button>
+
+              <h3 className="text-2xl font-semibold text-brand-blue mb-6">
+                Email Us
+              </h3>
+
+              <button
+                onClick={() => {
+                  openEmail();
+                  setShowEmailPopup(false);
+                }}
+                className="w-full py-3 rounded-lg border
+                     border-brand-lightgreen
+                     text-brand-blue font-medium
+                     hover:bg-brand-lightgreen hover:text-white
+                     transition"
+              >
+                info@redwoodscorp.com
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

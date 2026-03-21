@@ -11,6 +11,71 @@ function TransactionsGrid() {
 
   const transactions = [
     {
+      year: 2025,
+      company: "Redwoods Capital Management",
+      transactionText: "Advised on the strategic sale of Essel Finance",
+      client: "Essel Finance",
+      clientLogo: "/essel-grp.png",
+      metricLabel: "Transaction Type",
+      metricValue: "Strategic Sale",
+      role: "Transaction Advisor",
+    },
+    {
+      year: 2025,
+      company: "Redwoods Projects Pvt. Ltd.",
+      transactionText:
+        "Transacted the sale of a land parcel in Ghaziabad",
+      client: "Confidential Client",
+      clientLogo: "/dummy-company.png",
+      metricLabel: "Asset Type",
+      metricValue: "Land Transaction",
+      role: "Transaction Advisor",
+    },
+    {
+      year: 2023,
+      company: "Redwoods Projects Pvt. Ltd.",
+      transactionText:
+        "Advised on the sale of land located in Civil Lines, Ghaziabad",
+      client: "Tripathi Group",
+      clientLogo: "/tripathi-grp.png",
+      metricLabel: "Location",
+      metricValue: "Civil Lines, Ghaziabad",
+      role: "Transaction Advisor",
+    },
+    {
+      year: 2023,
+      company: "Redwoods Capital Management",
+      transactionText:
+        "Provided strategic advisory for asset restructuring and transaction planning",
+      client: "Confidential Client",
+      clientLogo: "/dummy-company.png",
+      metricLabel: "Mandate",
+      metricValue: "Strategic Advisory",
+      role: "Financial Advisor",
+    },
+    {
+      year: 2023,
+      company: "Redwoods Capital Management",
+      transactionText:
+        "Advised investors on acquisition strategy and portfolio positioning",
+      client: "Private Investors",
+      clientLogo: "/dummy-company.png",
+      metricLabel: "Service",
+      metricValue: "Investment Advisory",
+      role: "Investment Advisor",
+    },
+    {
+      year: 2025,
+      company: "Redwoods Projects Pvt. Ltd.",
+      transactionText:
+        "Provided development advisory across project planning and execution",
+      client: "Confidential Client",
+      clientLogo: "/dummy-company.png",
+      metricLabel: "Service",
+      metricValue: "Development Advisory",
+      role: "Development Advisor",
+    },
+    {
       year: 2016,
       company: "Redwoods Projects Pvt. Ltd.",
       transactionText:
@@ -203,7 +268,6 @@ function TransactionsGrid() {
     <section className="py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* ================= HEADER ================= */}
         <motion.div
           className="max-w-3xl mb-24"
           initial={{ opacity: 0, y: 30 }}
@@ -228,98 +292,107 @@ function TransactionsGrid() {
           </p>
         </motion.div>
 
-        {years.map((year) => {
-          const isOpen = activeYear === year;
+        {years.map((year) => (
+          <div key={year} className="mb-24">
 
-          return (
-            <motion.div
-              key={year}
-              className="mb-8 border border-brand-lightgreen rounded-xl bg-white overflow-hidden"
-            >
-              <button
-                onClick={() => setActiveYear(isOpen ? null : year)}
-                className="w-full flex items-center justify-between
-                   px-8 py-6"
-              >
-                <h2 className="text-2xl md:text-3xl font-semibold text-brand-lightgreen">
-                  {year}
-                </h2>
+            <h3 className="text-3xl font-semibold text-brand-lightgreen mb-12 text-center">
+              {year}
+            </h3>
 
-                <motion.span
-                  animate={{ rotate: isOpen ? 180 : 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="text-brand-lightgreen"
-                >
-                  <MdArrowDropDown size={30} />
-                </motion.span>
-              </button>
+            <div className="relative">
 
-              <AnimatePresence initial={false}>
-                {isOpen && (
-                  <motion.div
+              {/* Timeline line */}
+              <div className="absolute md:left-1/2 left-4 top-0 h-full w-[2px] bg-brand-lightgreen/30 md:-translate-x-1/2"></div>
 
+              <div className="space-y-16">
 
-                    className="overflow-hidden px-8 pb-10"
-                  >
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                      {groupedByYear[year].map((item, index) => (
-                        <motion.div
-                          key={index}
+                {groupedByYear[year].map((item, index) => {
 
-                        >
+                  const isLeft = index % 2 === 0;
+
+                  return (
+                    <div key={index} className="relative flex items-center w-full">
+
+                      {/* Timeline Dot */}
+                      <span className="absolute md:left-1/2 left-4 w-4 h-4 bg-brand-lightgreen rounded-full md:-translate-x-1/2 -translate-x-1/2 z-20"></span>
+
+                      {/* CARD WRAPPER */}
+                      <div
+                        className={`w-full md:w-1/2 pl-10 md:pl-0 ${isLeft ? "md:pr-12 md:ml-0" : "md:pl-12 md:ml-auto"
+                          }`}
+                      >
+
+                        <div className="relative">
+
+                          {/* Visual circle */}
+                          <div
+                            className={`absolute -top-10 w-48 h-48 border border-brand-lightgreen/20 rounded-full opacity-30 ${isLeft ? "-left-10" : "-right-10"
+                              }`}
+                          ></div>
+
                           {/* CARD */}
-                          <div className="h-full w-full border border-brand-lightgreen rounded-xl p-8 flex flex-col text-center bg-white">
+                          <div className="relative flex flex-col md:flex-row items-start gap-4 border border-brand-lightgreen/60 rounded-xl p-6 bg-white hover:shadow-lg hover:-translate-y-[2px] transition-all duration-300">
 
-                            <p className="text-xs tracking-widest uppercase text-gray-600 leading-relaxed">
-                              <span className="font-semibold text-gray-800">
-                                {item.company}
-                              </span>
-                              <br />
-                              {item.transactionText}
-                            </p>
-
+                            {/* LOGO */}
                             {item.clientLogo && (
-                              <div className="my-6 flex justify-center">
+                              <div className="flex-shrink-0 flex items-center justify-center w-20 h-20 md:w-28 md:h-28 bg-gray-50 rounded-lg border border-gray-100 p-3">
                                 <img
                                   src={item.clientLogo}
                                   alt={item.client}
-                                  className="h-28 object-contain"
+                                  className="w-full h-full object-contain"
                                 />
                               </div>
                             )}
 
-                            {item.metricValue && (
-                              <div className="mt-auto">
-                                <p className="text-xs tracking-widest uppercase text-gray-500">
-                                  {item.metricLabel}
-                                </p>
-                                <p className="text-xl font-semibold text-brand-blue mt-1">
-                                  {item.metricValue}
-                                </p>
-                                <p className="text-xs text-gray-500 mt-1">
-                                  Year: {item.year}
-                                </p>
-                              </div>
-                            )}
+                            {/* CONTENT */}
+                            <div className="flex flex-col">
 
-                            <p className="mt-6 text-[11px] uppercase tracking-wide text-gray-600">
-                              {item.company} acted as the
-                              <br />
-                              <span className="font-semibold text-gray-800">
-                                {item.role}
-                              </span>
-                            </p>
+                              <h4 className="text-sm font-semibold text-brand-blue leading-tight">
+                                {item.company}
+                              </h4>
+
+                              <p className="text-sm text-gray-600 mt-1 leading-relaxed">
+                                {item.transactionText}
+                              </p>
+
+                              {item.metricValue && (
+                                <div className="mt-3 inline-flex items-center gap-2 text-xs flex-wrap">
+
+                                  <span className="text-gray-500 uppercase tracking-wide">
+                                    {item.metricLabel}
+                                  </span>
+
+                                  <span className="px-2 py-1 rounded-md bg-brand-lightgreen/10 text-brand-lightgreen font-semibold">
+                                    {item.metricValue}
+                                  </span>
+
+                                </div>
+                              )}
+
+                              <p className="text-xs text-gray-500 mt-2">
+                                Role:{" "}
+                                <span className="font-medium text-gray-700">
+                                  {item.role}
+                                </span>
+                              </p>
+
+                            </div>
 
                           </div>
-                        </motion.div>
-                      ))}
+
+                        </div>
+
+                      </div>
+
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
-          );
-        })}
+                  );
+                })}
+
+              </div>
+            </div>
+
+          </div>
+        ))}
       </div>
     </section>
   );

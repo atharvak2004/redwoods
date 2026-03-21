@@ -5,27 +5,27 @@ import { motion } from "framer-motion";
 export default function OurTeam() {
   const team = [
     {
-      name: "Mr. Vicky Arya",
-      position: "Manager - Transaction",
-      image: "https://via.placeholder.com/500",
-      linkedin: "#",
-    },
-    {
       name: "Ms. Kaveramma C S",
-      position: "Assistant Manager -EA & Admin",
-      image: "https://via.placeholder.com/500",
+      position: "EA & Admin",
+      image: "/team/Kaveri-whitebg.png",
       linkedin: "#",
     },
     {
-      name: "Ms. Gadi Muthyalamma",
-      position: "Manager - Accounts",
-      image: "https://via.placeholder.com/500",
+      name: "Mr. Vicky Arya",
+      position: "Transaction",
+      image: "/team/Vicky-removebg-preview.png",
       linkedin: "#",
     },
     {
       name: "Ms. Kirthika M",
-      position: "IT - Executive",
-      image: "https://via.placeholder.com/500",
+      position: "IT",
+      image: "/team/Kirthika-removebg-preview.png",
+      linkedin: "#",
+    },
+    {
+      name: "Ms. Gadi Muthyalamma",
+      position: "Accounts",
+      image: "/team/Muthyalamma-removebg-preview.png",
       linkedin: "#",
     },
   ];
@@ -82,7 +82,7 @@ export default function OurTeam() {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
 

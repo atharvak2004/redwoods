@@ -93,11 +93,7 @@ export function PhilosophySection() {
             </h2>
 
             <p className="text-gray-700 text-lg leading-relaxed mb-10">
-              Heritage properties are enduring expressions of craftsmanship,
-              culture, and history. Our philosophy is rooted in respecting this
-              legacy while enabling thoughtful hospitality use that supports
-              preservation, relevance, and long-term stewardship.
-
+              Heritage properties are enduring expressions of craftsmanship, culture, and history. Our philosophy respects this legacy while enabling thoughtful hospitality experiences that support preservation, continued relevance, and long-term stewardship.
             </p>
 
             <div className="space-y-6">

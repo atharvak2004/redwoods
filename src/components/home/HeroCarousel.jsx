@@ -3,36 +3,37 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
+
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { MdKeyboardArrowRight } from "react-icons/md";
+
 const slides = [
   {
     title: "REAL ESTATE.\nBUILT TO LAST.",
     desc: "End-to-end real estate development across land acquisition, project feasibility, planning, structuring, and execution—delivering projects seamlessly from concept to completion.",
-    image: "/RealEstateHeroBg.png",
+    image: "/home/hero/hero1.png",
     link: "/real-estate/development",
   },
-
   {
     title: "CLEAN ENERGY.\nBUILT RESPONSIBLY.",
     desc: "Ownership and operation of clean energy infrastructure, focused on sustainable power generation, operational efficiency, and long-term asset performance.",
-    image: "/home/hero/solar1.JPG",
+    image: "/home/hero/hero3.png",
     link: "/business/renewable-energy",
   },
   {
     title: "HERITAGE.\nTHOUGHTFULLY REDESIGNED.",
     desc: "Restoration and adaptive reuse of heritage properties, balancing cultural preservation with contemporary hospitality and long-term stewardship.",
-    image: "/barsana-ongoing.jpg",
+    image: "/home/hero/hero2.png",
     link: "/heritage-hospitality/shukla-talab",
   },
   {
     title: "REAL ESTATE.\nADVISED WITH CLARITY.",
     desc: "Strategic real estate advisory services supporting informed investment decisions, efficient transactions, and sustainable long-term value creation.",
-    image: "/image.png",
+    image: "/home/hero/hero4.png",
     link: "/real-estate/advisory",
-  }
+  },
 ];
-
 
 export default function HeroCarousel() {
   return (
@@ -41,18 +42,20 @@ export default function HeroCarousel() {
       <Swiper
         modules={[Pagination, Autoplay, EffectFade]}
         effect="fade"
+        speed={1200}
         autoplay={{ delay: 5200, disableOnInteraction: false }}
-        speed={1200}  
         pagination={{
           clickable: true,
           el: ".custom-pagination",
-          renderBullet: (index, className) =>
-            `<span class="${className} pagination-item">
-              <span class="number">
-                ${String(index + 1).padStart(2, "0")}
+          renderBullet: (index, className) => {
+            return `
+              <span class="${className} progress-item">
+                <span class="progress-track">
+                  <span class="progress-fill"></span>
+                </span>
               </span>
-              <span class="line"></span>
-            </span>`,
+            `;
+          },
         }}
         className="h-full"
       >
@@ -63,8 +66,8 @@ export default function HeroCarousel() {
               style={{ backgroundImage: `url(${slide.image})` }}
             >
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/20" />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent" />
+              <div className="absolute inset-0 bg-black/30" />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-transparent" />
 
               {/* Content */}
               <div className="relative z-10 h-full flex items-center">
@@ -74,11 +77,11 @@ export default function HeroCarousel() {
                     OUR EXPERTISE
                   </span>
 
-                  <h1 className="md:text-7xl text-white mt-4 text-5xl font-bebas leading-tight fade-up delay-2">
+                  <h1 className="md:text-7xl text-5xl mt-4 font-bebas leading-tight fade-up delay-2">
                     {slide.title}
                   </h1>
 
-                  <p className="mt-6 max-w-xl text-md md:text-lg fade-up delay-3 text-white/80 leading-relaxed">
+                  <p className="mt-6 max-w-xl text-md md:text-lg text-white/80 leading-relaxed fade-up delay-3">
                     {slide.desc}
                   </p>
 
@@ -86,8 +89,16 @@ export default function HeroCarousel() {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="mt-4 md:mt-12 inline-flex items-center gap-2 bg-brand-green text-white px-6 py-3 rounded-full text-sm font-medium hover:opacity-90 transition fade-up delay-4">
-                      View Project →
+                      className="mt-4 md:mt-12 inline-flex items-center gap-2
+                      border-2 border-brand-green
+                      text-brand-green
+                      px-7 py-3
+                      rounded-full
+                      text-sm font-semibold
+                      hover:bg-brand-green hover:text-white
+                      transition-all duration-300"
+                    >
+                      View Project <MdKeyboardArrowRight size={22} />
                     </motion.button>
                   </Link>
 
@@ -98,21 +109,12 @@ export default function HeroCarousel() {
         ))}
       </Swiper>
 
-      {/* Custom Pagination */}
-      <div
-        className="
-    custom-pagination absolute z-20
-    bottom-20 sm:bottom-16
-    left-1/2 -translate-x-1/2
-    flex gap-6
-    lg:flex-col
-    lg:top-1/2 lg:right-12 lg:left-auto
-    lg:-translate-y-1/2 lg:-translate-x-0
-  "
-      />
+      {/* Progress Pagination */}
+      <div className="custom-pagination absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex gap-4" />
 
       <style>{`
-/* Smooth background zoom */
+
+/* Background zoom */
 .slide-bg {
   animation: zoomSlow 7s ease-in-out forwards;
 }
@@ -122,7 +124,7 @@ export default function HeroCarousel() {
   to { transform: scale(1.06); }
 }
 
-/* Fade up animation */
+/* Fade animation */
 .fade-up {
   opacity: 0;
   animation: fadeUp 1s ease forwards;
@@ -139,52 +141,57 @@ export default function HeroCarousel() {
   }
 }
 
-/* Delays */
 .delay-1 { animation-delay: 0.2s; }
 .delay-2 { animation-delay: 0.4s; }
 .delay-3 { animation-delay: 0.6s; }
-.delay-4 { animation-delay: 0.8s; }
 
-/* Pagination */
-.custom-pagination {
-  align-items: center;
+/* Reset swiper bullet */
+.swiper-pagination-bullet {
+  width: auto;
+  height: auto;
+  background: transparent;
+  opacity: 1;
+  margin: 0 !important;
 }
 
-.pagination-item {
+/* Progress container */
+.progress-item {
   display: flex;
   align-items: center;
-  gap: 14px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-.pagination-item .number {
-  font-size: 26px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  color: #cbd5e1;
-  transition: 0.4s ease;
+/* Track */
+.progress-track {
+  width: 60px;
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    rgba(84,176,109,0.6),
+    rgba(146,198,88,0.6)
+  );
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-.pagination-item .line {
-  width: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #54b06d, #92c658);
-  transition: 0.4s ease;
+/* Fill */
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg,#54b06d,#92c658);
 }
 
-/* Active */
-.swiper-pagination-bullet-active .number {
-  color: #54b06d;
-  font-size: 32px;
-  font-weight: 800;
+/* Active animation */
+.swiper-pagination-bullet-active .progress-fill {
+  animation: fillBar 5.2s linear forwards;
 }
 
-.swiper-pagination-bullet-active .line {
-  width: 42px;
+@keyframes fillBar {
+  from { width: 0%; }
+  to { width: 100%; }
 }
+
       `}</style>
-
     </section>
   );
 }

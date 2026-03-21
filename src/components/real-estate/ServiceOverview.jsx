@@ -15,28 +15,29 @@ export default function ServiceOverview() {
           {/* ================= LEFT CONTENT ================= */}
           {/* <div className="absolute -bottom-4 left-10 h-1 w-32 bg-brand-lightgreen rounded-full" /> */}
           <motion.div
-  initial={{ opacity: 0, x: -40 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  viewport={{ once: true, amount: 0.4 }}
-  transition={{ duration: 0.6, ease: "easeOut" }}
->
-  <span className="inline-block mb-4 text-sm tracking-widest text-brand-lightgreen uppercase">
-    Real Estate Development
-  </span>
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <span className="inline-block mb-4 text-sm tracking-widest text-brand-lightgreen uppercase">
+              Real Estate Development
+            </span>
 
-  <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-blue leading-tight">
-    Thoughtfully Planned <br />
-    <span className="text-[#373e68]">
-      Real Estate Development
-    </span>
-  </h2>
+            <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-blue leading-tight">
+              Thoughtfully Planned <br />
+              <span className="text-[#373e68]">
+                Real Estate Development
+              </span>
+            </h2>
 
-  <p className="mt-6 text-gray-700 text-lg leading-relaxed">
-    Our Real Estate Development vertical focuses on the planning, structuring,
-    and execution of residential and commercial projects, guided by market
-    insight, regulatory understanding, and long-term value creation.
-  </p>
-</motion.div>
+            <p className="mt-6 text-gray-700 text-lg leading-relaxed">
+              Our Real Estate Development vertical focuses on the planning, structuring, and execution of high-quality residential and commercial projects.
+            </p>
+            <p className="mt-6 text-gray-700 text-lg leading-relaxed">
+              Guided by deep market insight, regulatory expertise, and strategic partnerships, we create developments designed to deliver long-term value and sustainable growth.
+            </p>
+          </motion.div>
 
 
           {/* ================= RIGHT CONTENT ================= */}
@@ -49,12 +50,12 @@ export default function ServiceOverview() {
           >
             <div className="aspect-square rounded-3xl overflow-hidden shadow-xl">
               <MediaElement
-                src="/development/2.png"
+                src="/TheRecidency.png"
                 alt="Real estate development"
                 className="object-cover"
               />
             </div>
-            
+
           </motion.div>
 
         </div>

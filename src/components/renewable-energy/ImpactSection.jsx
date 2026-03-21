@@ -56,9 +56,7 @@ export function ImpactSection() {
           </h2>
 
           <p className="max-w-2xl mx-auto mt-6 text-gray-600 text-lg leading-relaxed">
-            Supporting India's clean energy transition through structured advisory, disciplined execution support, and a long-term commitment to
-            sustainable infrastructure development.
-
+            Supporting India’s clean energy transition through disciplined project execution and a long-term commitment to sustainable infrastructure development.
           </p>
         </motion.div>
 

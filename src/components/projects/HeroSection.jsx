@@ -55,7 +55,7 @@ function HeroSection({name, title, title2, descr, img}) {
             </h1>
 
             <motion.p
-              className="mt-6 text-md md:text-lg text-white/80 leading-relaxed max-w-3xl"
+              className="mt-6 text-md md:text-lg text-white/80 leading-relaxed max-w-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
