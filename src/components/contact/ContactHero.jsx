@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { MdCancel } from "react-icons/md";
 /* ================= ACTIONS ================= */
 
-const openInstagram = () => window.open("https://instagram.com/", "_blank");
+const openInstagram = () => window.open("");
 const openCall = () => {
   window.location.href = "tel:+918049078888";
 };
@@ -115,7 +115,7 @@ export default function ContactHero() {
 
             <Hex
               src="/contact/hex-insta.svg"
-              onClick={openInstagram}
+              // onClick={openInstagram}
               className="absolute top-[40px] left-[50px]"
             />
 
@@ -158,7 +158,7 @@ export default function ContactHero() {
 
         <Hex
           src="/contact/hex-insta.svg"
-          onClick={openInstagram}
+          // onClick={openInstagram}
           className="absolute top-[56px] right-[94px]"
         />
 

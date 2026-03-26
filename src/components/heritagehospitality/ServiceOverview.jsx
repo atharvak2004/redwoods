@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import MediaElement from "../media/MediaElement";
 
-/* ================= ANIMATION VARIANTS ================= */
 const fadeLeft = {
   hidden: { opacity: 0, x: -40 },
   visible: {
@@ -69,7 +68,7 @@ export function ServiceOverview() {
           >
             <div className="aspect-square rounded-3xl overflow-hidden shadow-xl">
               <MediaElement
-                src="/home/hero/Shukla.jpg"
+                src="/shukla-realestic.png"
                 alt="Heritage property restoration"
                 className="object-cover"
               />

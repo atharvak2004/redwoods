@@ -14,7 +14,7 @@ export default function OurLeadership() {
       name: "Mr. Rajeshwar Nimodiya",
       position: "Sr. Vice President",
       image: "/team/Rajeshwar-removebg-preview.png",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/rajeshwar-nimodiya-2b359124/",
     },
   ];
 

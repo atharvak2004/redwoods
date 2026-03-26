@@ -74,7 +74,7 @@ export default function OurBusinesses() {
         />
 
         <BusinessCard
-          image="/heritageHero.png"
+          image="/home/hero/barsana-hero-image.png"
           title="Heritage Hospitality"
           desc="Curated hospitality experiences through the careful restoration and adaptive reuse of heritage properties, balancing legacy with modern comfort."
           link="/business/heritage-hospitality"

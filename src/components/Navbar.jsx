@@ -181,8 +181,8 @@ function Navbar() {
           {/* MOBILE MENU BUTTON */}
           <button
             onClick={() => setOpen(true)}
-            className={`md:hidden text-2xl
-              ${scrolled ? "text-brand-blue" : "text-white"}`}
+            className={`md:hidden text-2xl text-brand-blue
+              `}
           >
             <FiMenu />
           </button>
@@ -193,11 +193,11 @@ function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.aside
-            initial={{ x: "-100%" }}
+            initial={{ x: "100%" }}
             animate={{ x: 0 }}
-            exit={{ x: "-100%" }}
+            exit={{ x: "100%" }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 left-0 h-full w-[280px] bg-white z-50"
+            className="fixed top-0 right-0 h-full w-[300px] bg-white z-50 shadow-2xl"
           >
 
             <div className="h-20 px-6 flex items-center justify-between border-b">

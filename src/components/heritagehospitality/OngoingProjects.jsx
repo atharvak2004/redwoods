@@ -6,14 +6,14 @@ import MediaElement from "../media/MediaElement";
 /* ================= DATA ================= */
 const ongoingProjects = [
   {
-    image: "/barsana-ongoing.jpg",
+    image: "/home/hero/barsana-hero-image.png",
     title: "Barsana Jal Mahal",
     slug: "/heritage-hospitality/barsana-mahal",
     description:
       "An 18th-century water palace in Barsana, Uttar Pradesh, currently undergoing a heritage restoration and adaptive reuse initiative focused on architectural conservation and long-term stewardship.",
   },
   {
-    image: "/Shukla-ongoing.jpg",
+    image: "/shukla-realestic.png",
     title: "Shukla Ka Talab",
     slug: "/heritage-hospitality/shukla-talab",
     description:

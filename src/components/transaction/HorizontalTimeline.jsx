@@ -1,173 +1,553 @@
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
-const timelineData = [
+/* ================== TRANSACTIONS ================== */
+
+const transactions = [
   {
-    year: "2006",
-    color: "#ec4899",
-    position: "top",
-    title: "LOREM IPSUM",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    year: 2025,
+    company: "Redwoods Capital Management",
+    transactionText: "Advised on the strategic sale of Essel Finance",
+    client: "Essel Finance",
+    clientLogo: "/essel-grp.png",
+    metricLabel: "Transaction Type",
+    metricValue: "Strategic Sale",
+    role: "Transaction Advisor",
   },
   {
-    year: "2010",
-    color: "#06b6d4",
-    position: "bottom",
-    title: "LOREM IPSUM",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    year: 2025,
+    company: "Redwoods Projects Pvt. Ltd.",
+    transactionText:
+      "Transacted the sale of a land parcel in Ghaziabad",
+    client: "Confidential Client",
+    clientLogo: "/dummy-company.png",
+    metricLabel: "Asset Type",
+    metricValue: "Land Transaction",
+    role: "Transaction Advisor",
   },
   {
-    year: "2012",
-    color: "#7c3aed",
-    position: "top",
-    title: "LOREM IPSUM",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    year: 2023,
+    company: "Redwoods Projects Pvt. Ltd.",
+    transactionText:
+      "Advised on the sale of land located in Civil Lines, Ghaziabad",
+    client: "Tripathi Group",
+    clientLogo: "/tripathi-grp.png",
+    metricLabel: "Location",
+    metricValue: "Civil Lines, Ghaziabad",
+    role: "Transaction Advisor",
   },
   {
-    year: "2015",
-    color: "#f59e0b",
-    position: "bottom",
-    title: "LOREM IPSUM",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    year: 2023,
+    company: "Redwoods Capital Management",
+    transactionText:
+      "Provided strategic advisory for asset restructuring and transaction planning",
+    client: "Confidential Client",
+    clientLogo: "/dummy-company.png",
+    metricLabel: "Mandate",
+    metricValue: "Strategic Advisory",
+    role: "Financial Advisor",
   },
   {
-    year: "2017",
-    color: "#22c55e",
-    position: "top",
-    title: "LOREM IPSUM",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    year: 2023,
+    company: "Redwoods Capital Management",
+    transactionText:
+      "Advised investors on acquisition strategy and portfolio positioning",
+    client: "Private Investors",
+    clientLogo: "/dummy-company.png",
+    metricLabel: "Service",
+    metricValue: "Investment Advisory",
+    role: "Investment Advisor",
   },
-  
+  {
+    year: 2025,
+    company: "Redwoods Projects Pvt. Ltd.",
+    transactionText:
+      "Provided development advisory across project planning and execution",
+    client: "Confidential Client",
+    clientLogo: "/dummy-company.png",
+    metricLabel: "Service",
+    metricValue: "Development Advisory",
+    role: "Development Advisor",
+  },
+  {
+    year: 2016,
+    company: "Redwoods Projects Pvt. Ltd.",
+    transactionText:
+      "Transacted the acquisition of land in the Central Business District",
+    client: "Embassy Group",
+    clientLogo: "/transaction_logos/Embassy-group.png",
+    metricLabel: "Value",
+    metricValue: "₹350 Million",
+    role: "Sole Transaction Advisor",
+  },
+  {
+    year: 2016,
+    company: "Redwoods Projects Pvt. Ltd.",
+    transactionText:
+      "Transacted the lease of office space for Musa Sait Wakf & BMR Advisors",
+    client: "BMR Advisors",
+    clientLogo: "/transaction_logos/BMR-Advisors.png",
+    metricLabel: "Total Built-Up Area",
+    metricValue: "23,000 SFT",
+    role: "Sole Transaction Advisor",
+  },
+  {
+    year: 2015,
+    company: "Redwoods Projects Pvt. Ltd.",
+    transactionText:
+      "Transacted the lease of office space to set up India Head Quarters",
+    client: "Janalakshmi",
+    clientLogo: "/transaction_logos/Janalakshmi.png",
+    metricLabel: "Total Built-Up Area",
+    metricValue: "150,000 SFT",
+    role: "Sole Transaction Advisor",
+  },
+  {
+    year: 2015,
+    company: "Redwoods Capital Management",
+    transactionText:
+      "Structured the joint development and profit share transaction",
+    client: "Godrej Properties",
+    clientLogo: "/transaction_logos/Godrej-Properties.png",
+    metricLabel: "Total Built-Up Area",
+    metricValue: "1.1 Million SFT",
+    role: "Sole Transaction Advisor",
+  },
+  {
+    year: 2015,
+    company: "Redwoods Projects Pvt. Ltd.",
+    transactionText:
+      "Transacted the acquisition of land in the Central Business District",
+    client: "Embassy Group",
+    clientLogo: "/transaction_logos/Embassy-group.png",
+    metricLabel: "Value",
+    metricValue: "₹400 Million",
+    role: "Sole Transaction Advisor",
+  },
+  {
+    year: 2015,
+    company: "Redwoods Projects Pvt. Ltd.",
+    transactionText:
+      "Transacted the lease of warehouse spaces in Pune & Mumbai",
+    client: "Iron Mountain",
+    clientLogo: "/transaction_logos/Iron-Mountain.png",
+    metricLabel: "Total Built-Up Area",
+    metricValue: "0.22 Million SFT",
+    role: "Sole Transaction Advisor",
+  },
+  {
+    year: 2015,
+    company: "Redwoods Projects Pvt. Ltd.",
+    transactionText:
+      "Transacted the lease of office space to set up South India Head Quarters",
+    client: "Jubilant Motorworks",
+    clientLogo: "/transaction_logos/Jubilant-Motorworks.png",
+    metricLabel: "Total Built-Up Area",
+    metricValue: "8,285 SFT",
+    role: "Sole Transaction Advisor",
+  },
+  {
+    year: 2015,
+    company: "Redwoods Projects Pvt. Ltd.",
+    transactionText: "Transacted the lease of retail restaurant",
+    client: "Havmor",
+    clientLogo: "/transaction_logos/Hong-Kong.png",
+    metricLabel: "Total Built-Up Area",
+    metricValue: "6,651 SFT",
+    role: "Sole Transaction Advisor",
+  },
+  {
+    year: 2014,
+    company: "Redwoods Projects Pvt. Ltd.",
+    transactionText: "Helped acquire controlling interest in",
+    client: "Windchimes & Embassy Blackstone",
+    clientLogo: "/transaction_logos/c3.png",
+    metricLabel: "Value / Total Saleable Area",
+    metricValue: "₹19,510 Million / 106 Acres",
+    role: "Sole Transaction Advisor",
+  },
+  {
+    year: 2014,
+    company: "Redwoods Projects Pvt. Ltd.",
+    transactionText:
+      "Transacted the lease of office space to set up branch offices",
+    client: "Janalakshmi",
+    clientLogo: "/transaction_logos/Janalakshmi.png",
+    metricLabel: "Total Built-Up Area",
+    metricValue: "28,000 SFT",
+    role: "Sole Transaction Advisor",
+  },
+  {
+    year: 2014,
+    company: "Redwoods Projects Pvt. Ltd.",
+    transactionText: "Transacted the lease of retail space in Bangalore",
+    client: "Apple",
+    clientLogo: "/transaction_logos/Apple.png",
+    metricLabel: "Total Built-Up Area",
+    metricValue: "10,000 SFT",
+    role: "Sole Transaction Advisor",
+  },
+  {
+    year: 2013,
+    company: "Redwoods Projects Pvt. Ltd.",
+    transactionText: "Transacted the lease of SEZ space",
+    client: "Fidelity",
+    clientLogo: "/transaction_logos/Fidelity.png",
+    metricLabel: "Total Built-Up Area",
+    metricValue: "1,75,000 SFT",
+    role: "Sole Transaction Advisor",
+  },
+  {
+    year: 2011,
+    company: "Redwoods Projects Pvt. Ltd.",
+    transactionText: "Raised investor funding and structured finance",
+    client: "Jain Heights",
+    clientLogo: "/transaction_logos/Jain-Heights.png",
+    metricLabel: "Value / Total Saleable Area",
+    metricValue: "₹150 Million / 6,50,000 SFT",
+    role: "Sole Transaction Advisor",
+  },
+  {
+    year: 2011,
+    company: "Redwoods Projects Pvt. Ltd.",
+    transactionText: "Transacted the lease of office space in Gurgaon",
+    client: "COLT",
+    clientLogo: "/transaction_logos/COLT.png",
+    metricLabel: "Total Built-Up Area",
+    metricValue: "1,00,000 SFT",
+    role: "Sole Transaction Advisor",
+  },
+  {
+    year: 2011,
+    company: "Redwoods Projects Pvt. Ltd.",
+    transactionText: "Raised investor funding and structured finance",
+    client: "JDP Prime 1002",
+    clientLogo: "/transaction_logos/JDP.png",
+    metricLabel: "Value / Total Saleable Area",
+    metricValue: "₹250 Million / 56,000 SFT",
+    role: "Sole Transaction Advisor",
+  },
+  {
+    year: 2008,
+    company: "Redwoods Projects Pvt. Ltd.",
+    transactionText: "Transacted the lease of office space in Bangalore",
+    client: "COLT",
+    clientLogo: "/transaction_logos/COLT.png",
+    metricLabel: "Total Built-Up Area",
+    metricValue: "36,000 + 36,000 SFT",
+    role: "Sole Transaction Advisor",
+  },
+  {
+    year: 2006,
+    company: "Redwoods Projects Pvt. Ltd.",
+    transactionText: "Transacted the lease of SEZ space",
+    client: "Fidelity",
+    clientLogo: "/transaction_logos/Fidelity.png",
+    metricLabel: "Total Built-Up Area",
+    metricValue: "2,75,000 SFT",
+    role: "Sole Transaction Advisor",
+  },
 ];
 
-const W = 780;
-const circleXs = [80, 220, 360, 500, 640];
-const topY = 100;
-const bottomY = 190;
-const circleYs = [topY, bottomY, topY, bottomY, topY];
-const R = 42;
+/* ================== YEAR TITLES ================== */
+
+const yearTitles = {
+  2025: "Strategic Growth",
+  2023: "Advisory Expansion",
+  2016: "Major Acquisitions",
+  2015: "Rapid Scaling",
+  2014: "Key Partnerships",
+  2013: "Market Entry",
+  2011: "Early Investments",
+  2008: "Foundation Deals",
+  2006: "Origin",
+};
+
+/* ================== YEARS ================== */
+
+const uniqueYears = [...new Set(transactions.map(t => t.year))].sort((a, b) => a - b);
+
+/* ================== CONSTANTS ================== */
+
+const WIDTH = 1800;
+const HEIGHT = 420;
+const CENTER_Y = HEIGHT / 2;
+const SPACING = WIDTH / (uniqueYears.length + 1);
+const R = 36;
+const LINE_OFFSET = -50;
+
+/* ================== POINTS ================== */
+
+const points = uniqueYears.map((year, i) => ({
+  x: SPACING * (i + 1),
+  y: i % 2 === 0 ? CENTER_Y - 70 : CENTER_Y + 70,
+}));
+
+/* ================== PATH ================== */
 
 function buildWavePath() {
-  const pts = circleXs.map((x, i) => ({ x, y: circleYs[i] }));
-  let d = `M ${pts[0].x} ${pts[0].y}`;
-  for (let i = 0; i < pts.length - 1; i++) {
-    const p0 = pts[i];
-    const p1 = pts[i + 1];
-    const mx = (p0.x + p1.x) / 2;
-    d += ` C ${mx} ${p0.y}, ${mx} ${p1.y}, ${p1.x} ${p1.y}`;
+  let d = "";
+
+  for (let i = 0; i < points.length; i++) {
+    const p = points[i];
+
+    const isTop = p.y < CENTER_Y;
+
+    const adjustedY = isTop
+      ? p.y + LINE_OFFSET
+      : p.y - LINE_OFFSET;
+
+    if (i === 0) {
+      d += `M ${p.x} ${adjustedY}`;
+    } else {
+      const prev = points[i - 1];
+
+      const prevIsTop = prev.y < CENTER_Y;
+      const prevAdjustedY = prevIsTop
+        ? prev.y + LINE_OFFSET
+        : prev.y - LINE_OFFSET;
+
+      const cpX = (prev.x + p.x) / 2;
+
+      d += ` C ${cpX} ${prevAdjustedY}, ${cpX} ${adjustedY}, ${p.x} ${adjustedY}`;
+    }
   }
+
   return d;
 }
 
+/* ================== COMPONENT ================== */
+
 export default function HorizontalTimeline() {
-  const [active, setActive] = useState(null);
-  const wavePath = buildWavePath();
+  const [selectedYear, setSelectedYear] = useState(null);
+  const path = buildWavePath();
+
+  const filteredTransactions = transactions.filter(
+    (t) => t.year === selectedYear
+  );
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
-      <div className="w-full max-w-4xl">
-        <h2 className="text-center text-xl font-bold tracking-widest text-gray-600 mb-4 uppercase">
-          Company Milestones
-        </h2>
+    <>
+      {/* ================= TIMELINE ================= */}
+      <div className="w-full flex justify-center py-16 bg-gradient-to-b from-gray-50 to-white">
+        <svg width="100%" height={HEIGHT} viewBox={`0 0 ${WIDTH} ${HEIGHT}`}>
 
-        <svg viewBox={`0 0 ${W} 420`} width="100%" xmlns="http://www.w3.org/2000/svg">
+          {/* Gradient */}
+          <defs>
+            <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#a78bfa">
+                <animate attributeName="offset" values="0;1" dur="6s" repeatCount="indefinite" />
+              </stop>
+              <stop offset="50%" stopColor="#38bdf8" />
+              <stop offset="100%" stopColor="#34d399" />
+            </linearGradient>
+          </defs>
 
-          {/* Building silhouettes */}
-          {[150,185,270,310,400,440,530,570,660].map((x, i) => {
-            const hs = [50,75,60,85,65,80,55,70,45];
+          {/* Wave */}
+          <motion.path
+            d={path}
+            fill="none"
+            stroke="url(#waveGradient)"
+            strokeWidth="4"
+            strokeLinecap="round"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 2 }}
+          />
+
+          {/* Nodes */}
+          {points.map((p, i) => {
+            const year = uniqueYears[i];
+
             return (
-              <rect key={i} x={x} y={310 - hs[i]} width={24} height={hs[i]}
-                fill="#94a3b8" opacity="0.18" rx="2" />
-            );
-          })}
+              <motion.g
+                key={year}
+                onClick={() => setSelectedYear(year)}
+                className="cursor-pointer"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: i * 0.15, type: "spring", stiffness: 120 }}
+                whileHover={{ scale: 1.2 }}
+              >
+                {/* Glow */}
+                <motion.circle
+                  cx={p.x}
+                  cy={p.y}
+                  r={R + 6}
+                  fill="#3b82f6"
+                  opacity={0.08}
+                />
 
-          {/* Wavy connector line */}
-          <path d={wavePath} fill="none" stroke="#d1d5db" strokeWidth="2.5" strokeLinecap="round" />
+                {/* Outer Circle */}
+                <circle
+                  cx={p.x}
+                  cy={p.y}
+                  r={R}
+                  fill="white"
+                  stroke="#3b82f6"
+                  strokeWidth="3"
+                />
 
-          {timelineData.map((item, i) => {
-            const cx = circleXs[i];
-            const cy = circleYs[i];
-            const isTop = item.position === "top";
-            const isActive = active === i;
-
-            // Small vertical pin from label to circle edge
-            const pinTopY = isTop ? cy - R - 2 : cy + R + 2;
-            const pinBotY = isTop ? cy - R - 20 : cy + R + 20;
-
-            // Label block Y anchor
-            const labelAnchor = isTop ? cy - R - 24 : cy + R + 24;
-
-            return (
-              <g key={i} onClick={() => setActive(active === i ? null : i)}
-                style={{ cursor: "pointer" }}>
-
-                {/* Vertical pin */}
-                <line x1={cx} y1={pinTopY} x2={cx} y2={pinBotY}
-                  stroke={item.color} strokeWidth="1.5" opacity="0.55" />
-                <circle cx={cx} cy={pinBotY} r="3" fill={item.color} opacity="0.65" />
-
-                {/* Outer glow ring */}
-                <circle cx={cx} cy={cy} r={R + 7} fill="white"
-                  stroke={item.color} strokeWidth="2" opacity="0.25" />
-
-                {/* Main circle */}
-                <circle cx={cx} cy={cy} r={R} fill="white"
-                  stroke={item.color} strokeWidth="3"
-                  style={{
-                    transition: "r 0.15s",
-                    transformOrigin: `${cx}px ${cy}px`,
-                    transform: isActive ? "scale(1.08)" : "scale(1)",
-                  }}
+                {/* Inner Ring */}
+                <circle
+                  cx={p.x}
+                  cy={p.y}
+                  r={R - 12}
+                  fill="none"
+                  stroke="#3b82f6"
+                  strokeWidth="2"
+                  opacity="0.5"
                 />
 
                 {/* Year */}
-                <text x={cx} y={cy} textAnchor="middle" dominantBaseline="middle"
-                  fill={item.color} fontSize="16" fontWeight="700" fontFamily="sans-serif">
-                  {item.year}
+                <text
+                  x={p.x}
+                  y={p.y - 4}
+                  textAnchor="middle"
+                  fontSize="14"
+                  fontWeight="700"
+                  fill="#2563eb"
+                >
+                  {year}
                 </text>
 
-                {/* Label: title + description (top items go above, bottom below) */}
-                <text x={cx} y={isTop ? labelAnchor - 14 : labelAnchor + 14}
-                  textAnchor="middle" fill={item.color}
-                  fontSize="9.5" fontWeight="700" fontFamily="sans-serif" letterSpacing="0.8">
-                  {item.title}
-                </text>
-                <text x={cx} y={isTop ? labelAnchor - 1 : labelAnchor + 27}
-                  textAnchor="middle" fill="#9ca3af" fontSize="8.5" fontFamily="sans-serif">
-                  Lorem ipsum dolor sit amet,
-                </text>
-                <text x={cx} y={isTop ? labelAnchor + 10 : labelAnchor + 38}
-                  textAnchor="middle" fill="#9ca3af" fontSize="8.5" fontFamily="sans-serif">
-                  consectetur adipiscing elit.
-                </text>
+                {/* ================= CONNECTOR LINE ================= */}
 
-                {/* Click popup */}
-                {isActive && (
-                  <g>
-                    <rect
-                      x={cx - 68} y={isTop ? cy + R + 14 : cy - R - 74}
-                      width={136} height={58} rx="8"
-                      fill="white" stroke={item.color} strokeWidth="1"
-                    />
-                    <text x={cx} y={isTop ? cy + R + 32 : cy - R - 55}
-                      textAnchor="middle" fill={item.color}
-                      fontSize="10" fontWeight="700" fontFamily="sans-serif">
-                      {item.year} · {item.title}
-                    </text>
-                    <text x={cx} y={isTop ? cy + R + 46 : cy - R - 40}
-                      textAnchor="middle" fill="#6b7280" fontSize="9" fontFamily="sans-serif">
-                      Lorem ipsum dolor sit amet,
-                    </text>
-                    <text x={cx} y={isTop ? cy + R + 58 : cy - R - 28}
-                      textAnchor="middle" fill="#6b7280" fontSize="9" fontFamily="sans-serif">
-                      consectetur adipiscing elit.
-                    </text>
-                  </g>
-                )}
-              </g>
+                {(() => {
+                  const isTop = p.y < CENTER_Y;
+
+                  const lineLength = 80;
+
+                  const x2 = p.x;
+                  const y2 = isTop ? p.y + lineLength : p.y - lineLength;
+
+                  return (
+                    <>
+                      {/* Line */}
+                      <motion.line
+                        x1={p.x}
+                        y1={p.y + (isTop ? R : -R)}
+                        x2={x2}
+                        y2={y2}
+                        stroke="#94a3b8"
+                        strokeWidth="1.5"
+                        initial={{ pathLength: 0 }}
+                        animate={{ pathLength: 1 }}
+                        transition={{ delay: i * 0.2 }}
+                      />
+
+                      {/* Title AFTER LINE */}
+                      <motion.text
+                        x={x2}
+                        y={isTop ? y2 + 16 : y2 - 10}
+                        textAnchor="middle"
+                        fontSize="12"
+                        fontWeight="600"
+                        fill="#374151"
+                        initial={{ opacity: 0, y: isTop ? 10 : -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: i * 0.25 }}
+                      >
+                        {yearTitles[year]}
+                      </motion.text>
+                    </>
+                  );
+                })()}
+              </motion.g>
             );
           })}
         </svg>
       </div>
-    </div>
+
+      {/* ================= MODAL ================= */}
+      <AnimatePresence>
+                {selectedYear && (
+                    <motion.div
+                        className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-md"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0, y: 40 }}
+                            animate={{ scale: 1, opacity: 1, y: 0 }}
+                            exit={{ scale: 0.9, opacity: 0 }}
+                            transition={{ type: "spring", stiffness: 120 }}
+                            className="bg-white/90 backdrop-blur-xl w-[95%] max-w-5xl max-h-[85vh] overflow-y-auto rounded-2xl p-8 relative shadow-2xl"
+                        >
+                            {/* Close */}
+                            <button
+                                onClick={() => setSelectedYear(null)}
+                                className="absolute top-4 right-5 text-xl text-gray-500 hover:text-black"
+                            >
+                                ✕
+                            </button>
+
+                            {/* Title */}
+                            <h2 className="text-3xl font-semibold text-brand-blue mb-8 text-center">
+                                Transactions - {selectedYear}
+                            </h2>
+
+                            <div className="space-y-10">
+                                {filteredTransactions.length > 0 ? (
+                                    filteredTransactions.map((item, index) => (
+                                        <motion.div
+                                            key={index}
+                                            initial={{ opacity: 0, y: 30 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ delay: index * 0.1 }}
+                                            className="relative flex flex-col md:flex-row gap-4 border border-brand-lightgreen/60 rounded-xl p-6 bg-white hover:shadow-xl hover:-translate-y-[3px] transition-all duration-300"
+                                        >
+                                            {/* LOGO */}
+                                            {item.clientLogo && (
+                                                <div className="flex-shrink-0 w-20 h-20 md:w-28 md:h-28 bg-gray-50 rounded-lg border p-3">
+                                                    <img
+                                                        src={item.clientLogo}
+                                                        alt={item.client}
+                                                        className="w-full h-full object-contain"
+                                                    />
+                                                </div>
+                                            )}
+
+                                            {/* CONTENT */}
+                                            <div>
+                                                <h4 className="text-sm font-semibold text-brand-blue">
+                                                    {item.company}
+                                                </h4>
+
+                                                <p className="text-sm text-gray-600 mt-1">
+                                                    {item.transactionText}
+                                                </p>
+
+                                                <div className="mt-3 text-xs">
+                                                    <span className="text-gray-500 uppercase">
+                                                        {item.metricLabel}
+                                                    </span>
+
+                                                    <span className="ml-2 px-2 py-1 rounded-md bg-brand-lightgreen/10 text-brand-lightgreen font-semibold">
+                                                        {item.metricValue}
+                                                    </span>
+                                                </div>
+
+                                                <p className="text-xs text-gray-500 mt-2">
+                                                    Role:{" "}
+                                                    <span className="font-medium text-gray-700">
+                                                        {item.role}
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </motion.div>
+                                    ))
+                                ) : (
+                                    <p className="text-center text-gray-500">
+                                        No transactions available
+                                    </p>
+                                )}
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+    </>
   );
 }

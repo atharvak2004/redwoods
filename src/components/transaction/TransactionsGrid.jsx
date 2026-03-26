@@ -267,7 +267,7 @@ function TransactionsGrid() {
 
   return (
     <section className="py-28 bg-gray-50">
-      <HorizontalTimeline />
+   
       <div className="max-w-7xl mx-auto px-6">
 
         <motion.div

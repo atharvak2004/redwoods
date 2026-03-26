@@ -14,7 +14,7 @@ export default function OurTeam() {
       name: "Mr. Rajeshwar Nimodiya",
       position: "Head – Real Estate Advisory",
       image: "/team/Rajeshwar-removebg-preview.png",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/rajeshwar-nimodiya-2b359124/",
     },
   ];
 

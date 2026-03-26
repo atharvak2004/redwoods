@@ -23,6 +23,14 @@ export const ongoingProjects = [
       "The Residency is an integrated residential development aimed at structured urban growth. The project focuses on coordinated planning, livable community spaces, and sustainable development principles, contributing to long-term urban value creation.",
     url: "/real-estate/development#theresidency",
   },
+  {
+    image: "/kasoli-land.webp",
+    title: "Kasoli Project",
+    shortDescription: "Mixed-use development • Kasoli • Under construction",
+    fullDescription:
+      "The Residency is an integrated residential development aimed at structured urban growth. The project focuses on coordinated planning, livable community spaces, and sustainable development principles, contributing to long-term urban value creation.",
+    url: "/real-estate/development#theresidency",
+  },
 ];
 
 

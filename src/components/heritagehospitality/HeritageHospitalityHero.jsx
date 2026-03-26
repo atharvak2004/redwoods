@@ -7,7 +7,7 @@ export default function HeritageHospitalityHero() {
         <section className="relative h-[90vh] min-h-[520px] flex items-center">
             <div className="absolute inset-0">
                 <MediaElement
-                    src="/heritageHero.png"
+                    src="/home/hero/barsana-hero-image2.png"
                     alt="Premium real estate architecture"
                     className="h-full w-full object-cover"
                 />
@@ -48,7 +48,7 @@ export default function HeritageHospitalityHero() {
                             </span>
                         </h1>
                         <motion.p
-                            className="mt-6 text-md md:text-lg text-white/80 leading-relaxed max-w-3xl"
+                            className="mt-6 text-md md:text-lg text-white/80 leading-relaxed max-w-2xl"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.3 }}

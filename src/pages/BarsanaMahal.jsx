@@ -6,7 +6,7 @@ import ImageGallery from '../components/projects/ImageGallery'
 function BarsanaMahal() {
   return (
     <div>
-      <HeroSection name="Barsana Jal Mahal Restoration" title="Barsana Jal Mahal" title2="Heritage Hospitality" descr="The Barsana Jal Mahal is a stunning water palace dating back to the 18th century. Our restoration project aims to preserve its magnificent heritage." img="/OurPhilosophy-image1.png" />
+      <HeroSection name="Barsana Jal Mahal Restoration" title="Barsana Jal Mahal" title2="Heritage Hospitality" descr="The Barsana Jal Mahal is a stunning water palace dating back to the 18th century. Our restoration project aims to preserve its magnificent heritage." img="/home/hero/barsana-hero-image.png" />
 
       <ProjectOverview description="The Barsana Jal Mahal is a stunning water palace dating back to the 18th century. Our restoration project aims to preserve its magnificent heritage." image="/barsana-ongoing.jpg" title="Barsana Jal Mahal" />
 

@@ -6,9 +6,9 @@ import CTASection from '../components/projects/CTASection'
 function ShuklaTalab() {
   return (
     <div>
-      <HeroSection name="Shukla Ka Talab Restoration" title="Shukla Ka Talab" title2="Heritage Hospitality" descr="Shukla Ka Talab is a historic heritage complex centered around a centuries-old reservoir. The project encompasses the restoration of its historical structures and surrounding environment." img="/shukla-gallery/Picture9.jpg" />
+      <HeroSection name="Shukla Ka Talab Restoration" title="Shukla Ka Talab" title2="Heritage Hospitality" descr="Shukla Ka Talab is a historic heritage complex centered around a centuries-old reservoir. The project encompasses the restoration of its historical structures and surrounding environment." img="/shukla-realestic.png" />
 
-      <ProjectOverview description="Shukla Ka Talab is a historic heritage complex centered around a centuries-old reservoir. The project encompasses the restoration of its historical structures and surrounding environment." image="/Shukla-ongoing.jpg" title="Shukla Ka Talab Restoration" />
+      <ProjectOverview description="Shukla Ka Talab is a historic heritage complex centered around a centuries-old reservoir. The project encompasses the restoration of its historical structures and surrounding environment." image="/shukla-about-realestic.png" title="Shukla Ka Talab Restoration" />
 
       <ImageGallery
         gallery={[
