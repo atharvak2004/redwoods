@@ -23,7 +23,7 @@ const locations = [
   {
     name: "Delhi Office",
     mapUrl:
-      "https://www.google.com/maps/search/redwoods+C-345,+3rd+Floor,+Defence+Colony,+New+Delhi+-+110024/@28.5733421,77.2303086,3390m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D",
+      "https://www.google.com/maps?q=28.5710054,77.2309467&entry=gps&lucs=,94297695,94275415,94284499,94231188,94280568,47071704,94218641,94282134,94286869&g_ep=CAISEjI1LjQ5LjkuODM4ODk5MTgzMBgAINeCAypRLDk0Mjk3Njk1LDk0Mjc1NDE1LDk0Mjg0NDk5LDk0MjMxMTg4LDk0MjgwNTY4LDQ3MDcxNzA0LDk0MjE4NjQxLDk0MjgyMTM0LDk0Mjg2ODY5QgJJTg%3D%3D&skid=510b257b-23e7-470e-aca0-931ff22c2365&g_st=iwb  ",
   },
   {
     name: "Dehradun Office",
@@ -62,7 +62,7 @@ export default function ContactHero() {
 
   return (
     <section
-      className="relative h-[90vh] min-h-[520px] flex items-center
+      className="relative h-[100vh] min-h-[520px] flex items-center
       bg-gradient-to-br from-[#162f4b] via-[#091a2e] to-[#0d1c2d] pt-60 md:pt-0"
     >
       <div className="max-w-7xl mx-auto px-6 w-full">

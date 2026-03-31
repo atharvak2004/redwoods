@@ -7,8 +7,8 @@ export default function OurTeam() {
     {
       name: "Mr. Anuj Nautiyal",
       position: "Founder & Managing Director",
-      image: "https://via.placeholder.com/500",
-      linkedin: "#",
+      image: "/team/leader-Anuj.png",
+      linkedin: "https://www.linkedin.com/in/anuj-nautiyal-91479521/",
     },
     {
       name: "Mr. Rajeshwar Nimodiya",

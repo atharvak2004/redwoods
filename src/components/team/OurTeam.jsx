@@ -6,13 +6,13 @@ export default function OurTeam() {
   const team = [
     {
       name: "Ms. Kaveramma C S",
-      position: "EA & Admin",
+      position: "Secretary",
       image: "/team/Kaveri-whitebg.png",
       linkedin: "#",
     },
     {
       name: "Mr. Vicky Arya",
-      position: "Transaction",
+      position: "Business Development ",
       image: "/team/Vicky-removebg-preview.png",
       linkedin: "#",
     },

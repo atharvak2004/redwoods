@@ -21,7 +21,7 @@ const transactions = [
         transactionText:
             "Transacted the sale of a land parcel in Ghaziabad",
         client: "Confidential Client",
-        clientLogo: "/dummy-company.png",
+        clientLogo: "Redwoods_logo-removebg.png",
         metricLabel: "Asset Type",
         metricValue: "Land Transaction",
         role: "Transaction Advisor",
@@ -43,7 +43,7 @@ const transactions = [
         transactionText:
             "Provided strategic advisory for asset restructuring and transaction planning",
         client: "Confidential Client",
-        clientLogo: "/dummy-company.png",
+        clientLogo: "Redwoods_logo-removebg.png",
         metricLabel: "Mandate",
         metricValue: "Strategic Advisory",
         role: "Financial Advisor",
@@ -54,7 +54,7 @@ const transactions = [
         transactionText:
             "Advised investors on acquisition strategy and portfolio positioning",
         client: "Private Investors",
-        clientLogo: "/dummy-company.png",
+        clientLogo: "Redwoods_logo-removebg.png",
         metricLabel: "Service",
         metricValue: "Investment Advisory",
         role: "Investment Advisor",
@@ -65,7 +65,7 @@ const transactions = [
         transactionText:
             "Provided development advisory across project planning and execution",
         client: "Confidential Client",
-        clientLogo: "/dummy-company.png",
+        clientLogo: "Redwoods_logo-removebg.png",
         metricLabel: "Service",
         metricValue: "Development Advisory",
         role: "Development Advisor",
