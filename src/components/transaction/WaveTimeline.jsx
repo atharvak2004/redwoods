@@ -326,7 +326,7 @@ const WaveTimeline = () => {
                     {/* Heading */}
                     <h2 className="text-3xl md:text-5xl xl:text-5xl font-semibold text-brand-blue leading-[1.2]">
                         Snapshot of Success <br />
-                       <span className="text-[#3e467c]">Across Key Mandates</span>
+                       <span className="">Across Key Mandates</span>
                     </h2>
 
                     {/* Description */}

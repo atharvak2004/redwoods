@@ -21,12 +21,12 @@ export default function OurBusinesses() {
 
           <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-blue leading-tight">
             Expertise Across <br />
-            <span className="text-[#373e68]">
+            <span className="">
               Real Estate, Energy & Heritage
             </span>
           </h2>
 
-          <p className="mt-6 text-lg text-gray-700 leading-relaxed">
+          <p className="mt-6 text-lg text-gray-700 leading-relaxed text-justify max-w-2xl">
             Our businesses are built on long-term thinking, disciplined execution,
             and a commitment to creating assets with lasting value.
           </p>
@@ -35,7 +35,7 @@ export default function OurBusinesses() {
         {/* ================= BUSINESS CARDS ================= */}
 
         <BusinessCard
-          image="/realestatedev_bgremove.jpeg"
+          image="/development/condo-living.png"
           title="Real Estate Development"
           desc="End-to-end real estate development across land acquisition, project feasibility, planning, structuring, and execution—delivering projects seamlessly from concept to completion."
           link="real-estate/development"
@@ -61,14 +61,14 @@ export default function OurBusinesses() {
         />
 
         <BusinessCard
-          image="/solar/Dakpathar.JPG"
+          image="/solar/Khodri/K-1.png"
           title="Renewable Energy"
           desc="Ownership and operation of clean energy infrastructure, focused on sustainable power generation, operational efficiency, and long-term asset performance."
           link="/business/renewable-energy"
           cards={[
             {
               title: "Solar Projects",
-              items: ["Dakpathar Solar Power Plant", "Dakpathar Solar Power Plant", "Dhakrani Solar Power Plant", "Dada Jalalpur Solar Power Project"],
+              items: ["Dhakrani Solar Power Project", "Khodri Solar Power Project", "Dadajalalpur Solar Power Project", "Dakpathar Solar Power Project"],
             },
           ]}
         />

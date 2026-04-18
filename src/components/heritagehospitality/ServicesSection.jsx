@@ -54,7 +54,7 @@ export function ServicesSection() {
 
           <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-blue leading-tight">
             Heritage Hospitality <br />
-            <span className="text-[#373e68]">Services</span>
+            <span className="">Services</span>
           </h2>
 
           <p className="max-w-3xl mx-auto mt-6 text-gray-600 text-lg leading-relaxed">

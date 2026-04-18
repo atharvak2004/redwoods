@@ -12,13 +12,13 @@ const slides = [
   {
     title: "REAL ESTATE.\nBUILT TO LAST.",
     desc: "End-to-end real estate development across land acquisition, project feasibility, planning, structuring, and execution—delivering projects seamlessly from concept to completion.",
-    image: "/home/hero/hero1.png",
+    image: "/home/hero/hero-carousal-image1.png",
     link: "/real-estate/development",
   },
   {
     title: "CLEAN ENERGY.\nBUILT RESPONSIBLY.",
     desc: "Ownership and operation of clean energy infrastructure, focused on sustainable power generation, operational efficiency, and long-term asset performance.",
-    image: "/home/hero/hero3.png",
+    image: "/solar/Dhakarani-hero.png",
     link: "/business/renewable-energy",
   },
   {
@@ -66,8 +66,8 @@ export default function HeroCarousel() {
               style={{ backgroundImage: `url(${slide.image})` }}
             >
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/30" />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-transparent" />
+              {/* <div className="absolute inset-0 bg-black/30" /> */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black via-black/65 to-transparent" />
 
               {/* Content */}
               <div className="relative z-10 h-full flex items-center">
@@ -81,7 +81,7 @@ export default function HeroCarousel() {
                     {slide.title}
                   </h1>
 
-                  <p className="mt-6 max-w-xl text-md md:text-lg text-white/80 leading-relaxed fade-up delay-3">
+                  <p className="mt-6 max-w-lg text-md md:text-lg text-white/80 leading-relaxed tracking-wide text-justify fade-up delay-3">
                     {slide.desc}
                   </p>
 

@@ -13,7 +13,7 @@ export default function OurLeadership() {
     {
       name: "Mr. Rajeshwar Nimodiya",
       position: "Sr. Vice President",
-      image: "/team/Rajeshwar-removebg-preview.png",
+      image: "/team/Rajeshwar-remove.png",
       linkedin: "https://www.linkedin.com/in/rajeshwar-nimodiya-2b359124/",
     },
   ];
@@ -36,7 +36,7 @@ export default function OurLeadership() {
 
           <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-blue leading-tight">
             Leadership Built on <br />
-            <span className="text-[#373e68]">Trust & Experience</span>
+            <span className="">Trust & Experience</span>
           </h2>
 
           <p className="mt-6 text-lg text-gray-700 leading-relaxed">

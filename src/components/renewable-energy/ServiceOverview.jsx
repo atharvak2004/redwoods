@@ -22,7 +22,7 @@ export function ServiceOverview() {
           >
             <div className="aspect-square rounded-3xl overflow-hidden shadow-xl">
               <MediaElement
-                src="/DHAKRANI_solor.png"
+                src="/solar/Khodri/K-2.png"
                 alt="Renewable energy infrastructure"
                 className="object-cover"
               />
@@ -45,7 +45,7 @@ export function ServiceOverview() {
 
             <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-blue leading-tight">
               Powering a <br />
-              <span className="text-[#373e68]">
+              <span className="">
                 Sustainable Future
               </span>
             </h2>

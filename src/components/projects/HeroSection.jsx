@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import MediaElement from "../media/MediaElement";
 
-function HeroSection({name, title, title2, descr, img}) {
+function HeroSection({ name, title, title2, descr, img }) {
   return (
     <section className="relative h-[90vh] min-h-[520px] flex items-center">
       {/* Background Media */}
@@ -14,7 +14,8 @@ function HeroSection({name, title, title2, descr, img}) {
           className="h-full w-full object-cover"
         />
         {/* Brand Overlay */}
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/65 to-transparent" />
+
       </div>
 
       {/* Content */}
@@ -55,7 +56,7 @@ function HeroSection({name, title, title2, descr, img}) {
             </h1>
 
             <motion.p
-              className="mt-6 text-md md:text-lg text-white/80 leading-relaxed max-w-2xl"
+              className="mt-6 max-w-lg text-md md:text-lg text-white/80 leading-relaxed tracking-wide text-justify fade-up delay-3"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}

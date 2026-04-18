@@ -58,30 +58,29 @@ export default function AboutRedwoods() {
 
             <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-blue leading-tight">
               Redefining Trust in <br />
-              <span className="text-[#373e68]">
+              <span className="">
                 Real Estate & Investments
               </span>
             </h2>
+<p className="mt-6 text-gray-700 text-lg leading-relaxed text-justify">
+  Redwoods Group is a diversified business group delivering strategic
+  opportunities across real estate, renewable energy, and hospitality sectors.
+</p>
 
-            <p className="mt-6 text-gray-700 text-lg leading-relaxed">
-              Redwoods Group is a diversified business group delivering strategic
-              opportunities across real estate, renewable energy, and hospitality sectors.
-            </p>
+<p className="mt-4 text-gray-700 leading-relaxed text-justify">
+  Since 2006, we have supported investors, developers, and organizations
+  with advisory expertise, deal structuring, and joint development solutions across India.
+</p>
 
-            <p className="mt-4 text-gray-700 leading-relaxed">
-              Since 2006, we have supported investors, developers, and organizations
-              with advisory expertise, deal structuring, and joint development solutions across India.
-            </p>
+<p className="mt-4 text-gray-700 leading-relaxed text-justify">
+  Our experience in facilitating over 25 million sq. ft. of real estate
+  transactions reflects our commitment to delivering practical, value-driven outcomes.
+</p>
 
-            <p className="mt-4 text-gray-700 leading-relaxed">
-              Our experience in facilitating over 25 million sq. ft. of real estate
-              transactions reflects our commitment to delivering practical, value-driven outcomes.
-            </p>
-
-            <p className="mt-4 text-gray-700 leading-relaxed">
-              Guided by integrity, transparency, and long-term thinking, Redwoods continues
-              to build trusted partnerships and sustainable growth opportunities.
-            </p>
+<p className="mt-4 text-gray-700 leading-relaxed text-justify">
+  Guided by integrity, transparency, and long-term thinking, Redwoods continues
+  to build trusted partnerships and sustainable growth opportunities.
+</p>
 
             {!isAboutPage && (
               <Link to="/about">

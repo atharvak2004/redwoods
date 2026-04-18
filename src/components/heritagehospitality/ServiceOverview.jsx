@@ -48,7 +48,7 @@ export function ServiceOverview() {
 
             <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-blue leading-tight mb-6">
               Preserving Legacy, <br />
-              <span className="text-[#373e68]">
+              <span className="">
                 Creating Experiences
               </span>
             </h2>

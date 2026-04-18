@@ -46,7 +46,7 @@ export default function CompletedProjects() {
           </span>
 
           <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-blue leading-tight">
-            Completed <span className="text-[#373e68]">Projects</span>
+            Completed <span className="">Projects</span>
           </h2>
 
           <p className="max-w-2xl mx-auto mt-6 text-gray-700 text-lg leading-relaxed">

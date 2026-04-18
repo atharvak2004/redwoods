@@ -23,7 +23,7 @@ import DhakraniSolar from "./pages/DhakraniSolar.jsx";
 import BarsanaMahal from "./pages/BarsanaMahal.jsx";
 import ShuklaTalab from "./pages/ShuklaTalab.jsx";
 import PilibhitHouse from "./pages/PilibhitHouse.jsx";
-
+import DakpatharSolar from "./pages/DakpatharSolar.jsx";
 function App() {
   return (
     <>
@@ -46,6 +46,7 @@ function App() {
         <Route path="/renewable-energy/khodri-solar" element={<KhodriSolar />} />
         <Route path="/renewable-energy/dadajalalpur-solar" element={<DadajalalpurSolar />} />
         <Route path="/renewable-energy/dhakrani-solar" element={<DhakraniSolar />} />
+        <Route path="/renewable-energy/dakpathar-solar" element={<DakpatharSolar />} />
         <Route path="/heritage-hospitality/barsana-mahal" element={<BarsanaMahal />} />
         <Route path="/heritage-hospitality/shukla-talab" element={<ShuklaTalab />} />
         <Route path="/heritage-hospitality/pilibhit-house" element={<PilibhitHouse />} />

@@ -51,7 +51,7 @@ export function ImpactSection() {
             Measurable Outcomes
           </span>
 
-          <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-green/80 leading-tight">
+          <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-green leading-tight">
             Our <span className="text-brand-green">Impact</span>
           </h2>
 

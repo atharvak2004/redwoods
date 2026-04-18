@@ -8,11 +8,11 @@ function AboutHero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/about/aboutpagebg03.png"
+          src="/about/Company-Building.png"
           alt="About Redwoods Group"
           className="h-full w-full object-cover object-[85%_center] md:object-center"
         />
-        <div className="absolute inset-0 bg-black/75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/65 to-transparent" />
       </div>
 
       {/* Content */}
@@ -54,7 +54,7 @@ function AboutHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-6 text-md md:text-lg text-white/80 leading-relaxed "
+              className="mt-6 max-w-lg text-md md:text-lg text-white/80 leading-relaxed tracking-wide text-justify fade-up delay-3"
             >
               Redwoods Group is a diversified advisory and investment platform
               delivering strategic insight, disciplined execution, and enduring

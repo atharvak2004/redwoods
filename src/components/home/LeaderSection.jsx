@@ -19,7 +19,7 @@ export default function LeaderSection() {
 
           <h2 className="text-3xl md:text-4xl font-semibold text-brand-blue leading-tight">
             Leadership Built on <br />
-            <span className="text-[#373e68]">Experience & Integrity</span>
+            <span className="">Experience & Integrity</span>
           </h2>
 
           <p className="mt-6 text-lg text-gray-700 leading-relaxed">

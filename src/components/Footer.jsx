@@ -40,7 +40,7 @@ export default function Footer() {
             <img
               src="/Redwoods_logo-removebg.png"
               alt="Redwoods Group"
-              className="h-14 w-auto mb-6"
+              className="h-20 w-auto mb-6"
             />
             <p className="text-sm text-gray-700 leading-relaxed">
               Delivering strategic advisory, execution excellence, and

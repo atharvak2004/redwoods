@@ -6,7 +6,7 @@ import ImageGallery from '../components/projects/ImageGallery'
 function KhodriSolar() {
   return (
     <div>
-      <HeroSection name="Khodri Solar Project" title="Khodri Solar" title2="Power Plant" descr="A pioneering solar energy initiative harnessing cutting-edge technology to deliver sustainable and efficient power solutions." img="/solar/Dhakrani.JPG" />
+      <HeroSection name="Khodri Solar Project" title="Khodri Solar" title2="Power Plant" descr="A pioneering solar energy initiative harnessing cutting-edge technology to deliver sustainable and efficient power solutions." img="/solar/Khodri-hero.png" />
       <SolarInfo1 />
       <ImageGallery gallery={[
         "/SolarPhotos/1.JPG",

@@ -6,27 +6,27 @@ export default function OurTeam() {
   const team = [
     {
       name: "Ms. Kaveramma C S",
-      position: "Secretary",
+      position: "EA & Admin",
       image: "/team/Kaveri-whitebg.png",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/kaveramma-cs-723b7370/",
     },
     {
       name: "Mr. Vicky Arya",
-      position: "Business Development ",
+      position: "Manager - Transactions",
       image: "/team/Vicky-removebg-preview.png",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/vicky-arya-36b16057/",
     },
     {
       name: "Ms. Kirthika M",
-      position: "IT",
+      position: "IT Executive",
       image: "/team/Kirthika-removebg-preview.png",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/kirthika-m-1653b1247/",
     },
     {
       name: "Ms. Gadi Muthyalamma",
-      position: "Accounts",
+      position: "Manager - Accounts",
       image: "/team/Muthyalamma-removebg-preview.png",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/g-muthyalamma-066238111/",
     },
   ];
 
@@ -48,7 +48,7 @@ export default function OurTeam() {
 
           <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-blue leading-tight">
             The Faces <br />
-            <span className="text-[#373e68]">Behind Our Work</span>
+            <span className="">Behind Our Work</span>
           </h2>
 
           <p className="mt-6 text-lg text-gray-700 leading-relaxed">
@@ -97,7 +97,7 @@ export default function OurTeam() {
                 </p>
 
                 {/* LinkedIn */}
-                {/* <div className="mt-6 flex justify-center">
+                <div className="mt-6 flex justify-center">
                   <a
                     href={member.linkedin}
                     target="_blank"
@@ -110,7 +110,7 @@ export default function OurTeam() {
                   >
                     <FaLinkedinIn className="text-lg" />
                   </a>
-                </div> */}
+                </div>
               </div>
             </motion.div>
           ))}

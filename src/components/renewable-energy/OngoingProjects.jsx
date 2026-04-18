@@ -5,38 +5,49 @@ import { Link } from "react-router-dom";
 const ongoingProjects = [
   {
     url:'/renewable-energy/dhakrani-solar',
-    image: "/DHAKRANI_solor.png",
+    image: "/solar/Dhakarani/Dha-3.png",
     title: "Dhakrani Solar Power Project",
     location: "Dhakrani, Vikasnagar, Uttarakhand",
     description:
       "A grid-connected solar photovoltaic project supported through execution assistance, contributing to clean energy generation under a long-term power supply arrangement with a government utility.",
-    stats: [
-      { label: "Status", value: "Commissioned (2016)" },
-    ],
+    // stats: [
+    //   { label: "Status", value: "Commissioned (2016)" },
+    // ],
   },
 
   {
     url:'/renewable-energy/khodri-solar',
-    image: "/KHODRI_solar.png",
+    image: "/solar/Khodri/K-4.png",
     title: "Khodri Solar Power Project",
-    location: "Dakpathar, Khodri, Uttarakhand",
+    location: "Khodri, Uttarakhand",
     description:
       "A utility-scale solar power project located in hilly terrain, supported through structured development and execution with a focus on long-term operational efficiency and reliability.",
-    stats: [
-      { label: "Status", value: "Commissioned (2016)" },
-    ],
+    // stats: [
+    //   { label: "Status", value: "Commissioned (2016)" },
+    // ],
   },
 
   {
     url:'/renewable-energy/dadajalalpur-solar',
-    image: "/DADAJALALPUR_solar.png",
+    image: "/solar/Dada/D-1.png",
     title: "Dadajalalpur Solar Power Project",
     location: "Dada Jalalpur, Haridwar, Uttarakhand",
     description:
       "A solar photovoltaic project delivering clean energy under a long-term power purchase agreement with a state electricity utility, supported through development and execution.",
-    stats: [
-      { label: "Status", value: "Commissioned" },
-    ],
+    // stats: [
+    //   { label: "Status", value: "Commissioned" },
+    // ],
+  },
+  {
+    url:'/renewable-energy/dakpathar-solar',
+    image: "/solar/Dakpathar/Dak-3.png",
+    title: "Dakpathar Solar Power Project",
+    location: "Dakpathar, Uttarakhand",
+    description:
+      "A solar photovoltaic project delivering clean energy under a long-term power purchase agreement with a state electricity utility, supported through development and execution.",
+    // stats: [
+    //   { label: "Status", value: "Commissioned" },
+    // ],
   },
 ];
 
@@ -70,7 +81,7 @@ export function OngoingProjects() {
             Current Engagements
           </span>
           <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-blue">
-            Renewable Energy <span className="text-[#373e68]"> Projects</span>
+            Renewable Energy <span className=""> Projects</span>
             
           </h2>
         </motion.div>
@@ -114,7 +125,7 @@ export function OngoingProjects() {
                 </p>
 
                 {/* STATS */}
-                <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6">
+                {/* <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6">
                   {project.stats.map((stat, idx) => (
                     <div key={idx}>
                       <div className="text-xs text-gray-500 uppercase tracking-wider">
@@ -125,7 +136,7 @@ export function OngoingProjects() {
                       </div>
                     </div>
                   ))}
-                </div>
+                </div> */}
 
                 {/* BUTTON */}
                 <Link to={project.url}>

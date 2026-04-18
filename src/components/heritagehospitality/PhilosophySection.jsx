@@ -87,7 +87,7 @@ export function PhilosophySection() {
 
             <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-blue leading-tight mb-6">
               Where History <br />
-              <span className="text-[#373e68]">
+              <span className="">
                 Meets Hospitality
               </span>
             </h2>

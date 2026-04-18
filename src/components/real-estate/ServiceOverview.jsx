@@ -26,7 +26,7 @@ export default function ServiceOverview() {
 
             <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-blue leading-tight">
               Thoughtfully Planned <br />
-              <span className="text-[#373e68]">
+              <span className="">
                 Real Estate Development
               </span>
             </h2>
@@ -50,7 +50,7 @@ export default function ServiceOverview() {
           >
             <div className="aspect-square rounded-3xl overflow-hidden shadow-xl">
               <MediaElement
-                src="/TheRecidency.png"
+                src="/development/TheRecidency.png"
                 alt="Real estate development"
                 className="object-cover"
               />

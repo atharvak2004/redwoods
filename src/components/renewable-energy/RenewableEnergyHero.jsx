@@ -36,12 +36,12 @@ export default function RenewableEnergyHero() {
     <section className="relative h-[90vh] min-h-[520px] flex items-center">
       <div className="absolute inset-0">
         <MediaElement
-          src="/home/hero/hero3.png"
+          src="/solar/Dhakarani-hero.png"
           alt="Renewable energy infrastructure"
           className="h-full w-full object-cover"
         />
         {/* Brand Overlay */}
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/65 to-transparent" />
       </div>
       <div className="relative z-10 w-full">
         <div className="max-w-7xl mx-auto px-6">
@@ -83,7 +83,7 @@ export default function RenewableEnergyHero() {
               variants={fadeUpText}
               initial="hidden"
               animate="visible"
-              className="mt-6 text-md md:text-lg text-white/80 leading-relaxed max-w-2xl"
+              className="mt-6 max-w-lg text-md md:text-lg text-white/80 leading-relaxed tracking-wide text-justify fade-up delay-3"
             >
               Ownership and operation of clean energy infrastructure focused on sustainable power generation, operational efficiency, and long-term asset performance.
             </motion.p>

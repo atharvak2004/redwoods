@@ -71,7 +71,7 @@ export function OngoingProjects() {
 
           <h2 className="text-3xl md:text-4xl xl:text-5xl 
                          font-semibold text-brand-blue">
-            Current <span className="text-[#373e68]">Engagements</span>
+            Current <span className="">Engagements</span>
           </h2>
         </motion.div>
 

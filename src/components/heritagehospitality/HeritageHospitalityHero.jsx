@@ -12,7 +12,7 @@ export default function HeritageHospitalityHero() {
                     className="h-full w-full object-cover"
                 />
 
-                <div className="absolute inset-0 bg-black/65" />
+               <div className="absolute inset-0 bg-gradient-to-r from-black via-black/65 to-transparent" />
             </div>
 
             {/* Content */}
@@ -48,7 +48,7 @@ export default function HeritageHospitalityHero() {
                             </span>
                         </h1>
                         <motion.p
-                            className="mt-6 text-md md:text-lg text-white/80 leading-relaxed max-w-2xl"
+                            className="mt-6 max-w-lg text-md md:text-lg text-white/80 leading-relaxed tracking-wide text-justify fade-up delay-3"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.3 }}

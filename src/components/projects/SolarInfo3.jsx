@@ -3,46 +3,14 @@ import MediaElement from "../media/MediaElement";
 
 const ongoingProjects = [
   {
-    image: "/DHAKRANI_solor.png",
+    image: "/solar/Dhakarani/Dha-3.png",
     title: "Dhakrani Solar Power Project",
     location: "Dhakrani, Vikasnagar, Uttarakhand",
     description:
-      "Grid-connected solar photovoltaic project executed with high-efficiency modules and long-term power purchase assurance from a government utility.",
-    stats: [
-      // { label: "Capacity", value: "1.95 MWp (DC)" },
-      // { label: "Land Area", value: "33,744 sq. m" },
-      // { label: "Tariff", value: "₹7.08 / Unit" },
-      { label: "Status", value: "Commissioned (2016)" },
-    ],
+      "Grid-connected solar project executed with high-efficiency modules and long-term power purchase assurance from a government utility.",
+    
   },
 
-  // {
-  //   image: "/KHODRI_solar.png",
-  //   title: "Khodri Solar Power Project",
-  //   location: "Dakpathar, Khodri, Uttarakhand",
-  //   description:
-  //     "Utility-scale solar power plant developed in a hilly terrain, optimized for grid stability and long-term performance under a 25-year PPA.",
-  //   stats: [
-  //     { label: "Capacity", value: "5.04 MWp (DC)" },
-  //     { label: "Land Area", value: "101,175 sq. m" },
-  //     { label: "Tariff", value: "₹7.08 / Unit" },
-  //     { label: "Status", value: "Commissioned (2016)" },
-  //   ],
-  // },
-
-  // {
-  //   image: "/DADAJALALPUR_solar.png",
-  //   title: "Dadajalalpur Solar Power Project",
-  //   location: "Dada Jalalpur, Haridwar, Uttarakhand",
-  //   description:
-  //     "Solar photovoltaic project supplying clean energy under a long-term power purchase agreement with a state electricity utility.",
-  //   stats: [
-  //     { label: "Capacity", value: "2.26 MWp (DC)" },
-  //     { label: "Land Area", value: "39,954 sq. m" },
-  //     { label: "Tariff", value: "₹6.85 / Unit" },
-  //     { label: "Status", value: "Commissioned" },
-  //   ],
-  // },
 ];
 
 
@@ -75,7 +43,7 @@ export function SolarInfo3() {
             Current Engagements
           </span>
           <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-blue">
-            Project <span className="text-[#373e68]">Information</span>
+            Project <span className="">Information</span>
           </h2>
         </motion.div>
 
@@ -118,7 +86,7 @@ export function SolarInfo3() {
                 </p>
 
                 {/* STATS */}
-                <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6">
+                {/* <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6">
                   {project.stats.map((stat, idx) => (
                     <div key={idx}>
                       <div className="text-xs text-gray-500 uppercase tracking-wider">
@@ -129,7 +97,7 @@ export function SolarInfo3() {
                       </div>
                     </div>
                   ))}
-                </div>
+                </div> */}
               </div>
             </motion.div>
           );

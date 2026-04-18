@@ -28,19 +28,16 @@ const fadeUpItem = {
 export default function OngoingProjects() {
   return (
     <section className="relative py-24 bg-white overflow-hidden">
-
-      {/* Light green wash (MATCHED) */}
+      {/* Background Gradient */}
       <div
-        className="absolute inset-0
-                   bg-gradient-to-r
-                   from-brand-lightgreen/4
-                   via-brand-lightgreen/7
-                   to-brand-lightgreen/4"
+        className="absolute inset-0 bg-gradient-to-r
+        from-brand-lightgreen/4
+        via-brand-lightgreen/7
+        to-brand-lightgreen/4"
       />
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
-
-        {/* ================= HEADING ================= */}
+        {/* HEADING */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -53,7 +50,7 @@ export default function OngoingProjects() {
           </span>
 
           <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-brand-blue leading-tight">
-            Our <span className="text-[#373e68]">Projects</span>
+            Our Projects
           </h2>
 
           <p className="max-w-2xl mx-auto mt-6 text-gray-700 text-lg leading-relaxed">
@@ -62,8 +59,8 @@ export default function OngoingProjects() {
           </p>
         </motion.div>
 
-        {/* ================= GRID ================= */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10">
+        {/* GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-items-center">
           {ongoingProjects.map((project, index) => (
             <motion.div
               key={index}
@@ -74,6 +71,8 @@ export default function OngoingProjects() {
               custom={index}
               className="
                 group
+                w-[380px]  
+                h-[420px]  
                 bg-white
                 rounded-2xl
                 overflow-hidden
@@ -87,7 +86,6 @@ export default function OngoingProjects() {
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );

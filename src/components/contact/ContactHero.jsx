@@ -96,7 +96,7 @@ export default function ContactHero() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-white/80 max-w-2xl mt-6 text-md md:text-lg leading-relaxed"
+          className="mt-6 max-w-lg text-md md:text-lg text-white/80 leading-relaxed tracking-wide text-justify fade-up delay-3"
         >
           Whether you’re exploring an opportunity, seeking strategic advisory,
           or planning a long-term partnership, our team is ready to engage
@@ -132,8 +132,8 @@ export default function ContactHero() {
             />
 
             <Hex
-              src="/contact/hex-fb.svg"
-              onClick={() => window.open("https://www.facebook.com/RedwoodsIndia", "_blank")}
+              src="/contact/hex-linkedin.svg"
+              onClick={() => window.open("https://www.linkedin.com/company/redwoods-projects-private-limited/", "_blank")}
               className="absolute top-[122px] left-[190px]"
             />
 
@@ -175,8 +175,8 @@ export default function ContactHero() {
         />
 
         <Hex
-          src="/contact/hex-fb.svg"
-          onClick={() => window.open("https://www.facebook.com/RedwoodsIndia", "_blank")}
+          src="/contact/hex-linkedin.svg"
+          onClick={() => window.open("https://www.linkedin.com/company/redwoods-projects-private-limited/", "_blank")}
           className="absolute top-[160px] right-[280px]"
         />
 
