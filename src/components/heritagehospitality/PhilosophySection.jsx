@@ -57,17 +57,17 @@ export function PhilosophySection() {
             viewport={{ once: true, amount: 0.3 }}
             className="grid grid-cols-2 gap-6"
           >
-            <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
+            <div className="aspect-[6/7] rounded-2xl overflow-hidden shadow-lg">
               <MediaElement
-                src='/OurPhilosophy-image1.png'
+                src='/Shukla/S-2.png'
                 alt="Heritage architectural detail"
                 className="object-cover"
               />
             </div>
 
-            <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-xl mt-12">
+            <div className="aspect-[6/7] rounded-2xl overflow-hidden shadow-xl mt-12">
               <MediaElement
-                src="/OurPhilosophy-image2.png"
+                src="/Barsana/B-2.png"
                 alt="Heritage hospitality space"
                 className="object-cover"
               />

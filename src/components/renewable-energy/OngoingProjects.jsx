@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const ongoingProjects = [
   {
     url:'/renewable-energy/dhakrani-solar',
-    image: "/solar/Dhakarani/Dha-3.png",
+    image: "/solar/Dhakrani-tree-removed.png",
     title: "Dhakrani Solar Power Project",
     location: "Dhakrani, Vikasnagar, Uttarakhand",
     description:
@@ -17,7 +17,7 @@ const ongoingProjects = [
 
   {
     url:'/renewable-energy/khodri-solar',
-    image: "/solar/Khodri/K-4.png",
+    image: "/solar/khodri-clear.png",
     title: "Khodri Solar Power Project",
     location: "Khodri, Uttarakhand",
     description:
@@ -101,7 +101,7 @@ export function OngoingProjects() {
             >
               {/* IMAGE */}
               <div className={reverse ? "lg:order-2" : ""}>
-                <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+                <div className=" rounded-3xl overflow-hidden shadow-xl">
                   <MediaElement
                     src={project.image}
                     alt={project.title}

@@ -70,13 +70,13 @@ function Navbar() {
     border border-gray-200
   "
       >
-        <div className={`px-6 flex items-center justify-between transition-all duration-300 h-16`}>
+        <div className={`px-6 p-1 flex items-center justify-between transition-all duration-300 h-18`}>
           {/* Logo */}
           <NavLink to="/">
             <img
-              src="/Redwoods_logo-removebg.png"
+              src="/redwoods-logo-clear.png"
               alt="Redwoods"
-              className={`transition-all duration-300 h-12`}
+              className={`transition-all duration-300 h-16`}
             />
           </NavLink>
 

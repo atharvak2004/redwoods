@@ -41,7 +41,7 @@ export default function RenewableEnergyHero() {
           className="h-full w-full object-cover"
         />
         {/* Brand Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/65 to-transparent" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,black,rgba(0,0,0,0.55)_40%,transparent)]" />
       </div>
       <div className="relative z-10 w-full">
         <div className="max-w-7xl mx-auto px-6">

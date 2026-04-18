@@ -6,14 +6,14 @@ import MediaElement from "../media/MediaElement";
 /* ================= DATA ================= */
 const ongoingProjects = [
   {
-    image: "/home/hero/barsana-hero-image.png",
+    image: "/Barsana/B-1.png",
     title: "Barsana Jal Mahal",
     slug: "/heritage-hospitality/barsana-mahal",
     description:
       "An 18th-century water palace in Barsana, Uttar Pradesh, currently undergoing a heritage restoration and adaptive reuse initiative focused on architectural conservation and long-term stewardship.",
   },
   {
-    image: "/shukla-realestic.png",
+    image: "/Shukla/S-3.png",
     title: "Shukla Ka Talab",
     slug: "/heritage-hospitality/shukla-talab",
     description:
@@ -92,7 +92,7 @@ export function OngoingProjects() {
                  min-h-[480px] flex flex-col"
             >
               {/* Image */}
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="overflow-hidden">
                 <MediaElement
                   src={p.image}
                   alt={p.title}
@@ -105,7 +105,7 @@ export function OngoingProjects() {
               {/* Content */}
               <div className="p-6 flex flex-col flex-grow">
 
-                <h3 className="text-lg font-semibold text-brand-blue mb-2
+                <h3 className="text-xl font-semibold text-brand-blue mb-2
                        group-hover:text-brand-lightgreen transition">
                   {p.title}
                 </h3>
@@ -118,7 +118,7 @@ export function OngoingProjects() {
                 <Link to={p.slug} className="mt-auto">
                   <motion.button
                     whileHover={{ scale: 1.05 }}
-                    className="inline-flex items-center gap-2
+                    className="inline-flex items-center gap-2 mt-4
                        bg-brand-green text-white
                        px-5 py-2 rounded-full
                        text-sm font-medium

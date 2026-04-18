@@ -20,9 +20,9 @@ export function ServiceOverview() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="lg:order-2"
           >
-            <div className="aspect-square rounded-3xl overflow-hidden shadow-xl">
+            <div className="rounded-3xl overflow-hidden shadow-xl">
               <MediaElement
-                src="/solar/Khodri/K-2.png"
+                src="/solar/Dakpathar/Dak-1.png"
                 alt="Renewable energy infrastructure"
                 className="object-cover"
               />

@@ -3,7 +3,7 @@ import MediaElement from "../media/MediaElement";
 
 const ongoingProjects = [
   {
-    image: "/solar/Khodri/K-4.png",
+    image: "/solar/khodri-clear.png",
     title: "Khodri Solar Power Project",
     location: "Khodri, Uttarakhand",
     description:

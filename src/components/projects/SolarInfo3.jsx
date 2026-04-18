@@ -3,7 +3,7 @@ import MediaElement from "../media/MediaElement";
 
 const ongoingProjects = [
   {
-    image: "/solar/Dhakarani/Dha-3.png",
+    image: "/solar/Dhakrani-tree-removed.png",
     title: "Dhakrani Solar Power Project",
     location: "Dhakrani, Vikasnagar, Uttarakhand",
     description:

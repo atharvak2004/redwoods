@@ -66,9 +66,9 @@ export function ServiceOverview() {
             viewport={{ once: true, amount: 0.3 }}
             className="relative"
           >
-            <div className="aspect-square rounded-3xl overflow-hidden shadow-xl">
+            <div className="rounded-3xl overflow-hidden shadow-xl">
               <MediaElement
-                src="/shukla-realestic.png"
+                src="/Shukla/S-3.png"
                 alt="Heritage property restoration"
                 className="object-cover"
               />

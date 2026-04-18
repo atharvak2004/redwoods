@@ -41,7 +41,7 @@ export default function ProjectOverview({description , image , title}) {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
             className="relative"
           >
-            <div className="aspect-square rounded-3xl overflow-hidden shadow-xl">
+            <div className="rounded-3xl overflow-hidden shadow-xl">
               <MediaElement
                 src={image}   
                 alt={title}

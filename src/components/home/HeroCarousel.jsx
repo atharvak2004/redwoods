@@ -24,7 +24,7 @@ const slides = [
   {
     title: "HERITAGE.\nTHOUGHTFULLY REDESIGNED.",
     desc: "Restoration and adaptive reuse of heritage properties, balancing cultural preservation with contemporary hospitality and long-term stewardship.",
-    image: "/home/hero/hero2.png",
+    image: "/home/hero/barsana-home-hero.png",
     link: "/heritage-hospitality/shukla-talab",
   },
   {
@@ -67,7 +67,7 @@ export default function HeroCarousel() {
             >
               {/* Overlay */}
               {/* <div className="absolute inset-0 bg-black/30" /> */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black via-black/65 to-transparent" />
+              <div className="absolute inset-0 bg-[linear-gradient(to_right,black,rgba(0,0,0,0.55)_40%,transparent)]" />
 
               {/* Content */}
               <div className="relative z-10 h-full flex items-center">

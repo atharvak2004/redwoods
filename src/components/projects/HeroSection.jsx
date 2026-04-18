@@ -14,7 +14,7 @@ function HeroSection({ name, title, title2, descr, img }) {
           className="h-full w-full object-cover"
         />
         {/* Brand Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/65 to-transparent" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,black,rgba(0,0,0,0.55)_40%,transparent)]" />
 
       </div>
 

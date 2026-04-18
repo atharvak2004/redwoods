@@ -7,12 +7,12 @@ export default function HeritageHospitalityHero() {
         <section className="relative h-[90vh] min-h-[520px] flex items-center">
             <div className="absolute inset-0">
                 <MediaElement
-                    src="/home/hero/barsana-hero-image2.png"
+                    src="/home/hero/barsana-hero-image3.png"
                     alt="Premium real estate architecture"
                     className="h-full w-full object-cover"
                 />
 
-               <div className="absolute inset-0 bg-gradient-to-r from-black via-black/65 to-transparent" />
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,black,rgba(0,0,0,0.55)_40%,transparent)]" />
             </div>
 
             {/* Content */}

@@ -5,10 +5,8 @@ import sitemap from "vite-plugin-sitemap";
 export default defineConfig({
   plugins: [
     react(),
-
     sitemap({
       hostname: "https://redwoods.prushal.com",
-
       dynamicRoutes: [
         "/about",
         "/contact",
@@ -31,7 +29,9 @@ export default defineConfig({
   ],
 
   server: {
-    host: true,
+    host: "0.0.0.0",               // 🔥 IMPORTANT
     port: 5173,
+    strictPort: true,
+    allowedHosts: true,            // 🔥 THIS is the real fix (not "all")
   },
 });
