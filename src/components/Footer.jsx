@@ -32,17 +32,17 @@ const businesses = [
 export default function Footer() {
   return (
     <footer className="bg-gray-200 text-brand-blue">
-      <div className="max-w-7xl mx-auto px-6 py-20">
+      <div className="max-w-7xl mx-auto px-6 pt-20 pb-8">
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14">
 
-          <div>
+          <div className="flex flex-col items-center">
             <img
               src="/Redwoods_logo-removebg.png"
               alt="Redwoods Group"
-              className="h-20 w-auto mb-6"
+              className="h-20 w-auto mb-6 items-center"
             />
-            <p className="text-sm text-gray-700 leading-relaxed">
+            <p className="text-sm text-gray-700 leading-relaxed text-justify">
               Delivering strategic advisory, execution excellence, and
               long-term value across real estate, energy, and heritage hospitality.
             </p>

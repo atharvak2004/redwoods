@@ -105,7 +105,7 @@ function BusinessCard({ image, title, desc, link, cards }) {
         <img
           src={image}
           alt={title}
-          className="w-full h-[320px] object-cover rounded-3xl shadow-lg 
+          className="w-full h-[300px] object-cover rounded-3xl shadow-lg 
                      group-hover:scale-105 transition duration-500"
         />
       </div>

@@ -79,8 +79,7 @@ function Navbar() {
               className={`
     absolute transition-all duration-300
     flex items-center justify-center
-    bg-white rounded-xl p-2
-    ${scrolled ? "h-20 w-20" : "h-32 w-32 top-[1px]"}
+    bg-white rounded-xl p-2 h-20 w-20
   `}
             >
               <NavLink to="/">

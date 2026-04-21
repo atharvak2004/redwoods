@@ -12,7 +12,7 @@ export default function HeritageHospitalityHero() {
                     className="h-full w-full object-cover"
                 />
 
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,black,rgba(0,0,0,0.55)_40%,transparent)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_left,rgba(0,0,0,0.8)_5%,rgba(0,0,0,0.4)_35%,rgba(0,0,0,0.2)_45%,transparent_50%)]" />
             </div>
 
             {/* Content */}
