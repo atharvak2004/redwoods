@@ -64,128 +64,146 @@ function Navbar() {
     fixed top-4 left-4 right-4
     mx-auto max-w-7xl
     z-50
-    bg-white/90 backdrop-blur-md
+    bg-white backdrop-blur-md
     rounded-2xl
     shadow-xl
     border border-gray-200
   "
       >
-        <div className={`px-6 p-1 flex items-center justify-between transition-all duration-300 h-18`}>
-          {/* Logo */}
-          <NavLink to="/">
-            <img
-              src="/redwoods-logo-clear.png"
-              alt="Redwoods"
-              className={`transition-all duration-300 h-16`}
-            />
-          </NavLink>
+        <div className="px-6 flex items-center justify-between">
 
-          {/* ================= DESKTOP NAV ================= */}
-          <nav className="hidden md:flex items-center gap-10">
+          {/* ================= LOGO SECTION ================= */}
+          <div className="flex items-center justify-center w-20 h-20 relative">
 
-            {navLinks.map((link) => {
+            <div
+              className={`
+    absolute transition-all duration-300
+    flex items-center justify-center
+    bg-white rounded-xl p-2
+    ${scrolled ? "h-20 w-20" : "h-32 w-32 top-[1px]"}
+  `}
+            >
+              <NavLink to="/">
+                <img
+                  src="/redwoods-logo-clear.png"
+                  alt="Redwoods"
+                  className="h-full w-full object-contain"
+                />
+              </NavLink>
+            </div>
 
-              /* ---------- NORMAL LINKS ---------- */
-              if (!link.dropdown) {
-                return (
-                  <NavLink key={link.name} to={link.path}>
-                    {({ isActive }) => (
-                      <span
-                        className={`relative text-md font-medium cursor-pointer
+          </div>
+
+          {/* ================= NAVBAR SECTION ================= */}
+          <div className="flex-1 flex justify-end items-center">
+
+            {/* DESKTOP NAV */}
+            <nav className="hidden md:flex items-center gap-10">
+              {navLinks.map((link) => {
+                // KEEP YOUR EXISTING CODE SAME HERE
+
+                /* ---------- NORMAL LINKS ---------- */
+                if (!link.dropdown) {
+                  return (
+                    <NavLink key={link.name} to={link.path}>
+                      {({ isActive }) => (
+                        <span
+                          className={`relative text-md font-medium cursor-pointer
   text-brand-blue`}
+                        >
+                          {link.name}
+                          <span
+                            className={`absolute -bottom-1 left-0 h-[2px] transition-all
+                          ${isActive
+                                ? "w-full bg-brand-green"
+                                : "w-0 bg-brand-green"
+                              }`}
+                          />
+                        </span>
+                      )}
+                    </NavLink>
+                  );
+                }
+
+                /* ---------- OUR BUSINESS ---------- */
+                return (
+                  <div key={link.name} className="relative group">
+
+                    <NavLink to={link.path}>
+                      <span
+                        className="relative text-md font-medium cursor-pointer text-brand-blue"
                       >
                         {link.name}
+
                         <span
                           className={`absolute -bottom-1 left-0 h-[2px] transition-all
-                          ${isActive
+                        ${isBusinessActive
                               ? "w-full bg-brand-green"
-                              : "w-0 bg-brand-green"
+                              : "w-0 bg-brand-green group-hover:w-full"
                             }`}
                         />
                       </span>
-                    )}
-                  </NavLink>
-                );
-              }
+                    </NavLink>
 
-              /* ---------- OUR BUSINESS ---------- */
-              return (
-                <div key={link.name} className="relative group">
-
-                  <NavLink to={link.path}>
-                    <span
-                      className="relative text-md font-medium cursor-pointer text-brand-blue"
-                    >
-                      {link.name}
-
-                      <span
-                        className={`absolute -bottom-1 left-0 h-[2px] transition-all
-                        ${isBusinessActive
-                            ? "w-full bg-brand-green"
-                            : "w-0 bg-brand-green group-hover:w-full"
-                          }`}
-                      />
-                    </span>
-                  </NavLink>
-
-                  {/* DROPDOWN */}
-                  <div className="
+                    {/* DROPDOWN */}
+                    <div className="
                     absolute left-0 top-full mt-4 w-72
                     bg-white rounded-xl shadow-lg
                     opacity-0 invisible
                     group-hover:opacity-100 group-hover:visible
                     transition-all
                   ">
-                    {link.dropdown.map((item) => (
-                      <div key={item.name} className="px-4 py-2">
+                      {link.dropdown.map((item) => (
+                        <div key={item.name} className="px-4 py-2">
 
-                        <NavLink
-                          to={item.path}
-                          className={({ isActive }) =>
-                            `block font-medium
+                          <NavLink
+                            to={item.path}
+                            className={({ isActive }) =>
+                              `block font-medium
                             ${isActive
-                              ? "text-brand-green"
-                              : "text-gray-700 hover:text-brand-blue"
-                            }`}
-                        >
-                          {item.name}
-                        </NavLink>
+                                ? "text-brand-green"
+                                : "text-gray-700 hover:text-brand-blue"
+                              }`}
+                          >
+                            {item.name}
+                          </NavLink>
 
-                        {/* Children */}
-                        {item.children && (
-                          <div className="ml-4 mt-2 border-l pl-4 space-y-1">
-                            {item.children.map((child) => (
-                              <NavLink
-                                key={child.name}
-                                to={child.path}
-                                className={({ isActive }) =>
-                                  `block text-sm
+                          {/* Children */}
+                          {item.children && (
+                            <div className="ml-4 mt-2 border-l pl-4 space-y-1">
+                              {item.children.map((child) => (
+                                <NavLink
+                                  key={child.name}
+                                  to={child.path}
+                                  className={({ isActive }) =>
+                                    `block text-sm
                                   ${isActive
-                                    ? "text-brand-green"
-                                    : "text-gray-600 hover:text-brand-green"
-                                  }`}
-                              >
-                                {child.name}
-                              </NavLink>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    ))}
+                                      ? "text-brand-green"
+                                      : "text-gray-600 hover:text-brand-green"
+                                    }`}
+                                >
+                                  {child.name}
+                                </NavLink>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-          </nav>
+                );
+              })}
+            </nav>
 
-          {/* MOBILE MENU BUTTON */}
-          <button
-            onClick={() => setOpen(true)}
-            className={`md:hidden text-2xl text-brand-blue
+            {/* MOBILE MENU BUTTON */}
+            <button
+              onClick={() => setOpen(true)}
+              className={`md:hidden text-2xl text-brand-blue
               `}
-          >
-            <FiMenu />
-          </button>
+            >
+              <FiMenu />
+            </button>
+          </div>
         </div>
       </motion.header>
 
