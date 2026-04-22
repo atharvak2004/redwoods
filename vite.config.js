@@ -28,10 +28,13 @@ export default defineConfig({
     }),
   ],
 
+  // ✅ FIX HERE
+  base: "./",   
+
   server: {
-    host: "0.0.0.0",               // 🔥 IMPORTANT
+    host: "0.0.0.0",
     port: 5173,
     strictPort: true,
-    allowedHosts: true,            // 🔥 THIS is the real fix (not "all")
+    allowedHosts: true,
   },
 });

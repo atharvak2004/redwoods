@@ -80,7 +80,7 @@ function Navbar() {
     absolute transition-all duration-300
     flex items-center justify-center
     bg-white rounded-xl p-2 h-20 w-20
-    ${scrolled ? "" : "h-32 w-32 top-[1px]"}
+   
   `}
             >
               <NavLink to="/">
