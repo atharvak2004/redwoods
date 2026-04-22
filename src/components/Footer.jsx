@@ -31,7 +31,7 @@ const businesses = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-[#0b0f14] to-[#05080c] text-white">
+    <footer className="bg-neutral-50 text-gray-700">
       <div className="max-w-7xl mx-auto px-6 pt-20 pb-10">
 
         {/* Top Center Section */}
@@ -42,14 +42,14 @@ export default function Footer() {
             className="h-36 w-auto mb-6"
           />
 
-          <p className="text-sm text-white leading-relaxed">
+          <p className="text-sm text-gray-900 leading-relaxed">
             Delivering strategic advisory, execution excellence, and
             long-term value across real estate, energy, and heritage hospitality.
           </p>
         </div>
 
         {/* Divider */}
-        <div className="my-14 border-t border-brand-lightgreen opacity-30"></div>
+        <div className="my-14 border-t border-brand-green opacity-30"></div>
 
         {/* Middle Section */}
         <div className="max-w-5xl mx-auto">
@@ -57,7 +57,7 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div className="text-left w-full max-w-[220px]">
-              <h4 className="text-xs font-semibold uppercase tracking-widest mb-6 text-brand-lightgreen">
+              <h4 className="text-xs font-semibold uppercase tracking-widest mb-6 text-brand-green">
                 Quick Links
               </h4>
               <ul className="space-y-3 text-left">
@@ -65,7 +65,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="hover:text-brand-lightgreen transition duration-300"
+                      className="hover:text-brand-green transition duration-300"
                     >
                       {link.label}
                     </a>
@@ -76,7 +76,7 @@ export default function Footer() {
 
             {/* Businesses */}
             <div className="text-left w-full max-w-[220px] mx-auto">
-              <h4 className="text-xs font-semibold uppercase tracking-widest mb-6 text-brand-lightgreen">
+              <h4 className="text-xs font-semibold uppercase tracking-widest mb-6 text-brand-green">
                 Businesses
               </h4>
               <ul className="space-y-3 text-left">
@@ -84,7 +84,7 @@ export default function Footer() {
                   <li key={item.label}>
                     <a
                       href={item.href}
-                      className="hover:text-brand-lightgreen transition duration-300"
+                      className="hover:text-brand-green transition duration-300"
                     >
                       {item.label}
                     </a>
@@ -95,23 +95,23 @@ export default function Footer() {
 
             {/* Contact */}
             <div className="text-left w-full max-w-[260px] ml-auto">
-              <h4 className="text-xs font-semibold uppercase tracking-widest mb-6 text-brand-lightgreen">
+              <h4 className="text-xs font-semibold uppercase tracking-widest mb-6 text-brand-green">
                 Contact
               </h4>
-              <ul className="space-y-4 text-gray-300">
+              <ul className="space-y-4 text-gray-700">
                 <li className="flex items-center gap-3">
-                  <CiLocationOn className="text-lg text-brand-lightgreen" />
+                  <CiLocationOn className="text-lg text-brand-green" />
                   Bengaluru, Karnataka, India
                 </li>
                 <li className="flex items-center gap-3">
-                  <IoIosCall className="text-lg text-brand-lightgreen" />
+                  <IoIosCall className="text-lg text-brand-green" />
                   +91 80490 78888
                 </li>
                 <li className="flex items-center gap-3">
-                  <CiMail className="text-lg text-brand-lightgreen" />
+                  <CiMail className="text-lg text-brand-green" />
                   <a
                     href="mailto:info@redwoodscorp.com"
-                    className="hover:text-brand-lightgreen transition"
+                    className="hover:text-brand-green transition"
                   >
                     info@redwoodscorp.com
                   </a>
@@ -123,10 +123,10 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="mt-14 pt-6 border-t border-brand-lightgreen opacity-30"></div>
+        <div className="mt-14 pt-6 border-t border-brand-green opacity-30"></div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400 max-w-5xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-700 max-w-5xl mx-auto">
           <span>
             © {new Date().getFullYear()} Redwoods. All rights reserved.
           </span>
@@ -135,7 +135,7 @@ export default function Footer() {
             href="https://prushal.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-brand-lightgreen transition"
+            className="hover:text-brand-green transition"
           >
             Designed & Developed by PRUSHAL TECHNOLOGY PVT. LTD.
           </a>
