@@ -38,10 +38,13 @@ export default function RenewableEnergyHero() {
         <MediaElement
           src="/solar/Dhakarani-hero.png"
           alt="Renewable energy infrastructure"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover object-[75%_center] md:object-center"
         />
         {/* Brand Overlay */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_left,rgba(0,0,0,0.8)_5%,rgba(0,0,0,0.4)_35%,rgba(0,0,0,0.2)_45%,transparent_50%)]" />
+        <div className="absolute inset-0 
+  bg-gradient-to-r from-black via-black/65 to-transparent
+  md:bg-[radial-gradient(circle_at_left,rgba(0,0,0,0.8)_5%,rgba(0,0,0,0.4)_35%,rgba(0,0,0,0.2)_45%,transparent_50%)] 
+" />
       </div>
       <div className="relative z-10 w-full">
         <div className="max-w-7xl mx-auto px-6">

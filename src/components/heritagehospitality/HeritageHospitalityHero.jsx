@@ -9,10 +9,13 @@ export default function HeritageHospitalityHero() {
                 <MediaElement
                     src="/home/hero/barsana-hero-image3.png"
                     alt="Premium real estate architecture"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover object-[60%_center] md:object-center"
                 />
 
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_left,rgba(0,0,0,0.8)_5%,rgba(0,0,0,0.4)_35%,rgba(0,0,0,0.2)_45%,transparent_50%)]" />
+                <div className="absolute inset-0 
+  bg-gradient-to-r from-black via-black/65 to-transparent
+  md:bg-[radial-gradient(circle_at_left,rgba(0,0,0,0.8)_5%,rgba(0,0,0,0.4)_35%,rgba(0,0,0,0.2)_45%,transparent_50%)] 
+" />
             </div>
 
             {/* Content */}

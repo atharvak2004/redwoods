@@ -62,12 +62,16 @@ export default function HeroCarousel() {
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div
-              className="h-full bg-cover bg-center relative slide-bg"
+              className="h-full bg-cover relative slide-bg 
+             bg-[position:65%_center] md:bg-center"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
               {/* Overlay */}
               {/* <div className="absolute inset-0 bg-black/30" /> */}
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_left,rgba(0,0,0,0.8)_5%,rgba(0,0,0,0.4)_35%,rgba(0,0,0,0.2)_45%,transparent_50%)]" />
+              <div className="absolute inset-0 
+  bg-gradient-to-r from-black via-black/65 to-transparent
+  md:bg-[radial-gradient(circle_at_left,rgba(0,0,0,0.8)_5%,rgba(0,0,0,0.4)_35%,rgba(0,0,0,0.2)_45%,transparent_50%)] 
+" />
 
               {/* Content */}
               <div className="relative z-10 h-full flex items-center">

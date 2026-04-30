@@ -53,14 +53,14 @@ export default function Footer() {
 
         {/* Middle Section */}
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-x-24 text-sm">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-x-24 text-sm text-left">
 
             {/* Quick Links */}
-            <div className="text-left w-full max-w-[220px]">
+            <div className="w-full">
               <h4 className="text-xs font-semibold uppercase tracking-widest mb-6 text-brand-green">
                 Quick Links
               </h4>
-              <ul className="space-y-3 text-left">
+              <ul className="space-y-3">
                 {quickLinks.map((link) => (
                   <li key={link.label}>
                     <a
@@ -75,11 +75,11 @@ export default function Footer() {
             </div>
 
             {/* Businesses */}
-            <div className="text-left w-full max-w-[220px] mx-auto">
+            <div className="w-full">
               <h4 className="text-xs font-semibold uppercase tracking-widest mb-6 text-brand-green">
                 Businesses
               </h4>
-              <ul className="space-y-3 text-left">
+              <ul className="space-y-3">
                 {businesses.map((item) => (
                   <li key={item.label}>
                     <a
@@ -94,7 +94,7 @@ export default function Footer() {
             </div>
 
             {/* Contact */}
-            <div className="text-left w-full max-w-[260px] ml-auto">
+            <div className="w-full">
               <h4 className="text-xs font-semibold uppercase tracking-widest mb-6 text-brand-green">
                 Contact
               </h4>
